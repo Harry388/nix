@@ -43,6 +43,11 @@
     pkgs.discord
     pkgs.nodejs_21
     pkgs.ripgrep
+    pkgs.jdk
+    pkgs.prismlauncher
+    pkgs.spotify
+    pkgs.obsidian
+    pkgs.gittyup
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
