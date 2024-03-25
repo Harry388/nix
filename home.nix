@@ -48,6 +48,7 @@
     pkgs.spotify
     pkgs.obsidian
     pkgs.gittyup
+    pkgs.dbeaver
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
