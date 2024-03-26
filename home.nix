@@ -49,6 +49,7 @@
     pkgs.obsidian
     pkgs.gittyup
     pkgs.dbeaver
+    pkgs.erlang
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
