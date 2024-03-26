@@ -134,7 +134,7 @@
   programs.nixvim = {
     enable = true;
 
-    colorschemes.kanagawa.enable = true;
+    colorschemes.gruvbox.enable = true;
 
     globals.mapleader = " ";
 
@@ -204,6 +204,23 @@
         keymaps.diagnostic = {
           "<leader>j" = "goto_next";
           "<leader>k" = "goto_prev";
+        };
+      };
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings = {
+          sources = [
+            {name = "nvim_lsp";}
+            {name = "path";}
+            {name = "buffer";}
+            {name = "luasnip";}
+          ];
+          mapping = {
+            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          };
         };
       };
     };
