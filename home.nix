@@ -51,6 +51,9 @@
     pkgs.dbeaver
     pkgs.erlang
     pkgs.neofetch
+    pkgs.gcc
+    pkgs.pkg-config
+    pkgs.openssl
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
