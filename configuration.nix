@@ -146,6 +146,8 @@
       }
     ];
 
+    clipboard.providers.wl-copy.enable = true;
+
     options = {
       nu = true;
       relativenumber = true;
