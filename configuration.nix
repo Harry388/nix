@@ -237,6 +237,10 @@
       };
     };
 
+    extraPlugins = with pkgs.vimPlugins; [
+        vim-carbon-now-sh
+    ];
+
     extraConfigLua = ''
       local mark = require("harpoon.mark")
       local ui = require("harpoon.ui")
