@@ -114,8 +114,8 @@
       terminal = "xterm-256color";
 
       extraConfig = ''
-        bind -n M-H previous-window
-        bind -n M-L next-window
+        bind -n C-M-H previous-window
+        bind -n C-M-L next-window
       '';
 
       plugins = [
