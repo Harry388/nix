@@ -97,6 +97,7 @@
       firefox
     #  thunderbird
     ];
+    shell = pkgs.zsh;
   };
 
   home-manager = {
@@ -124,6 +125,12 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+ 
+  programs.zsh.enable = true;
 
   programs.steam = {
     enable = true;
@@ -166,8 +173,6 @@
 
       hlsearch = false;
       incsearch = true;
-
-      termguicolors = true;
 
       scrolloff = 8;
 
@@ -235,6 +240,9 @@
         enable = true;
         highlight = [ "RainbowDelimiterYellow" "RainbowDelimiterBlue" "RainbowDelimiterOrange" "RainbowDelimiterGreen" "RainbowDelimiterViolet" "RainbowDelimiterCyan" ];
       };
+      tmux-navigator = {
+          enable = true;
+      };
     };
 
     extraPlugins = with pkgs.vimPlugins; [
@@ -248,10 +256,10 @@
       vim.keymap.set("n", "<leader>a", mark.add_file)
       vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
 
-      vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
-      vim.keymap.set("n", "<C-j>", function() ui.nav_file(2) end)
-      vim.keymap.set("n", "<C-k>", function() ui.nav_file(3) end)
-      vim.keymap.set("n", "<C-l>", function() ui.nav_file(4) end)
+      -- vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
+      -- vim.keymap.set("n", "<C-j>", function() ui.nav_file(2) end)
+      -- vim.keymap.set("n", "<C-k>", function() ui.nav_file(3) end)
+      -- vim.keymap.set("n", "<C-l>", function() ui.nav_file(4) end)
 
       local builtin = require('telescope.builtin')
       vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
