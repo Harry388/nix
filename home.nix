@@ -113,6 +113,8 @@
 
       terminal = "xterm-256color";
 
+      escapeTime = 0;
+
       extraConfig = ''
         bind -n C-M-H previous-window
         bind -n C-M-L next-window
