@@ -55,6 +55,7 @@
     pkgs.pkg-config
     pkgs.openssl
     pkgs.dolphin-emu
+    pkgs.rebar3
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
