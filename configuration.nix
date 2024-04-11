@@ -148,7 +148,7 @@
     keymaps = [
       {
         key = "<leader>pv";
-        action = "<cmd>Ex<CR>";
+        action = "<cmd>Oil<CR>";
         mode = "n";
       }
     ];
@@ -184,6 +184,10 @@
       telescope.enable = true;
       undotree.enable = true;
       harpoon.enable = true;
+      oil = {
+          enable = true;
+          settings.columns = [ "icon" ];
+      };
       lsp = {
         enable = true;
         servers = {
