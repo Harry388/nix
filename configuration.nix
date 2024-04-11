@@ -181,8 +181,15 @@
 
     plugins = {
       treesitter.enable = true;
-      telescope.enable = true;
       undotree.enable = true;
+      telescope = {
+          enable = true;
+          keymaps = {
+              "<leader>pg" = "git_files";
+              "<leader>pf" = "find_files";
+              "<leader>ps" = "live_grep";
+          };
+      };
       harpoon = {
           enable = true;
           keymaps = {
@@ -266,13 +273,6 @@
     ];
 
     extraConfigLua = ''
-      local builtin = require('telescope.builtin')
-      vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-      vim.keymap.set('n', '<leader>pg', builtin.git_files, {})
-      vim.keymap.set('n', '<leader>ps', function()
-	      builtin.grep_string({ search = vim.fn.input("Grep > ") });
-      end)
-
       vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
     '';
   };
