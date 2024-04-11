@@ -151,6 +151,11 @@
         action = "<cmd>Oil<CR>";
         mode = "n";
       }
+      {
+        key = "<leader>u";
+        action = "<cmd>UndotreeToggle<CR>";
+        mode = "n";
+      }
     ];
 
     clipboard.providers.wl-copy.enable = true;
@@ -181,7 +186,12 @@
 
     plugins = {
       treesitter.enable = true;
-      undotree.enable = true;
+      undotree = {
+          enable = true;
+          settings = {
+              SetFocusWhenToggle = true;
+          };
+      };
       telescope = {
           enable = true;
           keymaps = {
@@ -272,9 +282,6 @@
         vim-carbon-now-sh
     ];
 
-    extraConfigLua = ''
-      vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-    '';
   };
 
   # List services that you want to enable:
