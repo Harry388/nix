@@ -160,6 +160,12 @@
 
     clipboard.providers.wl-copy.enable = true;
 
+    filetype = {
+        extension = {
+            matcha = "matcha";
+        };
+    };
+
     options = {
       nu = true;
       relativenumber = true;
@@ -185,7 +191,12 @@
     };
 
     plugins = {
-      treesitter.enable = true;
+      treesitter = {
+          enable = true;
+          languageRegister = {
+              html = [ "matcha" ];
+          };
+      };
       undotree = {
           enable = true;
           settings = {
@@ -233,6 +244,14 @@
           gleam.enable = true;
           svelte.enable = true;
           tailwindcss.enable = true;
+          html = {
+              enable = true;
+              filetypes = [ "html" "matcha" ];
+          };
+          emmet_ls = {
+              enable = true;
+              filetypes = [ "html" "matcha" ];
+          };
         };
         keymaps.lspBuf = {
           K = "hover";
