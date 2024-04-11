@@ -248,6 +248,10 @@
               enable = true;
               filetypes = [ "html" "matcha" ];
           };
+          htmx = {
+              enable = true;
+              filetypes = [ "html" "matcha" ];
+          };
           emmet_ls = {
               enable = true;
               filetypes = [ "html" "matcha" ];
