@@ -133,7 +133,7 @@
 
       shellAliases = {
           switch = "sudo nixos-rebuild switch --flake ~/nix#default";
-          update = "nix flake update -I /home/harry/nix && switch";
+          update = "nix flake update";
       };
       
       oh-my-zsh = {
