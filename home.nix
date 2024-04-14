@@ -56,7 +56,6 @@
     pkgs.openssl
     pkgs.dolphin-emu
     pkgs.rebar3
-    pkgs.xclip
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -135,7 +134,6 @@
       shellAliases = {
           switch = "sudo nixos-rebuild switch --flake ~/nix#default";
           update = "nix flake update";
-          gh = "cat ~/Desktop/gh.txt | xclip -selection clipboard";
       };
       
       oh-my-zsh = {
