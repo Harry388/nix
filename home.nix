@@ -41,7 +41,7 @@
     pkgs.rustup
     pkgs.gleam
     pkgs.discord
-    pkgs.nodejs_21
+    pkgs.nodejs_22
     pkgs.ripgrep
     pkgs.jdk
     pkgs.prismlauncher

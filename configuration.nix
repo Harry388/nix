@@ -166,7 +166,7 @@
         };
     };
 
-    options = {
+    opts = {
       nu = true;
       relativenumber = true;
 
