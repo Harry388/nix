@@ -147,7 +147,7 @@
 
     keymaps = [
       {
-        key = "<leader>pv";
+        key = "-";
         action = "<cmd>Oil<CR>";
         mode = "n";
       }
@@ -217,10 +217,10 @@
               toggleQuickMenu = "<C-e>";
               addFile = "<leader>a";
               navFile = {
-                "1" = "<leader>h";
-                "2" = "<leader>j";
-                "3" = "<leader>k";
-                "4" = "<leader>l";
+                "1" = "<M-h>";
+                "2" = "<M-j>";
+                "3" = "<M-k>";
+                "4" = "<M-l>";
               };
           };
       };
