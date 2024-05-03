@@ -21,7 +21,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -38,25 +38,25 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.rustup
-    pkgs.gleam
-    pkgs.discord
-    pkgs.nodejs_22
-    pkgs.ripgrep
-    pkgs.jdk
-    pkgs.prismlauncher
-    pkgs.spotify
-    pkgs.obsidian
-    pkgs.gittyup
-    pkgs.dbeaver
-    pkgs.erlang
-    pkgs.neofetch
-    pkgs.gcc
-    pkgs.pkg-config
-    pkgs.openssl
-    pkgs.dolphin-emu
-    pkgs.rebar3
-    (pkgs.python311.withPackages (ps: with ps; [
+    rustup
+    gleam
+    discord
+    nodejs_22
+    ripgrep
+    jdk
+    prismlauncher
+    spotify
+    obsidian
+    gittyup
+    dbeaver
+    erlang
+    neofetch
+    gcc
+    pkg-config
+    openssl
+    dolphin-emu
+    rebar3
+    (python311.withPackages (ps: with ps; [
       numpy # these two are
       scipy # probably redundant to pandas
       jupyterlab
@@ -162,9 +162,4 @@
         extended = true; # Save timestamp into the history file.
       };
   };
-
-  programs.alacritty = {
-      enable = true;
-  };
-
 }
