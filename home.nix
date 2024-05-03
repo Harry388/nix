@@ -56,6 +56,14 @@
     pkgs.openssl
     pkgs.dolphin-emu
     pkgs.rebar3
+    (pkgs.python311.withPackages (ps: with ps; [
+      numpy # these two are
+      scipy # probably redundant to pandas
+      jupyterlab
+      pandas
+      statsmodels
+      scikitlearn
+    ]))
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
