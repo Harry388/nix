@@ -142,6 +142,7 @@
       shellAliases = {
           switch = "sudo nixos-rebuild switch --flake ~/nix#default";
           update = "nix flake update";
+          krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
       };
       
       oh-my-zsh = {
