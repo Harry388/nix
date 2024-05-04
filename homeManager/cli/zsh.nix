@@ -20,10 +20,10 @@ in
                 if [[ $current_generation != $new_generation ]] then
                     git add *
                     git stage *
-                    git commit -m "$new_generation $1"
-                    echo "$new_generation: $1"
+                    git commit -m "$new_generation $HOST $1"
+                    echo "$new_generation@$HOST: $1"
                 else
-                    echo "$new_generation: No Change"
+                    echo "$new_generation@$HOST: No Change"
                 fi
             '')
         ];
