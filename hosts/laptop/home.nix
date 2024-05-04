@@ -144,7 +144,7 @@
       enableCompletion = true;
 
       shellAliases = {
-          switch = "sudo nixos-rebuild switch --flake ~/nix#laptop";
+          switch = "sudo nixos-rebuild switch --flake ~/nix";
           update = "nix flake update";
           krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
       };
