@@ -4,6 +4,7 @@
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    inputs.catppuccin.homeManagerModules.catppuccin
     ../../homeManager/default.nix
   ];
 
@@ -83,5 +84,16 @@
   programs.home-manager.enable = true;
  
   defaultHome.enable = true;
+
+  xdg.enable = true;
+  gtk = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      accent = "pink";
+      size = "standard";
+      tweaks = [ "normal" ];
+    };
+  };
   
 }
