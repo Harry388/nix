@@ -17,7 +17,6 @@ in
             gittyup
             dbeaver
             dolphin-emu
-            zed-editor
         ];
     };
 }
