@@ -21,8 +21,9 @@ in
                     git add *
                     git stage *
                     git commit -m "$new_generation $1"
+                    echo "$new_generation: $1"
                 else
-                    echo "No Change"
+                    echo "$new_generation: No Change"
                 fi
             '')
         ];
