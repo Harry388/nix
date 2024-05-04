@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 let
     cfg = config.zsh;
@@ -9,12 +9,29 @@ in
     };
 
     config = lib.mkIf cfg.enable {
+        home.packages = with pkgs; [
+            (writeShellScriptBin "switch" ''
+                current_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+
+                sudo nixos-rebuild switch --flake ~/nix
+
+                new_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+
+                if [[ $current_generation != $new_generation ]] then
+                    git add *
+                    git stage *
+                    git commit -m "$new_generation $1"
+                else
+                    echo "No Change"
+                fi
+            '')
+        ];
+
         programs.zsh = {
             enable = true;
             enableCompletion = true;
 
             shellAliases = {
-                switch = "sudo nixos-rebuild switch --flake ~/nix && generation";
                 update = "nix flake update";
                 krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
                 generation = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
