@@ -14,9 +14,10 @@ in
             enableCompletion = true;
 
             shellAliases = {
-                switch = "sudo nixos-rebuild switch --flake ~/nix";
+                switch = "sudo nixos-rebuild switch --flake ~/nix && generation";
                 update = "nix flake update";
                 krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
+                generation = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
             };
 
             oh-my-zsh = {
