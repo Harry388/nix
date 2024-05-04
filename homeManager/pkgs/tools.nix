@@ -14,6 +14,7 @@ in
             pkg-config
             openssl
             neofetch
+            nerdfonts
         ];
     };
 }
