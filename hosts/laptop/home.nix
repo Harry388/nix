@@ -88,8 +88,8 @@
     enable = true;
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "Gruvbox-Dark";
+      package = pkgs.gruvbox-dark-icons-gtk;
     };
 
     gtk3.extraConfig = {
@@ -141,5 +141,9 @@
         picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
     };
   };
+
+  home.packages = with pkgs; [
+
+  ];
 
 }
