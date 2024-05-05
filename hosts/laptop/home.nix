@@ -109,6 +109,16 @@
     "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
     };
+
+    "org/gnome/shell" = {
+        favorite-apps = [
+          "google-chrome.desktop"
+          "org.gnome.Nautilus.desktop"
+          "org.gnome.Console.desktop"
+          "spotify.desktop"
+          "gittyup.desktop"
+       ];
+    };
   };
 
 }
