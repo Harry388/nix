@@ -124,6 +124,7 @@
 
   home.packages = with pkgs; [
     papirus-icon-theme
+    gnomeExtensions.blur-my-shell
   ];
 
 }
