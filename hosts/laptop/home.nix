@@ -77,7 +77,6 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    GTK_THEME = "palenight";
   };
 
   # Let Home Manager install and manage itself.
@@ -94,8 +93,8 @@
     };
 
     theme = {
-      name = "palenight";
-      package = pkgs.palenight-theme;
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
     };
 
     gtk3.extraConfig = {
