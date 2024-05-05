@@ -100,6 +100,14 @@
        ];
 
        disable-user-extensions = "false";
+
+       enabled-extensions = [
+         "blur-my-shell@aunetx"
+       ];
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/panel" = {
+      blur = false;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -120,6 +128,7 @@
         picture-uri = "file:///home/harry/Pictures/background.jpg";
         picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
     };
+
   };
 
   home.packages = with pkgs; [
