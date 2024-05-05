@@ -92,6 +92,11 @@
       package = pkgs.papirus-icon-theme;
     };
 
+    theme = {
+      name = "gruvbox-dark";
+      package = pkgs.gruvbox-dark-gtk;
+    };
+
     gtk3.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1
@@ -143,7 +148,6 @@
   };
 
   home.packages = with pkgs; [
-    gruvbox-dark-gtk
   ];
 
 }
