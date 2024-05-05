@@ -118,6 +118,8 @@
           "spotify.desktop"
           "gittyup.desktop"
        ];
+
+       disable-user-extensions = "false";
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
