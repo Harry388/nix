@@ -93,8 +93,8 @@
     };
 
     theme = {
-      name = "adw-gtk3";
-      package = pkgs.adw-gtk3;
+      name = "graphite";
+      package = pkgs.graphite-gtk-theme;
     };
 
     gtk3.extraConfig = {
@@ -109,5 +109,9 @@
       '';
     };
   };
+
+  home.packages = with pkgs; [
+    gnome.gnome-themes-extra
+  ];
 
 }
