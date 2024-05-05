@@ -91,18 +91,6 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
   };
 
   dconf.settings = {
@@ -141,8 +129,5 @@
         picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
     };
   };
-
-  home.packages = with pkgs; [
-  ];
 
 }
