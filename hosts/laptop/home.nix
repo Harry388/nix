@@ -124,6 +124,20 @@
         tap-to-click = true;
         natural-scroll = true;
     };
+
+    "org/gnome/desktop/background" = {
+        color-shading-type = "solid";
+        picture-options = "zoom";
+        picture-uri = "file:///home/harry/Pictures/background.jpg";
+        picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
+    };
+
+    "org/gnome/desktop/screensaver" = {
+        color-shading-type = "solid";
+        picture-options = "zoom";
+        picture-uri = "file:///home/harry/Pictures/background.jpg";
+        picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
+    };
   };
 
 }
