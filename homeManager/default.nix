@@ -7,6 +7,7 @@ in
     imports = [
         ./cli/default.nix
         ./pkgs/default.nix
+        ./desktops/default.nix
     ];
 
     options.defaultHome = {
@@ -17,6 +18,7 @@ in
         programs.google-chrome.enable = true;
         defaultHomeCli.enable = true;
         defaultHomePkgs.enable = true;
+        defaultHomeDesktop.enable = true;
     };
 
 }
