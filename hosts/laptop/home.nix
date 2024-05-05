@@ -92,11 +92,6 @@
       package = pkgs.papirus-icon-theme;
     };
 
-    theme = {
-      name = "graphite";
-      package = pkgs.graphite-gtk-theme;
-    };
-
     gtk3.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1
@@ -111,7 +106,6 @@
   };
 
   home.packages = with pkgs; [
-    gnome.gnome-themes-extra
   ];
 
 }
