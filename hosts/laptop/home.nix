@@ -26,7 +26,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
+  #home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -43,7 +43,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-  ];
+  #];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -77,7 +77,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    GTK_THEME = "palenight";
+    GTK_THEME = "graphite";
   };
 
   # Let Home Manager install and manage itself.
@@ -94,13 +94,8 @@
     };
 
     theme = {
-      name = "palenight";
-      package = pkgs.palenight-theme;
-    };
-
-    cursorTheme = {
-      name = "Numix-Cursor";
-      package = pkgs.numix-cursor-theme;
+      name = "graphite";
+      package = pkgs.graphite-gtk-theme;
     };
 
     gtk3.extraConfig = {
