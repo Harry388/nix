@@ -84,50 +84,50 @@
  
   defaultHome.enable = true;
 
-  #gtk = {
-    #enable = true;
-#
-    #iconTheme = {
-      #name = "Papirus-Dark";
-      #package = pkgs.papirus-icon-theme;
-    #};
-  #};
-#
-  #dconf.settings = {
-    #"org/gnome/desktop/interface" = {
-        #color-scheme = "prefer-dark";
-    #};
-#
-    #"org/gnome/shell" = {
-        #favorite-apps = [
-          #"google-chrome.desktop"
-          #"org.gnome.Nautilus.desktop"
-          #"org.gnome.Console.desktop"
-          #"spotify.desktop"
-          #"gittyup.desktop"
-       #];
-#
-       #disable-user-extensions = "false";
-    #};
-#
-    #"org/gnome/desktop/peripherals/touchpad" = {
-        #tap-to-click = true;
-        #natural-scroll = true;
-    #};
-#
-    #"org/gnome/desktop/background" = {
-        #color-shading-type = "solid";
-        #picture-options = "zoom";
-        #picture-uri = "file:///home/harry/Pictures/background.jpg";
-        #picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
-    #};
-#
-    #"org/gnome/desktop/screensaver" = {
-        #color-shading-type = "solid";
-        #picture-options = "zoom";
-        #picture-uri = "file:///home/harry/Pictures/background.jpg";
-        #picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
-    #};
-  #};
+  gtk = {
+    enable = true;
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+    };
+
+    "org/gnome/shell" = {
+        favorite-apps = [
+          "google-chrome.desktop"
+          "org.gnome.Nautilus.desktop"
+          "org.gnome.Console.desktop"
+          "spotify.desktop"
+          "gittyup.desktop"
+       ];
+
+       disable-user-extensions = "false";
+    };
+
+    "org/gnome/desktop/peripherals/touchpad" = {
+        tap-to-click = true;
+        natural-scroll = true;
+    };
+
+    "org/gnome/desktop/background" = {
+        color-shading-type = "solid";
+        picture-options = "zoom";
+        picture-uri = "file:///home/harry/Pictures/background.jpg";
+        picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
+    };
+
+    "org/gnome/desktop/screensaver" = {
+        color-shading-type = "solid";
+        picture-options = "zoom";
+        picture-uri = "file:///home/harry/Pictures/background.jpg";
+        picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
+    };
+  };
 
 }
