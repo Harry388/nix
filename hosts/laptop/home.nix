@@ -4,7 +4,6 @@
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    inputs.catppuccin.homeManagerModules.catppuccin
     ../../homeManager/default.nix
   ];
 
@@ -78,6 +77,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    GTK_THEME = "palenight";
   };
 
   # Let Home Manager install and manage itself.
@@ -85,15 +85,35 @@
  
   defaultHome.enable = true;
 
-  xdg.enable = true;
   gtk = {
     enable = true;
-    catppuccin = {
-      enable = true;
-      accent = "pink";
-      size = "standard";
-      tweaks = [ "normal" ];
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    theme = {
+      name = "palenight";
+      package = pkgs.palenight-theme;
+    };
+
+    cursorTheme = {
+      name = "Numix-Cursor";
+      package = pkgs.numix-cursor-theme;
+    };
+
+    gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
     };
   };
-  
+
 }
