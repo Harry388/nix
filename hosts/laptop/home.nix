@@ -77,7 +77,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    GTK_THEME = "graphite";
+    GTK_THEME = "palenight";
   };
 
   # Let Home Manager install and manage itself.
@@ -94,8 +94,8 @@
     };
 
     theme = {
-      name = "graphite";
-      package = pkgs.graphite-gtk-theme;
+      name = "palenight";
+      package = pkgs.palenight-theme;
     };
 
     gtk3.extraConfig = {
