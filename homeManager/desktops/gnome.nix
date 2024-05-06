@@ -54,12 +54,15 @@ in
                 picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
             };
 
+            "org/gnome/desktop/wm/preferences" = {
+                button-layout = "appmenu:minimize,maximize,close";
+            };
+
         };
 
         home.packages = with pkgs; [
             papirus-icon-theme
             gnomeExtensions.blur-my-shell
-            gnomeExtensions.dash-to-panel
         ];
     };
 }
