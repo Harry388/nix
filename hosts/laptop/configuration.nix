@@ -111,6 +111,8 @@
 
   defaultModules.enable = true;
 
+  services.udev.packages = with pkgs; [ vial ];
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
