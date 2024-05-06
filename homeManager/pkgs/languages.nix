@@ -10,7 +10,8 @@ in
 
     config = lib.mkIf cfg.enable {
         home.packages = with pkgs; [
-            rustup
+            rustc
+            cargo
             gleam
             nodejs_22
             jdk
