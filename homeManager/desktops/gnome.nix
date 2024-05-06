@@ -28,7 +28,7 @@ in
                 favorite-apps = [
                     "google-chrome.desktop"
                     "org.gnome.Nautilus.desktop"
-                    "org.gnome.Console.desktop"
+                    "Alacritty.desktop"
                     "spotify.desktop"
                     "gittyup.desktop"
                 ];
