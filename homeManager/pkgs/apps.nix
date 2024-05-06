@@ -18,6 +18,7 @@ in
             dbeaver
             dolphin-emu
             zed-editor
+            vial
         ];
     };
 }
