@@ -66,5 +66,9 @@ in
             gnomeExtensions.blur-my-shell
             gnomeExtensions.gtk3-theme-switcher
         ];
+
+        home.sessionVariables = {
+            GTK_THEME = "GRAPHITE_DARK";
+        };
     };
 }
