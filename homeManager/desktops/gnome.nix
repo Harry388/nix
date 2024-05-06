@@ -27,6 +27,7 @@ in
                 disable-user-extensions = "false";
 
                 enabled-extensions = [
+                    "user-theme@gnome-shell-extensions.gcampax.github.com"
                     "blur-my-shell@aunetx"
                 ];
             };
