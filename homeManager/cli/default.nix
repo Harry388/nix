@@ -9,6 +9,7 @@ in
         ./nixvim.nix
         ./tmux.nix
         ./zsh.nix
+        ./alacritty.nix
     ];
 
     options.defaultHomeCli = {
@@ -20,5 +21,6 @@ in
         nixvim.enable = lib.mkDefault true;
         tmux.enable = lib.mkDefault true;
         zsh.enable = lib.mkDefault true;
+        alacritty.enable = lib.mkDefault true;
     };
 }

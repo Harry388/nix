@@ -31,6 +31,8 @@ in
                 tmuxPlugins.vim-tmux-navigator
                 tmuxPlugins.catppuccin
             ];
+
+            keyMode = "vi";
         };
     };
 }
