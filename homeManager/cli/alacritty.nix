@@ -31,9 +31,9 @@ in
                         family = "JetBrainsMono Nerd Font Mono";
                         style = "Regular";
                     };
-                    size = 15;
+                    size = 13;
                 };
-                window = {opacity = 0.95;};
+                window.opacity = 0.95;
             };
         };
     };
