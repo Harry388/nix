@@ -34,7 +34,7 @@ in
                     size = 12;
                 };
                 window = {
-                    opacity = 0.95;
+                    opacity = 0.2;
                     blur = true;
                     decorations = "None";
                     startup_mode = "Maximized";
