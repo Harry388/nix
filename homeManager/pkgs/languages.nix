@@ -12,6 +12,7 @@ in
         home.packages = with pkgs; [
             rustc
             cargo
+            cargo-shuttle
             go
             gleam
             nodejs_22
