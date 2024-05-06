@@ -31,9 +31,14 @@ in
                         family = "JetBrainsMono Nerd Font Mono";
                         style = "Regular";
                     };
-                    size = 13;
+                    size = 12;
                 };
-                window.opacity = 0.95;
+                window = {
+                    opacity = 0.95;
+                    blur = true;
+                    decorations = "None";
+                    startup_mode = "Maximized";
+                };
             };
         };
     };
