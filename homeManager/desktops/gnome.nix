@@ -59,6 +59,7 @@ in
         home.packages = with pkgs; [
             papirus-icon-theme
             gnomeExtensions.blur-my-shell
+            gnomeExtensions.dash-to-panel
         ];
     };
 }
