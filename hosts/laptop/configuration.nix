@@ -97,7 +97,6 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    vial
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -111,8 +110,6 @@
   programs.zsh.enable = true;
 
   defaultModules.enable = true;
-
-  services.udev.packages = with pkgs; [ vial ];
 
   # List services that you want to enable:
 

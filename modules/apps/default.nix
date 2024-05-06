@@ -6,6 +6,7 @@ in
 {
     imports = [
         ./steam.nix
+        ./vial.nix
     ];
 
     options.defaultApps = {
@@ -14,5 +15,6 @@ in
 
     config = lib.mkIf cfg.enable {
         steam.enable = lib.mkDefault true;
+        vial.enable = lib.mkDefault true;
     };
 }
