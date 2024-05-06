@@ -25,6 +25,9 @@ in
             extraConfig = ''
                 bind -n C-M-H previous-window
                 bind -n C-M-L next-window
+                bind -T copy-mode-vi v send -X begin-selection
+                bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel
+                bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel
                 '';
 
             plugins = with pkgs; [
