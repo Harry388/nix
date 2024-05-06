@@ -61,14 +61,6 @@ in
 
         };
 
-        gtk = {
-            enable = true;
-
-            theme = {
-                name = "Graphite-Dark";
-            };
-        };
-
         home.packages = with pkgs; [
             papirus-icon-theme
             gnomeExtensions.blur-my-shell
@@ -76,7 +68,7 @@ in
         ];
 
         home.sessionVariables = {
-            GTK_THEME = "GRAPHITE_DARK";
+            GTK_THEME = "Graphite-Dark";
         };
     };
 }
