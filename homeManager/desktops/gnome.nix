@@ -10,18 +10,18 @@ in
 
     config = lib.mkIf cfg.enable {
         home.sessionVariables = {
-            GTK_THEME = "Gruvbox-Dark-B";
+            GTK_THEME = "Gruvbox-Dark-B-LB";
         };
 
         dconf.settings = {
             "org/gnome/desktop/interface" = {
                 color-scheme = "prefer-dark";
-                icon-theme = "Tela-circle-black";
-                gtk-theme = "Gruvbox-Dark-B";
+                icon-theme = "Gruvbox-Dark";
+                gtk-theme = "Gruvbox-Dark-B-LB";
             };
 
             "org/gnome/shell/extensions/user-theme" = {
-                name = "Gruvbox-Dark-B";
+                name = "Gruvbox-Dark-B-LB";
             };
 
             "org/gnome/shell" = {
