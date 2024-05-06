@@ -112,6 +112,7 @@ in
                             installCargo = false;
                             installRustc = false;
                         };
+                        gopls.enable = true;
                         gleam.enable = true;
                         svelte.enable = true;
                         tailwindcss.enable = true;
