@@ -9,10 +9,19 @@ in
     };
 
     config = lib.mkIf cfg.enable {
+        home.sessionVariables = {
+            GTK_THEME = "Graphite-Dark";
+        };
+
         dconf.settings = {
             "org/gnome/desktop/interface" = {
                 color-scheme = "prefer-dark";
-                icon-theme = "Papirus-Dark";
+                icon-theme = "Tela-circle-black";
+                gtk-theme = "Graphite-Dark";
+            };
+
+            "org/gnome/shell/extensions/user-theme" = {
+                name = "Graphite-Dark";
             };
 
             "org/gnome/shell" = {
@@ -64,11 +73,6 @@ in
         home.packages = with pkgs; [
             papirus-icon-theme
             gnomeExtensions.blur-my-shell
-            gnomeExtensions.gtk3-theme-switcher
         ];
-
-        home.sessionVariables = {
-            GTK_THEME = "Graphite-Dark";
-        };
     };
 }
