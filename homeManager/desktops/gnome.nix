@@ -71,7 +71,7 @@ in
         };
 
         home.packages = with pkgs; [
-            papirus-icon-theme
+            gtk-engine-murrine
             gnomeExtensions.blur-my-shell
         ];
     };
