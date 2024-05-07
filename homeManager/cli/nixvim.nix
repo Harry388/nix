@@ -28,23 +28,8 @@ in
                     mode = "n";
                 }
                 {
-                    key = ":";
-                    action = "<cmd>FineCmdline<CR>";
-                    mode = "n";
-                }
-                {
                     key = "<C-s>";
                     action = "<cmd>w<CR>";
-                    mode = "n";
-                }
-                {
-                    key = "/";
-                    action = "<cmd>SearchBoxIncSearch<CR>";
-                    mode = "n";
-                }
-                {
-                    key = "?";
-                    action = "<cmd>SearchBoxIncSearch reverse=true<CR>";
                     mode = "n";
                 }
             ];
@@ -192,19 +177,19 @@ in
                 tmux-navigator = {
                     enable = true;
                 };
-                packer = {
-                    enable = true;
-                    plugins = [
-                        {
-                            name = "VonHeikemen/fine-cmdline.nvim";
-                            requires = "MunifTanjim/nui.nvim";
-                        }
-                        {
-                            name = "VonHeikemen/searchbox.nvim";
-                            requires = "MunifTanjim/nui.nvim";
-                        }
-                    ];
-                };
+                #packer = {
+                    #enable = true;
+                    #plugins = [
+                        #{
+                            #name = "VonHeikemen/fine-cmdline.nvim";
+                            #requires = "MunifTanjim/nui.nvim";
+                        #}
+                        #{
+                            #name = "VonHeikemen/searchbox.nvim";
+                            #requires = "MunifTanjim/nui.nvim";
+                        #}
+                    #];
+                #};
                 # copilot-vim.enable = true;
             };
 
