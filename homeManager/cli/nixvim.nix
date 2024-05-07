@@ -174,8 +174,10 @@ in
                 packer = {
                     enable = true;
                     plugins = [
-                        "VonHeikemen/fine-cmdline.nvim"
-                        "MunifTanjim/nui.nvim"
+                        {
+                            name = "VonHeikemen/fine-cmdline.nvim";
+                            requires = "MunifTanjim/nui.nvim";
+                        }
                     ];
                 };
                 # copilot-vim.enable = true;
