@@ -27,6 +27,11 @@ in
                 action = "<cmd>UndotreeToggle<CR>";
                 mode = "n";
             }
+            {
+                key = ":";
+                action = "<cmd>FineCmdline<CR>";
+                mode = "n";
+            }
             ];
 
             clipboard.providers.wl-copy.enable = true;
