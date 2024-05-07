@@ -177,6 +177,7 @@ in
                 tmux-navigator = {
                     enable = true;
                 };
+                packer.enable = true;
                 #packer = {
                     #enable = true;
                     #plugins = [
