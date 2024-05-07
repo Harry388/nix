@@ -37,6 +37,11 @@ in
                     action = "<cmd>w<CR>";
                     mode = "n";
                 }
+                {
+                    key = "/";
+                    action = "<cmd>SearchBoxIncSearch<CR>";
+                    mode = "n";
+                }
             ];
 
             clipboard.providers.wl-copy.enable = true;
@@ -186,6 +191,10 @@ in
                     plugins = [
                         {
                             name = "VonHeikemen/fine-cmdline.nvim";
+                            requires = "MunifTanjim/nui.nvim";
+                        }
+                        {
+                            name = "VonHeikemen/searchbox.nvim";
                             requires = "MunifTanjim/nui.nvim";
                         }
                     ];
