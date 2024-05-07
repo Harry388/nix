@@ -27,6 +27,7 @@ in
                  pandas
                  statsmodels
                  scikitlearn
+                 matplotlib
             ]))
         ];
     };
