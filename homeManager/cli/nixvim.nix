@@ -171,6 +171,15 @@ in
                 tmux-navigator = {
                     enable = true;
                 };
+                packer = {
+                    enable = true;
+                    plugins = [
+                        {
+                            name = "VonHeikemen/fine-cmdline.nvim";
+                            requires = "MunifTanjim/nui.nvim";
+                        }
+                    ];
+                };
                 # copilot-vim.enable = true;
             };
 
