@@ -155,6 +155,7 @@ in
                         gd = "definition";
                         gi = "implementation";
                         gt = "type_definition";
+                        "<leader>r" = "rename";
                     };
                     keymaps.diagnostic = {
                         "<leader>j" = "goto_next";
