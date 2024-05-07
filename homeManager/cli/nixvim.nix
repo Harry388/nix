@@ -42,6 +42,11 @@ in
                     action = "<cmd>SearchBoxIncSearch<CR>";
                     mode = "n";
                 }
+                {
+                    key = "?";
+                    action = "<cmd>SearchBoxIncSearch reverse=true<CR>";
+                    mode = "n";
+                }
             ];
 
             clipboard.providers.wl-copy.enable = true;
