@@ -17,21 +17,26 @@ in
             globals.mapleader = " ";
 
             keymaps = [
-            {
-                key = "-";
-                action = "<cmd>Oil<CR>";
-                mode = "n";
-            }
-            {
-                key = "<leader>u";
-                action = "<cmd>UndotreeToggle<CR>";
-                mode = "n";
-            }
-            {
-                key = ":";
-                action = "<cmd>FineCmdline<CR>";
-                mode = "n";
-            }
+                {
+                    key = "-";
+                    action = "<cmd>Oil<CR>";
+                    mode = "n";
+                }
+                {
+                    key = "<leader>u";
+                    action = "<cmd>UndotreeToggle<CR>";
+                    mode = "n";
+                }
+                {
+                    key = ":";
+                    action = "<cmd>FineCmdline<CR>";
+                    mode = "n";
+                }
+                {
+                    key = "<C-s>";
+                    action = "<cmd>w<CR>";
+                    mode = "n";
+                }
             ];
 
             clipboard.providers.wl-copy.enable = true;
