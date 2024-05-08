@@ -16,6 +16,7 @@ in
             obsidian
             gittyup
             dbeaver
+            postman
             dolphin-emu
             zed-editor
         ];
