@@ -19,6 +19,7 @@ in
             postman
             dolphin-emu
             zed-editor
+            bottles
         ];
     };
 }
