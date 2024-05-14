@@ -177,8 +177,8 @@ in
                 tmux-navigator = {
                     enable = true;
                 };
-                packer = {
-                    enable = true;
+                # packer = {
+                    #enable = true;
                     #plugins = [
                         #{
                             #name = "VonHeikemen/fine-cmdline.nvim";
@@ -189,8 +189,8 @@ in
                             #requires = "MunifTanjim/nui.nvim";
                         #}
                     #];
-                };
-                copilot-vim.enable = true;
+                #};
+                # copilot-vim.enable = true;
             };
 
             extraPlugins = with pkgs.vimPlugins; [
