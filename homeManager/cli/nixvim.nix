@@ -190,7 +190,7 @@ in
                         #}
                     #];
                 };
-                # copilot-vim.enable = true;
+                copilot-vim.enable = true;
             };
 
             extraPlugins = with pkgs.vimPlugins; [
