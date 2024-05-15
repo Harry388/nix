@@ -28,7 +28,6 @@ in
                  statsmodels
                  scikitlearn
                  matplotlib
-                 pip
             ]))
         ];
     };
