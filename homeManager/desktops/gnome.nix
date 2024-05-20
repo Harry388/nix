@@ -9,20 +9,20 @@ in
     };
 
     config = lib.mkIf cfg.enable {
-        home.sessionVariables = {
-            GTK_THEME = "Gruvbox-Dark-BL";
-        };
+        #home.sessionVariables = {
+            #GTK_THEME = "Gruvbox-Dark-BL";
+        #};
 
         dconf.settings = {
-            "org/gnome/desktop/interface" = {
-                color-scheme = "prefer-dark";
-                icon-theme = "Gruvbox";
-                gtk-theme = "Gruvbox-Dark-BL";
-            };
+            #"org/gnome/desktop/interface" = {
+                #color-scheme = "prefer-dark";
+                #icon-theme = "Gruvbox";
+                #gtk-theme = "Gruvbox-Dark-BL";
+            #};
 
-            "org/gnome/shell/extensions/user-theme" = {
-                name = "Gruvbox-Dark-BL";
-            };
+            #"org/gnome/shell/extensions/user-theme" = {
+                #name = "Gruvbox-Dark-BL";
+            #};
 
             "org/gnome/shell" = {
                 favorite-apps = [
@@ -50,19 +50,19 @@ in
                 natural-scroll = true;
             };
 
-            "org/gnome/desktop/background" = {
-                color-shading-type = "solid";
-                picture-options = "zoom";
-                picture-uri = "file:///home/harry/Pictures/background";
-                picture-uri-dark = "file:///home/harry/Pictures/background";
-            };
+            #"org/gnome/desktop/background" = {
+                #color-shading-type = "solid";
+                #picture-options = "zoom";
+                #picture-uri = "file:///home/harry/Pictures/background";
+                #picture-uri-dark = "file:///home/harry/Pictures/background";
+            #};
 
-            "org/gnome/desktop/screensaver" = {
-                color-shading-type = "solid";
-                picture-options = "zoom";
-                picture-uri = "file:///home/harry/Pictures/background";
-                picture-uri-dark = "file:///home/harry/Pictures/background";
-            };
+            #"org/gnome/desktop/screensaver" = {
+                #color-shading-type = "solid";
+                #picture-options = "zoom";
+                #picture-uri = "file:///home/harry/Pictures/background";
+                #picture-uri-dark = "file:///home/harry/Pictures/background";
+            #};
 
             "org/gnome/desktop/wm/preferences" = {
                 button-layout = "appmenu:minimize,maximize,close";
