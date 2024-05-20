@@ -13,6 +13,8 @@ in
 
         stylix.image = /home/harry/Pictures/background;
 
+        stylix.polarity = "dark";
+
     };
 
 }
