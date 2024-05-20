@@ -20,6 +20,7 @@ in
             dolphin-emu
             zed-editor
             bottles
+            firefox
         ];
     };
 }
