@@ -19,7 +19,7 @@ in
 
         stylix.cursor = {
             package = pkgs.apple-cursor;
-            name = "macOS-BigSur-White";
+            name = "macOS-BigSur";
         };
 
         stylix.fonts = {
@@ -31,8 +31,8 @@ in
             };
 
             monospace = {
-                package = pkgs.dejavu_fonts;
-                name = "DejaVu Sans Mono";
+                package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+                name = "JetBrainsMono Nerd Font Mono";
             };
 
             emoji = {
