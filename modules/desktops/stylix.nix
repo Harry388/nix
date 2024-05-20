@@ -39,7 +39,16 @@ in
                 package = pkgs.noto-fonts-emoji;
                 name = "Noto Color Emoji";
             };
+
+            sizes = {
+                terminal = 12;
+                applications = 12;
+                desktop = 10;
+                popups = 10;
+            };
         };
+
+        stylix.opacity.terminal = 0.95;
 
         stylix.targets.nixvim.enable = false;
 

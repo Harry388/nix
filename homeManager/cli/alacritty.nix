@@ -14,8 +14,7 @@ in
 
             settings = {
                 colors.draw_bold_text_with_bright_colors = false;
-                window = lib.mkForce {
-                    opacity = 0.95;
+                window = {
                     decorations = "None";
                     startup_mode = "Maximized";
                 };
