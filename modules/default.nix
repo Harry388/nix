@@ -5,7 +5,7 @@ let
 in
 {
     imports = [
-        ./desktops/gnome.nix
+        ./desktops/default.nix
         ./apps/default.nix
     ];
 
@@ -14,7 +14,7 @@ in
     };
 
     config = lib.mkIf cfg.enable {
-        gnome.enable = lib.mkDefault true;
+        defaultDesktop.enable = lib.mkDefault true;
         defaultApps.enable = lib.mkDefault true;
     };
 

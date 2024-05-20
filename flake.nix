@@ -13,16 +13,19 @@
             url = "github:nix-community/nixvim";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        stylix.url = "github:danth/stylix";
     };
 
     outputs = { self, nixpkgs, ... }@inputs: {
         nixosConfigurations = {
             laptop = nixpkgs.lib.nixosSystem {
-                specialArgs = {inherit inputs;};
+                specialArgs = { inherit inputs; };
                 modules = [
                     ./hosts/laptop/configuration.nix
                     ./modules/default.nix
                     inputs.home-manager.nixosModules.default
+                    inputs.stylix.nixosModules.stylix
                 ];
             };
         };
