@@ -22,6 +22,27 @@ in
             name = "Bibata-Modern-Ice";
         };
 
+        stylix.fonts = {
+            serif = cfg.fonts.sansSerif;
+
+            sansSerif = {
+                package = pkgs.noto-fonts;
+                name = "Noto Sans";
+            };
+
+            monospace = {
+                package = pkgs.dejavu_fonts;
+                name = "DejaVu Sans Mono";
+            };
+
+            emoji = {
+                package = pkgs.noto-fonts-emoji;
+                name = "Noto Color Emoji";
+            };
+        };
+
+        stylix.targets.nixvim.enable = false;
+
     };
 
 }
