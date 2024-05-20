@@ -60,8 +60,8 @@ in
             "org/gnome/desktop/screensaver" = {
                 color-shading-type = "solid";
                 picture-options = "zoom";
-                picture-uri = "file:///home/harry/Pictures/background.jpg";
-                picture-uri-dark = "file:///home/harry/Pictures/background.jpg";
+                picture-uri = "file:///home/harry/Pictures/background";
+                picture-uri-dark = "file:///home/harry/Pictures/background";
             };
 
             "org/gnome/desktop/wm/preferences" = {
