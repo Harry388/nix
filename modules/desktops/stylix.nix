@@ -13,7 +13,7 @@ in
 
         stylix.image = /home/harry/Pictures/background;
 
-        stylix.polarity = "dark";
+        stylix.polarity = "light";
 
         stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
