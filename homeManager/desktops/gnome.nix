@@ -132,7 +132,6 @@ in
             "org/gnome/desktop/wm/preferences" = {
                 button-layout = "appmenu:minimize,maximize,close";
             };
-
         };
 
         home.packages = with pkgs; [
@@ -140,12 +139,14 @@ in
             gnomeExtensions.blur-my-shell
         ];
 
-        xdg.configFile."gtk-4.0/gtk.css" = {
-            text = css;
+        xdg = {
+            enable = true;
+
+            configFile = {
+                "gtk-4.0/gtk.css".text = css;
+                "gtk-3.0/gtk.css".text = css;
+            };
         };
 
-        xdg.configFile."gtk-3.0/gtk.css" = {
-            text = css;
-        };    
     };
 }
