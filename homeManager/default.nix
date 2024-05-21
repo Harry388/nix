@@ -19,6 +19,7 @@ in
         defaultHomeCli.enable = true;
         defaultHomePkgs.enable = true;
         defaultHomeDesktop.enable = true;
+        stylix.targets.alacritty.enable = false;
     };
 
 }
