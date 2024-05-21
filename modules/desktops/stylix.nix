@@ -23,7 +23,10 @@ in
         };
 
         stylix.fonts = {
-            serif = cfg.fonts.sansSerif;
+            serif = {
+                package = pkgs.noto-fonts;
+                name = "Noto Serif";
+            };
 
             sansSerif = {
                 package = pkgs.noto-fonts;
@@ -31,7 +34,7 @@ in
             };
 
             monospace = {
-                package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+                package = pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; };
                 name = "JetBrainsMono Nerd Font Mono";
             };
 
