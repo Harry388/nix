@@ -55,7 +55,6 @@ in
         home.packages = with pkgs; [
             gtk-engine-murrine
             gnomeExtensions.blur-my-shell
-            gnomeExtensions.compact-top-bar
         ];
 
         xdg = {
