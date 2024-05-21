@@ -2,6 +2,7 @@
 
 let
     cfg = config.gnomeHome;
+    gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
 in
 {
     options.gnomeHome = {
@@ -9,6 +10,15 @@ in
     };
 
     config = lib.mkIf cfg.enable {
+        gtk = {
+            enable = true;
+
+            iconTheme = {
+                package = gruvboxPlus;
+                name = "GruvboxPlus";
+            };
+        };
+
         dconf.settings = {
             "org/gnome/shell" = {
                 favorite-apps = [
