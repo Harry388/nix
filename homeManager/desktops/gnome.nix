@@ -14,7 +14,7 @@ in
             enable = true;
 
             iconTheme = {
-                package = gruvboxPlus;
+                package = pkgs.gruvbox-plus-icons;
                 name = "GruvboxPlus";
             };
         };
