@@ -55,6 +55,10 @@ in
 
         stylix.targets = {
             nixvim.enable = false;
+            grub = {
+                enable = true;
+                useImage = true;
+            };
         };
 
     };
