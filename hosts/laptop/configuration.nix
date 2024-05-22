@@ -19,7 +19,7 @@
       grub = {
           enable = true;
           efiSupport = true;
-          device = "/dev/sda";
+          device = "nodev";
       };
   };
 
