@@ -14,6 +14,7 @@ in
             cargo
             cargo-shuttle
             go
+            templ
             gleam
             nodejs_22
             jdk
