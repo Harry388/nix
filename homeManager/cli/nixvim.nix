@@ -120,6 +120,7 @@ in
                             installRustc = false;
                         };
                         gopls.enable = true;
+                        templ.enable = true;
                         gleam.enable = true;
                         svelte.enable = true;
                         tailwindcss.enable = true;
