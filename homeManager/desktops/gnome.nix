@@ -57,14 +57,5 @@ in
             gnomeExtensions.blur-my-shell
         ];
 
-        xdg = {
-            enable = true;
-
-            configFile = {
-                "gtk-4.0/gtk.css".source = lib.mkForce ./gtk.css;
-                "gtk-3.0/gtk.css".source = lib.mkForce ./gtk.css;
-            };
-        };
-
     };
 }
