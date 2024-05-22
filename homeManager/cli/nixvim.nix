@@ -39,6 +39,7 @@ in
             filetype = {
                 extension = {
                     matcha = "matcha";
+                    templ = "templ";
                 };
             };
 
@@ -73,6 +74,7 @@ in
                     enable = true;
                     languageRegister = {
                         html = [ "matcha" ];
+                        templ = [ "templ" ];
                     };
                 };
                 undotree = {
