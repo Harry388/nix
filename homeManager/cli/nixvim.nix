@@ -65,7 +65,7 @@ in
 
                 updatetime = 50;
 
-                signcolumn = "number";
+                signcolumn = 1;
             };
 
             plugins = {
