@@ -64,6 +64,8 @@ in
                 scrolloff = 8;
 
                 updatetime = 50;
+
+                signcolumn = "number";
             };
 
             plugins = {
