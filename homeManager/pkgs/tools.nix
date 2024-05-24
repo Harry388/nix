@@ -15,6 +15,7 @@ in
             openssl
             neofetch
             nerdfonts
+            gnumake
         ];
     };
 }
