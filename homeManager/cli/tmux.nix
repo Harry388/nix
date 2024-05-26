@@ -32,7 +32,7 @@ in
 
             plugins = with pkgs; [
                 tmuxPlugins.vim-tmux-navigator
-                tmuxPlugins.gruvbox
+                tmuxPlugins.catppuccin
             ];
 
             keyMode = "vi";
