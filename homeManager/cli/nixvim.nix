@@ -44,8 +44,6 @@ in
             };
 
             opts = {
-                background = "NONE";
-
                 nu = true;
                 relativenumber = true;
 
