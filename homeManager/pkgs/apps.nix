@@ -15,7 +15,7 @@ in
             spotify
             obsidian
             gittyup
-            dbeaver
+            dbeaver-bin
             postman
             dolphin-emu
             zed-editor
