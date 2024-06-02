@@ -16,6 +16,7 @@ in
             neofetch
             nerdfonts
             gnumake
+            inotify-tools
         ];
     };
 }
