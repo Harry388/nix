@@ -132,7 +132,7 @@ in
                         };
                         htmx = {
                             enable = true;
-                            filetypes = [ "html" "matcha" ];
+                            filetypes = [ "html" "matcha" "templ" ];
                         };
                         emmet_ls = {
                             enable = true;
