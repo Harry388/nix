@@ -134,7 +134,7 @@ in
                             enable = true;
                             filetypes = [ "html" "matcha" "templ" ];
                         };
-                        emmet_ls = {
+                        emmet-ls = {
                             enable = true;
                             filetypes = [ "html" "matcha" ];
                         };
