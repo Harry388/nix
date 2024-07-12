@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 
 let 
-    cfg = config.stylix;
+    cfg = config.stylixConfig;
     css = ''
 button.titlebutton,
 windowcontrols > button {
@@ -88,7 +88,7 @@ windowcontrols > button.minimize:backdrop {
 in
 {
 
-    options.stylix = {
+    options.stylixConfig = {
         enable = lib.mkEnableOption "enables stylix";
     };
 

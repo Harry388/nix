@@ -15,6 +15,6 @@ in
 
     config = lib.mkIf cfg.enable {
         gnomeHome.enable = lib.mkDefault true;
-        stylix.enable = lib.mkDefault true;
+        stylixConfig.enable = lib.mkDefault true;
     };
 }
