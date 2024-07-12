@@ -21,7 +21,6 @@ in
             zed-editor
             bottles
             firefox
-            transmission_4-gtk
         ];
     };
 }
