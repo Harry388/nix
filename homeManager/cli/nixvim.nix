@@ -105,7 +105,7 @@ in
                     };
                 };
                 oil = {
-                    enable = false;
+                    enable = true;
                     settings.columns = [ "icon" ];
                 };
                 lsp = {
