@@ -119,6 +119,13 @@
 
   defaultModules.enable = true;
 
+  # AppImages
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
