@@ -56,7 +56,7 @@ in
         stylix.opacity.terminal = 0.95;
 
         stylix.targets = {
-            nixvim.enable = true;
+            nixvim.enable = false;
             grub = {
                 enable = true;
                 useImage = true;
