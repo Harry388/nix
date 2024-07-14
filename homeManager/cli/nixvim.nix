@@ -67,6 +67,8 @@ in
                 updatetime = 50;
 
                 signcolumn = "yes:1";
+
+                foldlevelstart = 99;
             };
 
             plugins = {
