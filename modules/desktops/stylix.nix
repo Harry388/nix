@@ -11,7 +11,7 @@ in
 
     config = lib.mkIf cfg.enable {
 
-        stylix.enable = true;
+        stylix.enable = false;
 
         stylix.image = /home/harry/Pictures/background;
 
