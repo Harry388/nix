@@ -76,6 +76,12 @@ in
                         html = [ "matcha" ];
                         templ = [ "templ" ];
                     };
+                    settings = {
+                        auto_install = true;
+                        highlight = {
+                            enable = true;
+                        };
+                    };
                 };
                 undotree = {
                     enable = true;
