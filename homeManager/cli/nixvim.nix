@@ -71,7 +71,7 @@ in
 
             plugins = {
                 treesitter = {
-                    enable = true;
+                    enable = false;
                     languageRegister = {
                         html = [ "matcha" ];
                         templ = [ "templ" ];
