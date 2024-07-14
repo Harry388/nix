@@ -35,8 +35,6 @@ in
                 update = "nix flake update";
                 krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
                 generation = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
-                remove-generations = "sudo nix-env --delete-generations old";
-                garbage-collect = "sudo nix-store --gc";
             };
 
             oh-my-zsh = {
