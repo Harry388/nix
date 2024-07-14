@@ -12,7 +12,7 @@ in
         programs.nixvim = {
             enable = true;
 
-            colorschemes.melange.enable = false;
+            colorschemes.melange.enable = true;
 
             globals.mapleader = " ";
 
