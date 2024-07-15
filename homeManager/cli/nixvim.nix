@@ -132,6 +132,7 @@ in
                         gopls.enable = true;
                         templ.enable = true;
                         gleam.enable = true;
+                        intelephense.enable = true;
                         svelte.enable = true;
                         tailwindcss.enable = true;
                         html = {
