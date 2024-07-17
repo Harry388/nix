@@ -16,6 +16,7 @@ in
             go
             templ
             gleam
+            typescript
             nodejs_22
             jdk
             erlang
