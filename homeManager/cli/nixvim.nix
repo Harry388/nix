@@ -134,6 +134,7 @@ in
                         gleam.enable = true;
                         intelephense.enable = true;
                         svelte.enable = true;
+                        volar.enable = true;
                         tailwindcss.enable = true;
                         html = {
                             enable = true;
