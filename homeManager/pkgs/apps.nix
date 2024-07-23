@@ -16,6 +16,7 @@ in
             obsidian
             gittyup
             dbeaver-bin
+            mysql-workbench
             postman
             dolphin-emu
             zed-editor
