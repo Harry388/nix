@@ -32,6 +32,11 @@ in
                     action = "<cmd>w<CR>";
                     mode = "n";
                 }
+                {
+                    key = "<leader>gg";
+                    action = "<cmd>LazyGit<CR>";
+                    mode = "n";
+                }
             ];
 
             clipboard.providers.wl-copy.enable = true;
@@ -195,6 +200,7 @@ in
                 tmux-navigator = {
                     enable = true;
                 };
+                lazygit.enable = true;
                 # packer = {
                     #enable = true;
                     #plugins = [
