@@ -13,6 +13,11 @@ in
 
         services.displayManager.defaultSession = "xfce+i3";
 
+        services.xserver.xkb = {
+            layout = "gb";
+            variant = "";
+        };
+
         services.xserver = {
             enable = true;   
             desktopManager = {
