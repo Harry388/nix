@@ -23,8 +23,8 @@ in
             escapeTime = 0;
 
             extraConfig = ''
-                bind-key -n C-Tab next-window
-                bind-key -n C-S-Tab previous-window
+                bind -n C-S-L next-window
+                bind -n C-S-H previous-window
                 bind -T copy-mode-vi v send -X begin-selection
                 bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel
                 bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel
