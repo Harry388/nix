@@ -6,6 +6,7 @@ in
 {
     imports = [
         ./gnome.nix
+        ./kde.nix
         ./stylix.nix
     ];
 
@@ -14,7 +15,8 @@ in
     };
 
     config = lib.mkIf cfg.enable {
-        gnome.enable = lib.mkDefault true;
+        kde.enable = lib.mkDefault true;
+        gnome.enable = lib.mkDefault false;
         stylixConfig.enable = lib.mkDefault true;
     };
 }
