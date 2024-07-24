@@ -15,8 +15,8 @@ in
     };
 
     config = lib.mkIf cfg.enable {
-        kde.enable = lib.mkDefault true;
-        gnome.enable = lib.mkDefault false;
+        kde.enable = lib.mkDefault false;
+        gnome.enable = lib.mkDefault true;
         stylixConfig.enable = lib.mkDefault true;
     };
 }
