@@ -134,7 +134,10 @@ in
                         gleam.enable = true;
                         intelephense.enable = true;
                         svelte.enable = true;
-                        volar.enable = true;
+                        volar = {
+                            enable = true;
+                            filetypes = [ "vue" "typescript" "javascript" "json" ];
+                        };
                         tailwindcss.enable = true;
                         html = {
                             enable = true;
