@@ -16,6 +16,7 @@ in
             go
             templ
             gleam
+            mysql84
             typescript
             nodejs_22
             jdk
