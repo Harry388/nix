@@ -17,6 +17,7 @@ in
             nerdfonts
             gnumake
             inotify-tools
+            lazygit
         ];
     };
 }
