@@ -18,7 +18,7 @@ in
 
             prefix = "C-space";
 
-            terminal = "xterm-256color";
+            #terminal = "xterm-256color";
 
             escapeTime = 0;
 
