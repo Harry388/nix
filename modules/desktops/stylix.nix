@@ -17,7 +17,7 @@ in
 
         stylix.polarity = "dark";
 
-        stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-pale.yaml";
+        stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal-bathory.yaml";
 
         stylix.cursor = {
             package = pkgs.apple-cursor;
