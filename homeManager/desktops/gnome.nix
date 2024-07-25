@@ -27,7 +27,6 @@ in
                     "org.gnome.Nautilus.desktop"
                     "Alacritty.desktop"
                     "spotify.desktop"
-                    "gittyup.desktop"
                 ];
 
                 disable-user-extensions = "false";
