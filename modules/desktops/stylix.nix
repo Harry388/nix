@@ -57,6 +57,7 @@ in
 
         stylix.targets = {
             nixvim.enable = false;
+            console.enable = false;
         };
 
     };
