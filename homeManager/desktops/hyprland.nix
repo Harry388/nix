@@ -80,6 +80,7 @@ in
         };
 
         home.packages = with pkgs; [
+            waybar
             fuzzel
         ];
 
