@@ -14,6 +14,8 @@ in
             enable = true;
             settings = {
                 "$terminal" = "alacritty";
+                "$mainMod" = "SUPER";
+                "$menu" = "fuzzel";
 
                 env = [
                     "XCURSOR_SIZE,24"
@@ -31,9 +33,6 @@ in
                 input = {
                     "kb_layout" = "gb";
                 };
-                
-                "$mainMod" = "SUPER";
-                "$menu" = "wofi --show drun";
 
                 bind = [
                     "$mainMod, T, exec, $terminal"
