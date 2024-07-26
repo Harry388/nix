@@ -53,7 +53,7 @@ in
             };
         };
 
-        stylix.opacity.terminal = 0.95;
+        stylix.opacity.terminal = 0.80;
 
         stylix.targets = {
             nixvim.enable = false;
