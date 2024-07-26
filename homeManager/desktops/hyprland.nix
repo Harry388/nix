@@ -21,7 +21,7 @@ in
                 "$mainMod" = "SUPER";
                 "$terminal" = "alacritty";
                 "$menu" = "fuzzel";
-                "$screenshot" = "spectacle";
+                "$screenshot" = "shutter";
 
                 "exec-once" = "waybar";
 
@@ -131,7 +131,7 @@ in
             fuzzel
             waybar
             playerctl
-            libsForQt5.spectacle
+            shutter
         ];
 
     };
