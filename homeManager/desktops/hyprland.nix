@@ -19,6 +19,10 @@ in
                     "XCURSOR_SIZE,24"
                     "HYPRCURSOR_SIZE,24"
                 ];
+
+                input = {
+                    "kb_layout" = "uk";
+                };
                 
                 "$mainMod" = "SUPER";
 
