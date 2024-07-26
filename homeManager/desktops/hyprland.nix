@@ -45,6 +45,11 @@ in
                     "$mainMod, l, movefocus, r"
                     "$mainMod, k, movefocus, u"
                     "$mainMod, j, movefocus, d"
+
+                    "mainMod SHIFT, h, movetofocus, l"
+                    "mainMod SHIFT, l, movetofocus, r"
+                    "mainMod SHIFT, k, movetofocus, u"
+                    "mainMod SHIFT, j, movetofocus, d"
                 ];
 
             };
