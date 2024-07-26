@@ -183,6 +183,11 @@ in
         wayland.windowManager.hyprland = {
             enable = true;
             settings = {
+                monitor = [
+                    "DP-1, 1920x1200, 0x0, 1"
+                    "DP-2, 1920x1080, 1920x0, 1"
+                ];
+
                 "$terminal" = "alacritty";
                 "$mainMod" = "SUPER";
                 "$menu" = "fuzzel";
