@@ -81,6 +81,9 @@ in
                     "$mainMod SHIFT, 9, movetoworkspace, 9"
                     "$mainMod SHIFT, 0, movetoworkspace, 10"
 
+                    "$mainMod, ], resizeactive 10"
+                    "$mainMod, [, resizeactive -10"
+
                     "$mainMod, mouse_down, workspace, e-1"
                     "$mainMod, mouse_up, workspace, e+1"
 
