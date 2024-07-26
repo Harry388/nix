@@ -81,8 +81,8 @@ in
                     "$mainMod SHIFT, 9, movetoworkspace, 9"
                     "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-                    "$mainMod, ], resizeactive 10+"
-                    "$mainMod, [, resizeactive 10-"
+                    "$mainMod, ], resizeactive, 10+"
+                    "$mainMod, [, resizeactive, 10-"
 
                     "$mainMod, mouse_down, workspace, e-1"
                     "$mainMod, mouse_up, workspace, e+1"
@@ -104,6 +104,11 @@ in
                     ", XF86AudioPlay, exec, playerctl play-pause"
                     ", XF86AudioPrev, exec, playerctl previous"
                     ", XF86AudioNext, exec, playerctl next"
+                ];
+
+                bindm = [
+                    "$mainMod, mouse:272, movewindow"
+                    "$mainMod, mouse:273, resizewindow"
                 ];
 
             };
