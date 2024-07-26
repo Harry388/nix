@@ -9,6 +9,7 @@ in
         ./kde.nix
         ./stylix.nix
         ./xfcei3.nix
+        ./hyprland.nix
     ];
 
     options.defaultDesktop = {
@@ -20,5 +21,6 @@ in
         gnome.enable = lib.mkDefault true;
         xfcei3.enable = lib.mkDefault false;
         stylixConfig.enable = lib.mkDefault true;
+        hyprland.enable = lib.mkDefault true;
     };
 }
