@@ -82,9 +82,9 @@ in
         programs.waybar = {
             enable = true;
             settings = {
-                "modules-center" = [
-                    "hyprland/window"
-                ];
+                mainBar = {
+                    modules-center = [ "hyprland/window" ];
+                };
             };
         };
 
