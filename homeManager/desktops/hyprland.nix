@@ -74,6 +74,7 @@ in
                     "$mainMod SHIFT, 0, movetoworkspace, 10"
 
                     "$mainMod, f, fullscreen"
+                    "$mainMod, g, togglefloating"
                 ];
 
             };
