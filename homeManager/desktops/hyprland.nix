@@ -79,18 +79,9 @@ in
             };
         };
 
-        programs.waybar = {
-            enable = true;
-            settings = {
-                mainBar = {
-                    modules-center = [ "hyprland/window" ];
-                };
-            };
-        };
-
         home.packages = with pkgs; [
-            waybar
             fuzzel
+            eww
         ];
 
     };
