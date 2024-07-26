@@ -45,7 +45,7 @@ in
                 bind = [
                     "$mainMod, T, exec, $terminal"
                     "$mainMod, R, exec, $menu"
-                    "$mainMod, S, exec, $spectacle"
+                    "$mainMod, S, exec, $screenshot"
                     "$mainMod, Q, killactive"
                     "$mainMod, M, exit"
 
