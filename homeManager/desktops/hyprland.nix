@@ -29,7 +29,7 @@ in
                 };
 
                 input = {
-                    "kb_layout" = "uk";
+                    "kb_layout" = "gb";
                 };
                 
                 "$mainMod" = "SUPER";
