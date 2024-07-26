@@ -14,6 +14,9 @@ in
             enable = true;
             settings = {
                 "$terminal" = "alacritty";
+                animations = {
+                    enabled = true;
+                };
             };
             plugins = [
                 inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
