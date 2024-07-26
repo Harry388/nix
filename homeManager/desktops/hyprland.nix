@@ -38,12 +38,6 @@ let
         transition: all 0.2s cubic-bezier(.55,-0.68,.48,1.682);
     }
 
-    #workspaces button.active {
-        color: @accent_color;
-        animation: gradient_f 20s ease-in infinite;
-        transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-    }
-
     #workspaces button:hover {
         color: @accent_color;
         animation: gradient_f 20s ease-in infinite;
