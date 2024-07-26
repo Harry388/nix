@@ -18,9 +18,10 @@ in
                     "HDMI-A-1, 1920x1080, 1920x0, 1"
                 ];
 
-                "$terminal" = "alacritty";
                 "$mainMod" = "SUPER";
+                "$terminal" = "alacritty";
                 "$menu" = "fuzzel";
+                "$screenshot" = "spectacle";
 
                 "exec-once" = "waybar";
 
@@ -44,6 +45,7 @@ in
                 bind = [
                     "$mainMod, T, exec, $terminal"
                     "$mainMod, R, exec, $menu"
+                    "$mainMod, S, exec, $spectacle"
                     "$mainMod, Q, killactive"
                     "$mainMod, M, exit"
 
@@ -129,6 +131,7 @@ in
             fuzzel
             waybar
             playerctl
+            libsForQt5.spectacle
         ];
 
     };
