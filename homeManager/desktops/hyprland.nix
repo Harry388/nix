@@ -37,7 +37,7 @@ in
                     shadow_render_power = 3;
                 };
 
-                animation = "global,1,2,default";
+                animation = "global,1,3,default";
 
                 input = {
                     "kb_layout" = "gb";
@@ -80,6 +80,12 @@ in
                     "$mainMod SHIFT, 8, movetoworkspace, 8"
                     "$mainMod SHIFT, 9, movetoworkspace, 9"
                     "$mainMod SHIFT, 0, movetoworkspace, 10"
+
+                    "$mainMod, mouse_down, workspace, e+1"
+                    "$mainMod, mouse_up, workspace, e-1"
+
+                    "$mainMod, left, workspace, e+1"
+                    "$mainMod, right, workspace, e-1"
 
                     "$mainMod, f, fullscreen"
                     "$mainMod, g, togglefloating"
