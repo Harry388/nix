@@ -12,6 +12,9 @@ in
 
         wayland.windowManager.hyprland = {
             enable = true;
+            settings = {
+                "$terminal" = "alacritty";
+            };
             plugins = [
                 inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
             ];
