@@ -21,6 +21,7 @@ in
                 "$mainMod" = "SUPER";
                 "$terminal" = "alacritty";
                 "$menu" = "fuzzel";
+                "$browser" = "google-chrome-stable";
 
                 "exec-once" = "waybar";
 
@@ -45,6 +46,7 @@ in
 
                 bind = [
                     "$mainMod, T, exec, $terminal"
+                    "$mainMod, B, exec, $browser"
                     "$mainMod, R, exec, $menu"
                     "$mainMod, Q, killactive"
                     "$mainMod, M, exit"
@@ -81,8 +83,8 @@ in
                     "$mainMod SHIFT, 9, movetoworkspace, 9"
                     "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-                    "$mainMod, ], resizeactive, 10+"
-                    "$mainMod, [, resizeactive, 10-"
+                    "$mainMod, S, togglespecialworkspace, magic"
+                    "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
                     "$mainMod, mouse_down, workspace, e-1"
                     "$mainMod, mouse_up, workspace, e+1"
