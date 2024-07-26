@@ -81,11 +81,11 @@ in
                     "$mainMod SHIFT, 9, movetoworkspace, 9"
                     "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-                    "$mainMod, mouse_down, workspace, e+1"
-                    "$mainMod, mouse_up, workspace, e-1"
+                    "$mainMod, mouse_down, workspace, e-1"
+                    "$mainMod, mouse_up, workspace, e+1"
 
-                    "$mainMod, left, workspace, e+1"
-                    "$mainMod, right, workspace, e-1"
+                    "$mainMod, left, workspace, e-1"
+                    "$mainMod, right, workspace, e+1"
 
                     "$mainMod, f, fullscreen"
                     "$mainMod, g, togglefloating"
