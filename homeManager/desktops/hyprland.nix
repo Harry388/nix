@@ -46,10 +46,13 @@ in
                     "$mainMod, k, movefocus, u"
                     "$mainMod, j, movefocus, d"
 
-                    "mainMod SHIFT, h, movetofocus, l"
-                    "mainMod SHIFT, l, movetofocus, r"
-                    "mainMod SHIFT, k, movetofocus, u"
-                    "mainMod SHIFT, j, movetofocus, d"
+                    "$mainMod SHIFT, h, movewindow, l"
+                    "$mainMod SHIFT, l, movewindow, r"
+                    "$mainMod SHIFT, k, movewindow, u"
+                    "$mainMod SHIFT, j, movewindow, d"
+
+                    "$mainMod, f, fullscreen"
+                    "$mainMod, g, togglefloating"
                 ];
 
             };
