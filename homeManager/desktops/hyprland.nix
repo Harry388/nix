@@ -33,11 +33,18 @@ in
                 };
                 
                 "$mainMod" = "SUPER";
-                "$menu" = "wofi --show drun";
+                "$menu" = "wofi --show Apps";
 
                 bind = [
-                    "$mainMod, ENTER, exec, $terminal"
+                    "$mainMod, T, exec, $terminal"
                     "$mainMod, R, exec, $menu"
+                    "$mainMod, Q, killactive"
+                    "$mainMod, M, exit"
+
+                    "$mainMod, h, movefocus, l"
+                    "$mainMod, l, movefocus, r"
+                    "$mainMod, k, movefocus, u"
+                    "$mainMod, j, movefocus, d"
                 ];
 
             };
