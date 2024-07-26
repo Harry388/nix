@@ -14,9 +14,18 @@ in
             enable = true;
             settings = {
                 "$terminal" = "alacritty";
-                animations = {
-                    enabled = true;
-                };
+
+                env = [
+                    "XCURSOR_SIZE,24"
+                    "HYPRCURSOR_SIZE,24"
+                ];
+                
+                "$mainMod" = "SUPER";
+
+                bind = [
+                    "$mainMod, Q, exec, $terminal"
+                ];
+
             };
         };
 
