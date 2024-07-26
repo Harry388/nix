@@ -81,7 +81,7 @@ in
         };
 
         home.packages = with pkgs; [
-            wofi
+            fuzzel
         ];
 
     };
