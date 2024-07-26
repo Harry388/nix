@@ -21,7 +21,6 @@ in
                 "$mainMod" = "SUPER";
                 "$terminal" = "alacritty";
                 "$menu" = "fuzzel";
-                "$screenshot" = "shutter";
 
                 "exec-once" = "waybar";
 
@@ -38,6 +37,8 @@ in
                     shadow_render_power = 3;
                 };
 
+                animation = "global,1,2,default";
+
                 input = {
                     "kb_layout" = "gb";
                 };
@@ -45,7 +46,6 @@ in
                 bind = [
                     "$mainMod, T, exec, $terminal"
                     "$mainMod, R, exec, $menu"
-                    "$mainMod, S, exec, $screenshot"
                     "$mainMod, Q, killactive"
                     "$mainMod, M, exit"
 
@@ -131,7 +131,6 @@ in
             fuzzel
             waybar
             playerctl
-            shutter
         ];
 
     };
