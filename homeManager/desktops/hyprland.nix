@@ -24,6 +24,7 @@ in
 
                 bind = [
                     "$mainMod, Q, exec, $terminal"
+                    "$mainMod, C, exec, firefox"
                 ];
 
             };
