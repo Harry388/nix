@@ -255,15 +255,6 @@ in
             settings = {
                 mainBar = {
                     "hyprland/workspaces" = {
-                        format = "{icon}";
-                        format-icons = {
-                            "1" = "";
-                            "2" = "";
-                            "3" = "";
-                            active = "";
-                            default = "";
-                            urgent = "";
-                        };
                         on-click = "activate";
                     };
                     mod = "dock";
@@ -277,7 +268,7 @@ in
                     modules-right = [
                         "network"
                         "bluetooth"
-                        "pulseaudio#microphone"
+                        "pulseaudio"
                         "clock"
                         "tray"
                     ];
