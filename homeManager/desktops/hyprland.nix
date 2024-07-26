@@ -37,7 +37,7 @@ in
                     shadow_render_power = 3;
                 };
 
-                animation = "global,1,3,default";
+                animation = "global,1,2.5,default";
 
                 input = {
                     "kb_layout" = "gb";
