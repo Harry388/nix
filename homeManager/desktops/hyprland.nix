@@ -33,7 +33,7 @@ in
                 };
                 
                 "$mainMod" = "SUPER";
-                "$menu" = "wofi --show Apps";
+                "$menu" = "wofi --show drun";
 
                 bind = [
                     "$mainMod, T, exec, $terminal"
