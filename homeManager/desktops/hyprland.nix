@@ -118,6 +118,7 @@ in
                         "bluetooth"
                         "pulseaudio"
                         "clock"
+                        "battery"
                         "tray"
                     ];
                 };
