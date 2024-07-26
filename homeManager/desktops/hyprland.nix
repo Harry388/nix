@@ -93,9 +93,7 @@ in
                     "$mainMod, right, workspace, e+1"
 
                     "$mainMod, f, fullscreen"
-                    "$mainMod, d, togglefloating"
-
-                    "$mainMod, g, togglegroup"
+                    "$mainMod, g, togglefloating"
                 ];
 
                 bindel = [
