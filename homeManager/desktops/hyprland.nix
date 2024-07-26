@@ -33,14 +33,19 @@ in
                 };
                 
                 "$mainMod" = "SUPER";
+                "$menu" = "wofi --show drun";
 
                 bind = [
-                    "$mainMod, Q, exec, $terminal"
-                    "$mainMod, C, exec, firefox"
+                    "$mainMod, ENTER, exec, $terminal"
+                    "$mainMod, R, exec, $menu"
                 ];
 
             };
         };
+
+        home.packages = with pkgs; [
+            wofi
+        ];
 
     };
 }
