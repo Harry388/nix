@@ -35,6 +35,15 @@
                     inputs.stylix.nixosModules.stylix
                 ];
             };
+            desktop = nixpkgs.lib.nixosSystem {
+                specialArgs = { inherit inputs; };
+                modules = [
+                    ./hosts/desktop/configuration.nix
+                    ./modules/default.nix
+                    inputs.home-manager.nixosModules.default
+                    inputs.stylix.nixosModules.stylix
+                ];
+            };
         };
     };
 }
