@@ -26,6 +26,10 @@ in
                     "HYPRCURSOR_SIZE,24"
                 ];
 
+                cursor = {
+                    "no_hardware_cursors" = true;
+                };
+
                 decoration = {
                     rounding = 10;
                     
