@@ -201,6 +201,7 @@ in
                     enable = true;
                 };
                 lazygit.enable = true;
+                transparent.enable = true;
                 # packer = {
                     #enable = true;
                     #plugins = [
