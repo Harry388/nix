@@ -224,7 +224,7 @@ in
             extraConfigLua = ''
                 local telescope = require('telescope.builtin')
                 vim.keymap.set('n', '<leader>ps', function()
-                    builtin.grep_string({ search = vim.fn.input("Grep > ") });
+                    telescope.grep_string({ search = vim.fn.input("Grep > ") });
                 end)
             '';
 
