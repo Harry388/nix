@@ -101,7 +101,6 @@ in
                     keymaps = {
                         "<leader>pg" = "git_files";
                         "<leader>pf" = "find_files";
-                        "<leader>ps" = "live_grep";
                     };
                 };
                 harpoon = {
@@ -221,6 +220,13 @@ in
             extraPlugins = with pkgs.vimPlugins; [
                 vim-carbon-now-sh
             ];
+
+            extraConfigLua = ''
+                local telescope = require('telescope.builtin')
+                vim.keymap.set('n', '<leader>ps', function()
+                    builtin.grep_string({ search = vim.fn.input("Grep > ") });
+                end)
+            '';
 
         };
     };
