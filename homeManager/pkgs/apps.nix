@@ -22,7 +22,7 @@ in
             zed-editor
             bottles
             firefox
-            transmission_4
+            transmission_4-gtk
         ];
     };
 }
