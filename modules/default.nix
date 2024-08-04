@@ -7,6 +7,7 @@ in
     imports = [
         ./desktops/default.nix
         ./apps/default.nix
+        ./nvidia.nix
     ];
 
     options.defaultModules = {
@@ -16,6 +17,7 @@ in
     config = lib.mkIf cfg.enable {
         defaultDesktop.enable = lib.mkDefault true;
         defaultApps.enable = lib.mkDefault true;
+        nvidia.enable = lib.mkDefault false;
     };
 
 }
