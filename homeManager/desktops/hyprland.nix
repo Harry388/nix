@@ -33,6 +33,9 @@ in
 
                 general = {
                     "gaps_out" = 10;
+                    col = {
+                        "active-border" = "0x8ec07c";
+                    };
                 };
 
                 cursor = {
