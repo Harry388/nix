@@ -28,6 +28,10 @@ in
                     "HYPRCURSOR_SIZE,24"
                 ];
 
+                general = {
+                    "gaps_out" = 10;
+                };
+
                 cursor = {
                     "no_hardware_cursors" = true;
                 };
@@ -191,13 +195,13 @@ window#waybar {
 }
 
 .modules-left {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .modules-right {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .modules-center {
