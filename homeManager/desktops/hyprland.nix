@@ -122,7 +122,7 @@ in
                 mainBar = {
                     layer = "top";
                     position = "top";
-                    height = 30;
+                    height = 40;
                     margin-top = 10;
                     modules-left = ["battery" "pulseaudio" "backlight"];
                     modules-center = ["hyprland/workspaces"];
@@ -166,7 +166,7 @@ in
 * {
     font-family: 'SF Mono', sans-serif;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
     border-radius: 10px;
 }
 
