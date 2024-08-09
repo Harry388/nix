@@ -124,6 +124,7 @@ in
                 mainBar = {
                     layer = "top";
                     position = "top";
+                    mode = "dock";
                     height = 20;
                     margin-top = 10;
                     modules-left = ["battery" "pulseaudio" "backlight"];
