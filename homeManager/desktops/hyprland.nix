@@ -122,7 +122,7 @@ in
                 mainBar = {
                     layer = "top";
                     position = "top";
-                    height = 40;
+                    height = 20;
                     margin-top = 10;
                     modules-left = ["battery" "pulseaudio" "backlight"];
                     modules-center = ["hyprland/workspaces"];
@@ -180,7 +180,7 @@ window#waybar {
 
 #workspaces button.active {
     background-color: #8ec07c;
-    padding: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
     color: #282828;
 }
 
