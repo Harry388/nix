@@ -97,6 +97,9 @@ in
 
                     "$mainMod, f, fullscreen"
                     "$mainMod, g, togglefloating"
+
+                    ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
+                    ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
                 ];
 
                 bindel = [
@@ -150,6 +153,7 @@ in
             fuzzel
             waybar
             playerctl
+            brightnessctl
         ];
 
     };
