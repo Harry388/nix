@@ -42,6 +42,7 @@ in
 
                 input = {
                     "kb_layout" = "gb";
+                    "natural_scroll" = true;
                 };
 
                 bind = [
