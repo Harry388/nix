@@ -24,8 +24,8 @@ in
                 "windowrule" = "float,^(pavucontrol)$";
 
                 env = [
-                    #"XCURSOR_SIZE,24"
-                    #"HYPRCURSOR_SIZE,24"
+                    "XCURSOR_SIZE,24"
+                    "HYPRCURSOR_SIZE,24"
                 ];
 
                 cursor = {
@@ -181,9 +181,12 @@ window#waybar {
 #workspaces {
 }
 
+#workspaces button {
+    padding: 0 15px 0 15px;
+}
+
 #workspaces button.active {
     background-color: #8ec07c;
-    padding: 0 15px 0 15px;
     color: #282828;
 }
 
