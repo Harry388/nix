@@ -21,7 +21,10 @@ in
 
                 "exec-once" = "waybar";
 
-                "windowrule" = "float,^(pavucontrol)$";
+                "windowrule" = [
+                    "float,^(pavucontrol)$"
+                    "float,^(gnome-calculator)$"
+                ];
 
                 env = [
                     "XCURSOR_SIZE,24"
