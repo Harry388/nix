@@ -23,7 +23,7 @@ in
 
                 "windowrule" = [
                     "float,^(pavucontrol)$"
-                    "float,^(gnome-calculator)$"
+                    "float,^(calculator)$"
                 ];
 
                 env = [
