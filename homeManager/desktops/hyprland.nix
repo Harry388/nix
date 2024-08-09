@@ -120,25 +120,58 @@ in
             enable = true;
             settings = {
                 mainBar = {
-                    "hyprland/workspaces" = {
-                        on-click = "activate";
-                    };
-                    mod = "dock";
                     layer = "top";
-                    gtk-layer-shell = true;
-                    height = 14;
                     position = "top";
+                    height = 40;
+                    margin-top = 15;
+                    modules-left = ["battery" "pulseaudio" "backlight"];
+                    modules-center = ["hyprland/workspaces"];
+                    modules-right = ["network" "clock"];
 
-                    modules-left = ["hyprland/workspaces"];
-                    modules-center = [];
-                    modules-right = [
-                        "network"
-                        "bluetooth"
-                        "pulseaudio"
-                        "clock"
-                        "battery"
-                        "tray"
-                    ];
+                    battery = {
+                        format = "bat: {capacity}%";
+                        format-charging = "charging: {capacity}%";
+                    };
+                    clock = {
+                        format= "{:%I:%M %p}";
+                        format-alt = "{:%a, %d. %b  %I:%M %p}";
+                    };
+                    pulseaudio = {
+                        format = "vol: {volume}%";
+                        format-bluetooth = "blu: {volume}%";
+                        format-muted = "vol: muted";
+                        scroll-step = 1;
+                        on-click = "pavucontrol";
+                        ignored-sinks = ["Easy Effects Sink"];
+                    };
+                    network = {
+                        format = "{ifname}";
+                        format-wifi = "wifi: {essid}";
+                        format-ethernet = "eth: {ipaddr}/{cidr}";
+                        format-disconnected = "disconnected";
+                        max-length = 50;
+                    };
+                    "hyprland/workspaces" = {
+                        format = "{icon}";
+                        on-click = "activate";
+                        format-icons = {
+                            "1" = "一";
+                            "2" = "二";
+                            "3" = "三";
+                            "4" = "四";
+                            "5" = "五";
+                            "6" = "六";
+                            "7" = "七";
+                            "8" = "八";
+                            "9" = "九";
+                            "10" = "十";
+                        };
+                        sort-by-number = true;
+                    };
+                    backlight = {
+                        device = "intel_backlight";
+                        format = "bl: {percent}%";
+                    };
                 };
             };
         };
