@@ -139,7 +139,7 @@ in
                     margin-top = 10;
                     modules-left = ["battery" "pulseaudio" "backlight"];
                     modules-center = ["hyprland/workspaces"];
-                    modules-right = ["network" "clock"];
+                    modules-right = ["network" "clock" "tray"];
 
                     battery = {
                         format = "bat: {capacity}%";
@@ -228,6 +228,14 @@ window#waybar {
     margin-left: 15px;
     background-color: #282828;
     color: #b8bb26;
+}
+
+#tray {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 15px;
+    background-color: #282828;
+    color: #ffffff;
 }
 
 #network {
