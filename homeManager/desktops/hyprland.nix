@@ -48,6 +48,9 @@ in
 
                 input = {
                     "kb_layout" = "gb";
+                    touchpad = {
+                        "natural_scroll" = true;
+                    };
                 };
 
                 bind = [
@@ -100,6 +103,9 @@ in
 
                     "$mainMod, f, fullscreen"
                     "$mainMod, g, togglefloating"
+
+                    ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
+                    ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
                 ];
 
                 bindel = [
@@ -253,6 +259,7 @@ window#waybar {
             waybar
             playerctl
             pavucontrol
+            brightnessctl
         ];
 
     };
