@@ -42,7 +42,9 @@ in
 
                 input = {
                     "kb_layout" = "gb";
-                    "natural_scroll" = true;
+                    touchpad = {
+                        "natural_scroll" = true;
+                    };
                 };
 
                 bind = [
