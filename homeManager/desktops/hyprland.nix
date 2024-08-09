@@ -19,7 +19,11 @@ in
                 "$menu" = "fuzzel";
                 "$browser" = "google-chrome-stable";
 
-                "exec-once" = "waybar";
+                "exec-once" = [
+                    "waybar"
+                    "nm-applet --indicator"
+                    "blueman-applet"
+                ];
 
                 "windowrule" = [
                     "float,^(pavucontrol)$"
@@ -275,6 +279,8 @@ window#waybar {
             pavucontrol
             brightnessctl
             grimblast
+            networkmanagerapplet
+            blueman
         ];
 
     };
