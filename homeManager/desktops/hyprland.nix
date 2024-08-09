@@ -155,16 +155,19 @@ in
                         format = "{icon}";
                         on-click = "activate";
                         format-icons = {
-                            "1" = "一";
-                            "2" = "二";
-                            "3" = "三";
-                            "4" = "四";
-                            "5" = "五";
-                            "6" = "六";
-                            "7" = "七";
-                            "8" = "八";
-                            "9" = "九";
-                            "10" = "十";
+                            "1" = "";
+                            "2" = "";
+                            "3" = "";
+                            "4" = "";
+                            "5" = "";
+                            "6" = "";
+                            "7" = "";
+                            "8" = "";
+                            "9" = "";
+                            "10" = "";
+                            active = "";
+                            default = "";
+                            urgent = "";
                         };
                         sort-by-number = true;
                     };
@@ -174,6 +177,80 @@ in
                     };
                 };
             };
+            style = ''
+* {
+    font-family: 'SF Mono', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ebdbb2;
+}
+
+#workspaces {
+}
+
+#workspaces button.active {
+    background-color: #8ec07c;
+    padding: 0 15px 0 15px;
+    color: #282828;
+}
+
+.modules-left {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.modules-right {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.modules-center {
+    background-color: #282828;
+}
+
+#battery {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 15px;
+    color: #83a598;
+    background-color: #282828;
+}
+
+#clock {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 15px;
+    background-color: #282828;
+    color: #b8bb26;
+}
+
+#network {
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #282828;
+    color: #d3869b;
+}
+
+#pulseaudio {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 15px;
+    background-color: #282828;
+    color: #fabd2f;
+}
+
+#backlight {
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #282828;
+    color: #fe8019;
+}
+            '';
         };
 
         home.packages = with pkgs; [
