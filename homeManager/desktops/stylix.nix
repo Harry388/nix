@@ -97,7 +97,6 @@ in
         stylix.targets = {
             gtk.extraCss = css;
             waybar.enable = false;
-            hyprland.enable = false;
         };
 
     };

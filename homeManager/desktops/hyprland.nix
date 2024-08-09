@@ -33,9 +33,7 @@ in
 
                 general = {
                     "gaps_out" = 10;
-                    col = {
-                        "active_border" = "0x8ec07c";
-                    };
+                    "col.active_border" = lib.mkForce "0x8ec07c";
                 };
 
                 cursor = {
