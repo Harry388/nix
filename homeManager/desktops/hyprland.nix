@@ -180,7 +180,6 @@ window#waybar {
 
 #workspaces button.active {
     background-color: #8ec07c;
-    padding: 0 15px 0 15px;
     color: #282828;
 }
 
