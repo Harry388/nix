@@ -11,7 +11,7 @@ in
 
     config = lib.mkIf cfg.enable {
 # Enable OpenGL
-        hardware.opengl = {
+        hardware.graphics = {
             enable = true;
         };
 
