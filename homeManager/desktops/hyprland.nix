@@ -117,6 +117,8 @@ in
 
                     ",Print, exec, grimblast --freeze copy area"
                     "$mainMod, p, exec, grimblast --freeze copy area"
+
+                    "$mainMod, x, exec, lifx"
                 ];
 
                 bindel = [
