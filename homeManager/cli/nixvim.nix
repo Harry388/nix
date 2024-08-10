@@ -43,7 +43,7 @@ in
                     mode = "n";
                 }
                 {
-                    key = "<C-Tab>";
+                    key = "<C-S-l>";
                     action = "<cmd>tabnext<CR>";
                     mode = "n";
                 }
