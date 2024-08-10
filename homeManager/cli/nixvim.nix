@@ -37,6 +37,16 @@ in
                     action = "<cmd>LazyGit<CR>";
                     mode = "n";
                 }
+                {
+                    key = "<leader>t";
+                    action = "<cmd>tabnew<CR>";
+                    mode = "n";
+                }
+                {
+                    key = "<C-Tab>";
+                    action = "<cmd>tabnext<CR>";
+                    mode = "n";
+                }
             ];
 
             clipboard.providers.wl-copy.enable = true;
