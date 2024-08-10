@@ -116,6 +116,7 @@ in
                     ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
 
                     ",Print, exec, grimblast --freeze copy area"
+                    "$mainMod, p, exec, grimblast --freeze copy area"
                 ];
 
                 bindel = [
