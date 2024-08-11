@@ -23,6 +23,7 @@ in
             bottles
             firefox
             transmission_4-gtk
+            vlc
         ];
     };
 }
