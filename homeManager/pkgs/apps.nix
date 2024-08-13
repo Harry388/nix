@@ -24,6 +24,7 @@ in
             firefox
             transmission_4-gtk
             vlc
+            libreoffice-still-unwrapped
         ];
     };
 }
