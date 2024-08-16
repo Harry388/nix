@@ -19,6 +19,7 @@ in
             mysql84
             typescript
             nodejs_22
+            bun
             jdk
             erlang
             gcc
