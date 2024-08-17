@@ -31,7 +31,7 @@ in
             enable = true;
             enableCompletion = true;
             
-            initExtra = "export TERM = \"xterm-256color\"";
+            initExtra = "export TERM=\"xterm-256color\"";
 
             shellAliases = {
                 update = "nix flake update";
