@@ -12,7 +12,8 @@ in
         programs.btop = {
             enable = true;
             settings = {
-                vim_keys = "true";
+                color_theme = lib.mkForce "gruvbox_material_dark";
+                vim_keys = true;
             };
         };
     };
