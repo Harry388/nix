@@ -14,6 +14,7 @@ in
 
             settings = {
                 colors.draw_bold_text_with_bright_colors = false;
+                env.term = "xterm-256color";
                 window = {
                     decorations = "None";
                     startup_mode = "Maximized";
