@@ -30,6 +30,8 @@ in
         programs.zsh = {
             enable = true;
             enableCompletion = true;
+            
+            initExtra = "export TERM = \"xterm-256color\"";
 
             shellAliases = {
                 update = "nix flake update";
