@@ -10,6 +10,7 @@ in
         ./tmux.nix
         ./zsh.nix
         ./alacritty.nix
+        ./btop.nix
     ];
 
     options.defaultHomeCli = {
@@ -22,5 +23,6 @@ in
         tmux.enable = lib.mkDefault true;
         zsh.enable = lib.mkDefault true;
         alacritty.enable = lib.mkDefault true;
+        btop.enable = lib.mkDefault true;
     };
 }
