@@ -18,7 +18,6 @@ in
             gnumake
             inotify-tools
             lazygit
-            btop
         ];
     };
 }
