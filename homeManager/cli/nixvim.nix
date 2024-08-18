@@ -170,6 +170,7 @@ in
                             enable = true;
                             filetypes = [ "html" "matcha" ];
                         };
+                        zls.enable = true;
                     };
                     keymaps.lspBuf = {
                         K = "hover";
