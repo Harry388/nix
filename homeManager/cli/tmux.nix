@@ -18,8 +18,6 @@ in
 
             prefix = "C-space";
 
-            terminal = "alacritty:RGB";
-
             escapeTime = 0;
 
             extraConfig = ''
