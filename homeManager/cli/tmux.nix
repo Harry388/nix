@@ -23,6 +23,7 @@ in
             escapeTime = 0;
 
             extraConfig = ''
+                set -ag terminal-overrides ",alacritty:RGB"
                 bind -n M-C-L next-window
                 bind -n M-C-H previous-window
                 bind -T copy-mode-vi v send -X begin-selection
