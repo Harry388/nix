@@ -18,6 +18,8 @@ in
 
             prefix = "C-space";
 
+            terminal = "tmux-256color";
+
             escapeTime = 0;
 
             extraConfig = ''
