@@ -17,9 +17,11 @@ in
             templ
             gleam
             zig
+            zls
             mysql84
             typescript
             nodejs_22
+            vue-language-server
             bun
             jdk
             erlang
