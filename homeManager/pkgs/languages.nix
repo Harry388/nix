@@ -16,6 +16,7 @@ in
             go
             templ
             gleam
+            zig
             mysql84
             typescript
             nodejs_22
