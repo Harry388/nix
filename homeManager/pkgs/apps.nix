@@ -15,8 +15,8 @@ in
             spotify
             obsidian
             gittyup
-            dbeaver-bin
-            #mysql-workbench
+            #dbeaver-bin
+            mysql-workbench
             postman
             dolphin-emu
             zed-editor
