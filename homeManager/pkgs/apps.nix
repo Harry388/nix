@@ -24,7 +24,9 @@ in
             firefox
             transmission_4-gtk
             vlc
-            libreoffice-still-unwrapped
+            libreoffice-qt
+            hunspell
+            hunspellDicts.en_GB-ise
         ];
     };
 }
