@@ -25,6 +25,7 @@ in
             transmission_4-gtk
             vlc
             libreoffice-qt
+            clonehero
             hunspell
             hunspellDicts.en_GB-ise
         ];
