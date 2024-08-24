@@ -17,7 +17,7 @@ in
                 "$mainMod" = "SUPER";
                 "$terminal" = "alacritty";
                 "$menu" = "fuzzel";
-                "$browser" = "google-chrome-stable";
+                "$browser" = "steam-run ~/zen/zen";
 
                 "exec-once" = [
                     "waybar"
