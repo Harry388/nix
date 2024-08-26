@@ -38,7 +38,7 @@ in
 
                 general = {
                     "gaps_out" = 10;
-                    "col.active_border" = lib.mkForce "rgb(8ec07c)";
+                    "col.active_border" = "rgb(8ec07c)";
                 };
 
                 cursor = {
@@ -231,21 +231,18 @@ window#waybar {
 #workspaces button {
     padding: 0 15px 0 15px;
     color: #ffffff;
+    border: 2px solid rgba(0,0,0,0.6);
 }
 
 #workspaces button.active {
     background-color: #8ec07c;
     color: #282828;
-    border: none
+    border: 2px solid #8ec07c;
 }
 
 .modules-right {
     padding-right: 10px;
     padding-left: 10px;
-}
-
-.modules-center {
-    background-color: rgba(0,0,0,0.6);
 }
 
 #battery {
