@@ -167,9 +167,9 @@ in
                     mode = "dock";
                     height = 20;
                     margin-top = 10;
-                    modules-left = ["battery" "pulseaudio" "backlight"];
-                    modules-center = ["hyprland/workspaces"];
-                    modules-right = ["network" "clock" "tray"];
+                    modules-left = ["hyprland/workspaces" "battery" "backlight"];
+                    modules-center = ["clock"];
+                    modules-right = ["network" "pulseaudio" "tray"];
 
                     battery = {
                         format = "bat: {capacity}%";
@@ -219,6 +219,7 @@ window#waybar {
 }
 
 #workspaces {
+    color: #fefefe;
 }
 
 #workspaces button {
