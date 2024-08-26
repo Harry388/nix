@@ -157,6 +157,10 @@ in
             size = 24;
         };
 
+        programs.hyprlock = {
+            enable = true;
+        };
+
         programs.waybar = {
             enable = true;
             settings = {

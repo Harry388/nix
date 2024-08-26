@@ -16,6 +16,10 @@ in
             package = inputs.hyprland.packages."${pkgs.system}".hyprland;
         };
 
+        security.pam.services.hyprlock = {};
+
+        services.xserver.enable = true;
+
     };
 
 }
