@@ -15,7 +15,7 @@ in
     };
 
     config = lib.mkIf cfg.enable {
-        gnomeHome.enable = lib.mkDefault true;
+        gnomeHome.enable = lib.mkDefault false;
         hyprlandHome.enable = lib.mkDefault true;
         stylixConfig.enable = lib.mkDefault true;
     };
