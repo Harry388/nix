@@ -31,7 +31,7 @@ in
                 bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel
                 bind '"' split-window -v -c "#{pane_current_path}"
                 bind % split-window -h -c "#{pane_current_path}"
-                set -g status-bg black
+                set -g status-style bg=default
                 set -g status-fg white
                 '';
 
