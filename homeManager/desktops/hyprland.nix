@@ -39,7 +39,7 @@ in
                 general = {
                     "gaps_out" = 10;
                     "col.active_border" = "rgb(8ec07c)";
-                    "border_size" = 4;
+                    "border_size" = 2;
                 };
 
                 cursor = {
@@ -49,9 +49,7 @@ in
                 decoration = {
                     rounding = 10;
                     
-                    drop_shadow = true;
-                    shadow_range = 4;
-                    shadow_render_power = 3;
+                    drop_shadow = false;
                 };
 
                 animation = "global,1,2.5,default";
