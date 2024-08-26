@@ -33,6 +33,7 @@ in
                 env = [
                     "XCURSOR_SIZE,24"
                     "HYPRCURSOR_SIZE,24"
+                    "HYPRCURSOR_THEME,macOS-BigSur"
                 ];
 
                 general = {
@@ -151,8 +152,10 @@ in
 
         home.pointerCursor = {
             gtk.enable = true;
+            x11.enable = true;
             package = pkgs.apple-cursor;
             name = "macOS-BigSur";
+            size = 24;
         };
 
         programs.waybar = {
