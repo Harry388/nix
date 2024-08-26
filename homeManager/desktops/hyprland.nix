@@ -39,7 +39,7 @@ in
                 general = {
                     "gaps_out" = 10;
                     "col.active_border" = "rgb(8ec07c)";
-                    "border_size" = 2;
+                    "border_size" = 3;
                 };
 
                 cursor = {
