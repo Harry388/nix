@@ -141,6 +141,14 @@ in
             };
         };
 
+        services.hyprpaper = {
+            enable = true;
+            settings = {
+                preload = [ "~/Pictures/background" ];
+                wallpaper = [ ", ~/Pictures/background" ];
+            };
+        };
+
         programs.waybar = {
             enable = true;
             settings = {
