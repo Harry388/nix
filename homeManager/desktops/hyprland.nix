@@ -218,22 +218,23 @@ window#waybar {
     color: #ebdbb2;
 }
 
+.modules-left {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #workspaces {
-    color: #fefefe;
+    background-color: #282828;
 }
 
 #workspaces button {
     padding: 0 15px 0 15px;
+    color: #ffffff;
 }
 
 #workspaces button.active {
     background-color: #8ec07c;
     color: #282828;
-}
-
-.modules-left {
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .modules-right {
@@ -249,6 +250,7 @@ window#waybar {
     padding-right: 20px;
     padding-left: 20px;
     margin-right: 15px;
+    margin-left: 15px;
     color: #83a598;
     background-color: #282828;
 }
@@ -256,7 +258,6 @@ window#waybar {
 #clock {
     padding-right: 20px;
     padding-left: 20px;
-    margin-left: 15px;
     background-color: #282828;
     color: #b8bb26;
 }
@@ -264,7 +265,6 @@ window#waybar {
 #tray {
     padding-right: 20px;
     padding-left: 20px;
-    margin-left: 15px;
     background-color: #282828;
     color: #ffffff;
 }
@@ -279,6 +279,7 @@ window#waybar {
 #pulseaudio {
     padding-right: 20px;
     padding-left: 20px;
+    margin-left: 15px;
     margin-right: 15px;
     background-color: #282828;
     color: #fabd2f;
