@@ -18,6 +18,7 @@ in
                     decorations = "None";
                     startup_mode = "Maximized";
                 };
+                font.size = 12;
             };
         };
     };

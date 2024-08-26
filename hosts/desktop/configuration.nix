@@ -94,8 +94,8 @@
   fonts = {
       enableDefaultPackages = true;
       packages = with pkgs; [
-          nerdfonts
-              noto-fonts
+          (nerdfonts.override { fonts = ["JetBrainsMono"]; })
+          noto-fonts
       ];
       fontconfig = {
           defaultFonts = {
