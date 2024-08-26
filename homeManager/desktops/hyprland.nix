@@ -225,7 +225,7 @@ window#waybar {
 
 #workspaces {
     background-color: #282828;
-    border: 1px solid #8ec07c;
+    border: 2px solid #8ec07c;
 }
 
 #workspaces button {
@@ -253,7 +253,7 @@ window#waybar {
     margin-right: 15px;
     margin-left: 15px;
     color: #83a598;
-    border: 1px solid #83a598;
+    border: 2px solid #83a598;
     background-color: #282828;
 }
 
@@ -262,7 +262,7 @@ window#waybar {
     padding-left: 20px;
     background-color: #282828;
     color: #b8bb26;
-    border: 1px solid #b8bb26;
+    border: 2px solid #b8bb26;
 }
 
 #tray {
@@ -270,7 +270,7 @@ window#waybar {
     padding-left: 20px;
     background-color: #282828;
     color: #ffffff;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
 }
 
 #network {
@@ -278,7 +278,7 @@ window#waybar {
     padding-left: 20px;
     background-color: #282828;
     color: #d3869b;
-    border: 1px solid #d3869b;
+    border: 2px solid #d3869b;
 }
 
 #pulseaudio {
@@ -288,7 +288,7 @@ window#waybar {
     margin-right: 15px;
     background-color: #282828;
     color: #fabd2f;
-    border: 1px solid #fabd2f;
+    border: 2px solid #fabd2f;
 }
 
 #backlight {
@@ -296,7 +296,7 @@ window#waybar {
     padding-left: 20px;
     background-color: #282828;
     color: #fe8019;
-    border: 1px solid #fe8019;
+    border: 2px solid #fe8019;
 }
             '';
         };
