@@ -33,7 +33,6 @@ in
                 env = [
                     "XCURSOR_SIZE,24"
                     "HYPRCURSOR_SIZE,24"
-                    "HYPRCURSOR_THEME,macOS-BigSur"
                 ];
 
                 general = {
@@ -148,6 +147,12 @@ in
                 preload = [ "~/Pictures/background" ];
                 wallpaper = [ ", ~/Pictures/background" ];
             };
+        };
+
+        home.pointerCursor = {
+            gtk.enable = true;
+            package = pkgs.apple-cursor;
+            name = "macOS-BigSur";
         };
 
         programs.waybar = {
@@ -293,7 +298,6 @@ window#waybar {
             grimblast
             networkmanagerapplet
             blueman
-            apple-cursor
         ];
 
     };
