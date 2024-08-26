@@ -23,6 +23,7 @@ in
                     "waybar"
                     "nm-applet --indicator"
                     "blueman-applet"
+                    "swaync"
                 ];
 
                 "windowrule" = [
@@ -306,6 +307,7 @@ window#waybar {
             grimblast
             networkmanagerapplet
             blueman
+            swaynotificationcenter
         ];
 
     };
