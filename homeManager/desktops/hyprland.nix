@@ -225,13 +225,11 @@ window#waybar {
 
 #workspaces {
     background-color: rgba(0,0,0,0.6);
-    border: 2px solid #8ec07c;
 }
 
 #workspaces button {
     padding: 0 15px 0 15px;
     color: #ffffff;
-    border: 2px solid rgba(0,0,0,0.6);
 }
 
 #workspaces button.active {
