@@ -31,7 +31,6 @@ in
                 ];
 
                 env = [
-                    "XCURSOR_SIZE,24"
                     "HYPRCURSOR_SIZE,24"
                 ];
 
@@ -292,6 +291,7 @@ window#waybar {
             grimblast
             networkmanagerapplet
             blueman
+            apple-cursor
         ];
 
     };
