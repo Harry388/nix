@@ -211,7 +211,6 @@ in
     font-weight: bold;
     font-size: 10px;
     border-radius: 10px;
-    --background-color: rgba(0,0,0, 0.4);
 }
 
 window#waybar {
@@ -225,7 +224,7 @@ window#waybar {
 }
 
 #workspaces {
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
     border: 2px solid #8ec07c;
 }
 
@@ -245,7 +244,7 @@ window#waybar {
 }
 
 .modules-center {
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
 }
 
 #battery {
@@ -255,13 +254,13 @@ window#waybar {
     margin-left: 15px;
     color: #83a598;
     border: 2px solid #83a598;
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
 }
 
 #clock {
     padding-right: 20px;
     padding-left: 20px;
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
     color: #b8bb26;
     border: 2px solid #b8bb26;
 }
@@ -269,7 +268,7 @@ window#waybar {
 #tray {
     padding-right: 20px;
     padding-left: 20px;
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
     color: #ffffff;
     border: 2px solid #ffffff;
 }
@@ -277,7 +276,7 @@ window#waybar {
 #network {
     padding-right: 20px;
     padding-left: 20px;
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
     color: #d3869b;
     border: 2px solid #d3869b;
 }
@@ -287,7 +286,7 @@ window#waybar {
     padding-left: 20px;
     margin-left: 15px;
     margin-right: 15px;
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
     color: #fabd2f;
     border: 2px solid #fabd2f;
 }
@@ -295,7 +294,7 @@ window#waybar {
 #backlight {
     padding-right: 20px;
     padding-left: 20px;
-    background-color: var(--background-color);
+    background-color: rgba(0,0,0,0.4);
     color: #fe8019;
     border: 2px solid #fe8019;
 }
