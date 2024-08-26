@@ -15,6 +15,7 @@ in
             openssl
             neofetch
             nerdfonts
+            noto-fonts
             gnumake
             inotify-tools
             lazygit
