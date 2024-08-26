@@ -230,6 +230,7 @@ window#waybar {
 #workspaces button {
     padding: 0 15px 0 15px;
     color: #ffffff;
+    border: 2px solid #8ec07c;
 }
 
 #workspaces button.active {
