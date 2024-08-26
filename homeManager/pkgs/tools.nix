@@ -14,8 +14,6 @@ in
             pkg-config
             openssl
             neofetch
-            nerdfonts
-            noto-fonts
             gnumake
             inotify-tools
             lazygit
