@@ -236,6 +236,7 @@ window#waybar {
 #workspaces button.active {
     background-color: #8ec07c;
     color: #282828;
+    border: none
 }
 
 .modules-right {
