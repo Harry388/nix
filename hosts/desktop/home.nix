@@ -3,6 +3,7 @@
 {
 
   imports = [
+    inputs.spicetify-nix.homeManagerModule
     inputs.nixvim.homeManagerModules.nixvim
     ../../homeManager/default.nix
   ];
@@ -88,5 +89,17 @@
       "DVI-D-1, 1680x1050, 0x0, 1"
       "HDMI-A-1, 1920x1080, 1680x0, 1"
   ];
+
+  programs.spicetify = {
+      enable = false;
+      theme = inputs.spicetify-nix.packages.${pkgs.system}.default.themes.catppuccin;
+      colorScheme = "mocha";
+
+      enabledExtensions = with inputs.spicetify-nix.packages.${pkgs.system}.default.extensions; [
+          fullAppDisplay
+          shuffle # shuffle+ (special characters are sanitized out of ext names)
+          hidePodcasts
+      ];
+  };
 
 }

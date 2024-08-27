@@ -31,7 +31,6 @@ in
             epiphany # web browser
             geary # email reader
             yelp # Help view
-        ]) ++ (with pkgs.gnome; [
             gnome-music
             gnome-characters
             tali # poker game
@@ -41,6 +40,7 @@ in
             gnome-contacts
             gnome-initial-setup
         ]);
+
         programs.dconf.enable = true;
         environment.systemPackages = with pkgs; [
             gnome-tweaks
