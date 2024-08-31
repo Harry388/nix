@@ -18,6 +18,7 @@ in
                 "$terminal" = "alacritty";
                 "$menu" = "fuzzel";
                 "$browser" = "steam-run ~/zen/zen";
+                "$lifx" = "/home/harry/programming/zig/lifx/zig-out/bin/lifx 192.168.1.252 d073d5303445 toggle";
 
                 "exec-once" = [
                     "waybar"
@@ -68,7 +69,7 @@ in
                     "$mainMod, R, exec, $menu"
                     "$mainMod, Q, killactive"
                     "$mainMod, M, exit"
-                    "$mainMod, X, exec, lifx"
+                    "$mainMod, X, exec, $lifx"
 
                     "$mainMod, h, movefocus, l"
                     "$mainMod, l, movefocus, r"
