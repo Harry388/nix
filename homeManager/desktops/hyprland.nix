@@ -68,6 +68,7 @@ in
                     "$mainMod, R, exec, $menu"
                     "$mainMod, Q, killactive"
                     "$mainMod, M, exit"
+                    "$mainMod, X, exec, lifx"
 
                     "$mainMod, h, movefocus, l"
                     "$mainMod, l, movefocus, r"
