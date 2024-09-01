@@ -19,6 +19,7 @@ in
             mysql-workbench
             postman
             dolphin-emu
+            desmume
             zed-editor
             bottles
             firefox
