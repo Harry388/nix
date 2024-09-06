@@ -18,6 +18,7 @@ in
             inotify-tools
             lazygit
             nmap
+            wayvnc
         ];
     };
 }
