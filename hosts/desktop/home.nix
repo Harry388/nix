@@ -87,7 +87,7 @@
   wayland.windowManager.hyprland.settings.monitor = [
       "DVI-D-1, 1680x1050, 0x0, 1"
       "HDMI-A-1, 1920x1080, 1680x0, 1"
-      "fake, 2000x1200@60, 0x1050, 1"
+      "HEADLESS-2, 1920x1080, 3600x0, 1"
   ];
 
 }
