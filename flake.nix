@@ -10,7 +10,7 @@
         };
 
         nixvim = {
-            url = "github:nix-community/nixvim";
+            url = "github:nix-community/nixvim/2ef974182ef62a6a6992118f0beb54dce812ae9b";
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
