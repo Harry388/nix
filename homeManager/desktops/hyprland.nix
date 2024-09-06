@@ -32,12 +32,6 @@ in
                     "float,^(calculator)$"
                 ];
 
-                env = [
-                    #"XCURSOR_SIZE,24"
-                    #"HYPRCURSOR_SIZE,24"
-                    #"HYPRCURSOR_THEME,macOS-BigSur"
-                ];
-
                 general = {
                     "gaps_out" = 10;
                     "col.active_border" = "rgb(8ec07c)";
