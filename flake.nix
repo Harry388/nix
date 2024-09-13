@@ -37,7 +37,21 @@
                 modules = [
                     ./hosts/desktop/configuration.nix
                     ./modules/default.nix
-                    inputs.home-manager.nixosModules.default
+                    inputs.home-manager.nixosModules.home-manager {
+                        home-manager = {
+                            extraSpecialArgs = { 
+                                inherit inputs;
+                                monitors = [
+                                    "DVI-D-1, 1680x1050, 0x0, 1"
+                                    "HDMI-A-1, 1920x1080, 1680x0, 1"
+                                    "fake, 2000x1200, 0x1050, 2"
+                                ];
+                            };
+                            users = {
+                                "harry" = import ./home/harry.nix;
+                            };
+                        };
+                    }
                 ];
             };
         };
