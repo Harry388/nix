@@ -14,8 +14,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        stylix.url = "github:danth/stylix";
-
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
         hyprland-plugins = {
@@ -32,7 +30,6 @@
                     ./hosts/laptop/configuration.nix
                     ./modules/default.nix
                     inputs.home-manager.nixosModules.default
-                    inputs.stylix.nixosModules.stylix
                 ];
             };
             desktop = nixpkgs.lib.nixosSystem {
@@ -41,7 +38,6 @@
                     ./hosts/desktop/configuration.nix
                     ./modules/default.nix
                     inputs.home-manager.nixosModules.default
-                    inputs.stylix.nixosModules.stylix
                 ];
             };
         };
