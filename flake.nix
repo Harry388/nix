@@ -22,24 +22,21 @@
         };
     };
 
-    outputs = { self, nixpkgs, ... }@inputs: {
+    outputs = { self, nixpkgs, ... }@inputs: 
+    let
+        mkSystem = host: nixpkgs.lib.nixosSystem {
+            specialArgs = { inherit inputs; };
+            modules = [
+                ./hosts/${host}/configuration.nix
+                ./modules/default.nix
+                inputs.home-manager.nixosModules.default
+            ];
+        };
+    in
+    {
         nixosConfigurations = {
-            laptop = nixpkgs.lib.nixosSystem {
-                specialArgs = { inherit inputs; };
-                modules = [
-                    ./hosts/laptop/configuration.nix
-                    ./modules/default.nix
-                    inputs.home-manager.nixosModules.default
-                ];
-            };
-            desktop = nixpkgs.lib.nixosSystem {
-                specialArgs = { inherit inputs; };
-                modules = [
-                    ./hosts/desktop/configuration.nix
-                    ./modules/default.nix
-                    inputs.home-manager.nixosModules.default
-                ];
-            };
+            laptop = mkSystem "laptop";
+            desktop = mkSystem "desktop";
         };
     };
 }
