@@ -37,14 +37,7 @@
                 modules = [
                     ./hosts/desktop/configuration.nix
                     ./modules/default.nix
-                    inputs.home-manager.nixosModules.home-manager {
-                        home-manager = {
-                            extraSpecialArgs = { inherit inputs; };
-                            users = {
-                                "harry" = import ./hosts/desktop/home.nix;
-                            };
-                        };
-                    }
+                    inputs.home-manager.nixosModules.default
                 ];
             };
         };

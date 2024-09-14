@@ -83,6 +83,13 @@
     shell = pkgs.zsh;
   };
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "harry" = import ./home.nix;
+    };
+  };
+
   fonts = {
       enableDefaultPackages = true;
       packages = with pkgs; [
