@@ -90,7 +90,6 @@
     };
   };
 
-
   fonts = {
       enableDefaultPackages = true;
       packages = with pkgs; [

@@ -14,8 +14,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        stylix.url = "github:danth/stylix";
-
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
         hyprland-plugins = {
@@ -24,26 +22,21 @@
         };
     };
 
-    outputs = { self, nixpkgs, ... }@inputs: {
+    outputs = { self, nixpkgs, ... }@inputs: 
+    let
+        mkSystem = host: nixpkgs.lib.nixosSystem {
+            specialArgs = { inherit inputs; };
+            modules = [
+                ./hosts/${host}/configuration.nix
+                ./modules/default.nix
+                inputs.home-manager.nixosModules.default
+            ];
+        };
+    in
+    {
         nixosConfigurations = {
-            laptop = nixpkgs.lib.nixosSystem {
-                specialArgs = { inherit inputs; };
-                modules = [
-                    ./hosts/laptop/configuration.nix
-                    ./modules/default.nix
-                    inputs.home-manager.nixosModules.default
-                    inputs.stylix.nixosModules.stylix
-                ];
-            };
-            desktop = nixpkgs.lib.nixosSystem {
-                specialArgs = { inherit inputs; };
-                modules = [
-                    ./hosts/desktop/configuration.nix
-                    ./modules/default.nix
-                    inputs.home-manager.nixosModules.default
-                    inputs.stylix.nixosModules.stylix
-                ];
-            };
+            laptop = mkSystem "laptop";
+            desktop = mkSystem "desktop";
         };
     };
 }
