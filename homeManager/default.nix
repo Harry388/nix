@@ -1,24 +1,16 @@
-{ config, lib, ... }:
-
-let
-    cfg = config.defaultHome;
-in
-{
+{ util, lib, ... }@confInps: util.mkModule { 
+    inherit confInps;
+    name = "defaultHome";
     imports = [
         ./cli/default.nix
         ./pkgs/default.nix
         ./desktops/default.nix
     ];
+} {
 
-    options.defaultHome = {
-        enable = lib.mkEnableOption "enables home";
-    };
-
-    config = lib.mkIf cfg.enable {
-        programs.google-chrome.enable = true;
-        defaultHomeCli.enable = true;
-        defaultHomePkgs.enable = true;
-        defaultHomeDesktop.enable = true;
-    };
+    programs.google-chrome.enable = lib.mkDefault true;
+    defaultHomeCli.enable = lib.mkDefault true;
+    defaultHomePkgs.enable = lib.mkDefault true;
+    defaultHomeDesktop.enable = lib.mkDefault true;
 
 }

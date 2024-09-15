@@ -1,22 +1,13 @@
-{ config, lib, pkgs, ... }:
+{ util, pkgs, ... }@confInps: util.mkModule { 
+    inherit confInps;
+    name = "vial";
+} {
 
-let
-    cfg = config.vial;
-in
-{
-
-    options.vial = {
-        enable = lib.mkEnableOption "enables vial";
-    };
-
-    config = lib.mkIf cfg.enable {
-        environment.systemPackages = with pkgs; [
-            vial
-        ];
-
-        services.udev.packages = with pkgs; [ 
-            vial
-        ];
-    };
+    environment.systemPackages = with pkgs; [
+        vial
+    ];
+    services.udev.packages = with pkgs; [ 
+        vial
+    ];
 
 }

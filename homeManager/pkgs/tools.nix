@@ -1,24 +1,18 @@
-{ lib, config, pkgs, ...}:
+{ util, pkgs, ... }@confInps: util.mkModule { 
+    inherit confInps;
+    name = "tools";
+} {
 
-let
-    cfg = config.tools;
-in
-{
-    options.tools = {
-        enable = lib.mkEnableOption "enables tools";
-    };
+    home.packages = with pkgs; [
+        ripgrep
+        pkg-config
+        openssl
+        neofetch
+        gnumake
+        inotify-tools
+        lazygit
+        nmap
+        wayvnc
+    ];
 
-    config = lib.mkIf cfg.enable {
-        home.packages = with pkgs; [
-            ripgrep
-            pkg-config
-            openssl
-            neofetch
-            gnumake
-            inotify-tools
-            lazygit
-            nmap
-            wayvnc
-        ];
-    };
 }

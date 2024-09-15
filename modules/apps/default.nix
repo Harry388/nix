@@ -1,20 +1,13 @@
-{ config, lib, ... }:
-
-let
-    cfg = config.defaultApps;
-in
-{
+{ util, lib, ... }@confInps: util.mkModule { 
+    inherit confInps;
+    name = "defaultApps";
     imports = [
         ./steam.nix
         ./vial.nix
     ];
+} {
 
-    options.defaultApps = {
-        enable = lib.mkEnableOption "enables apps";
-    };
+    steam.enable = lib.mkDefault true;
+    vial.enable = lib.mkDefault true;
 
-    config = lib.mkIf cfg.enable {
-        steam.enable = lib.mkDefault true;
-        vial.enable = lib.mkDefault true;
-    };
 }

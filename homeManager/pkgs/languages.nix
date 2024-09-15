@@ -1,40 +1,34 @@
-{ lib, config, pkgs, ...}:
+{ util, pkgs, ... }@confInps: util.mkModule { 
+    inherit confInps;
+    name = "languages";
+} {
 
-let
-    cfg = config.languages;
-in
-{
-    options.languages = {
-        enable = lib.mkEnableOption "enables languages";
-    };
+    home.packages = with pkgs; [
+        rustc
+        cargo
+        cargo-shuttle
+        go
+        templ
+        gleam
+        zig
+        zls
+        mysql84
+        typescript
+        nodejs_22
+        bun
+        jdk
+        erlang
+        gcc
+        rebar3
+        (python311.withPackages (ps: with ps; [
+             numpy # these two are
+             scipy # probably redundant to pandas
+             jupyterlab
+             pandas
+             statsmodels
+             scikitlearn
+             matplotlib
+        ]))
+    ];
 
-    config = lib.mkIf cfg.enable {
-        home.packages = with pkgs; [
-            rustc
-            cargo
-            cargo-shuttle
-            go
-            templ
-            gleam
-            zig
-            zls
-            mysql84
-            typescript
-            nodejs_22
-            bun
-            jdk
-            erlang
-            gcc
-            rebar3
-            (python311.withPackages (ps: with ps; [
-                 numpy # these two are
-                 scipy # probably redundant to pandas
-                 jupyterlab
-                 pandas
-                 statsmodels
-                 scikitlearn
-                 matplotlib
-            ]))
-        ];
-    };
 }

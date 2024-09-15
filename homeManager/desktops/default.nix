@@ -1,20 +1,13 @@
-{ lib, config, ... }:
-
-let
-    cfg = config.defaultHomeDesktop;
-in
-{
-    imports =[
+{ util, lib, ... }@confInps: util.mkModule { 
+    inherit confInps;
+    name = "defaultHomeDesktop";
+    imports = [
         ./gnome.nix
         ./hyprland.nix
     ];
+} {
 
-    options.defaultHomeDesktop = {
-        enable = lib.mkEnableOption "enables desktop";
-    };
+    gnomeHome.enable = lib.mkDefault true;
+    hyprlandHome.enable = lib.mkDefault true;
 
-    config = lib.mkIf cfg.enable {
-        gnomeHome.enable = lib.mkDefault true;
-        hyprlandHome.enable = lib.mkDefault true;
-    };
 }
