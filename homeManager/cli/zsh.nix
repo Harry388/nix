@@ -1,59 +1,53 @@
-{ lib, config, pkgs, ... }:
+{ util, pkgs, ... }@confInps: util.mkModule { 
+    inherit confInps;
+    name = "zsh";
+} {
 
-let
-    cfg = config.zsh;
-in
-{
-    options.zsh = {
-        enable = lib.mkEnableOption "enables zsh";
-    };
+    home.packages = with pkgs; [
+        (writeShellScriptBin "switch" ''
+            current_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
 
-    config = lib.mkIf cfg.enable {
-        home.packages = with pkgs; [
-            (writeShellScriptBin "switch" ''
-                current_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+            sudo nixos-rebuild switch --flake ~/nix
 
-                sudo nixos-rebuild switch --flake ~/nix
+            new_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
 
-                new_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+            if [[ $current_generation != $new_generation ]] then
+                git stage *
+                git commit -m "$new_generation $1"
+                echo "$new_generation: $1"
+            else
+                echo "$new_generation: No Change"
+            fi
+        '')
+    ];
 
-                if [[ $current_generation != $new_generation ]] then
-                    git stage *
-                    git commit -m "$new_generation $1"
-                    echo "$new_generation: $1"
-                else
-                    echo "$new_generation: No Change"
-                fi
-            '')
-        ];
+    programs.zsh = {
+        enable = true;
+        enableCompletion = true;
 
-        programs.zsh = {
+        shellAliases = {
+            krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
+            generation = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
+            sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
+            lifx = "/home/harry/programming/zig/lifx/zig-out/bin/lifx 192.168.1.252 d073d5303445 toggle";
+        };
+
+        oh-my-zsh = {
+            # 2023-07-28: oh-my-zsh doesn't have a plugin that shows me the exit code if it was not 0 (I'd probably have to define my own prompt)
             enable = true;
-            enableCompletion = true;
+            theme = "robbyrussell";
+            plugins = [ # List of plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+                "z" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z
+            ];
+        };
 
-            shellAliases = {
-                krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
-                generation = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
-                sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
-                lifx = "/home/harry/programming/zig/lifx/zig-out/bin/lifx 192.168.1.252 d073d5303445 toggle";
-            };
-
-            oh-my-zsh = {
-                # 2023-07-28: oh-my-zsh doesn't have a plugin that shows me the exit code if it was not 0 (I'd probably have to define my own prompt)
-                enable = true;
-                theme = "robbyrussell";
-                plugins = [ # List of plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-                    "z" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z
-                ];
-            };
-
-            history = {
-                share = true; # false -> every terminal has it's own history
-                size = 9999999; # Number of history lines to keep.
-                save = 9999999; # Number of history lines to save.
-                ignoreDups = true; # Do not enter command lines into the history list if they are duplicates of the previous event.
-                extended = true; # Save timestamp into the history file.
-            };
+        history = {
+            share = true; # false -> every terminal has it's own history
+            size = 9999999; # Number of history lines to keep.
+            save = 9999999; # Number of history lines to save.
+            ignoreDups = true; # Do not enter command lines into the history list if they are duplicates of the previous event.
+            extended = true; # Save timestamp into the history file.
         };
     };
+
 }
