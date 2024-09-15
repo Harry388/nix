@@ -24,16 +24,9 @@
 
     outputs = { self, nixpkgs, ... }@inputs: 
     let
-        mkSystem = host: nixpkgs.lib.nixosSystem {
-            specialArgs = { inherit inputs; };
-            modules = [
-                ./hosts/${host}/configuration.nix
-                ./modules/default.nix
-                inputs.home-manager.nixosModules.default
-            ];
-        };
+        util = import ./util.nix { inherit inputs; };
     in
-    {
+    with util; {
         nixosConfigurations = {
             laptop = mkSystem "laptop";
             desktop = mkSystem "desktop";
