@@ -171,7 +171,6 @@ in
                             filetypes = [ "html" "matcha" ];
                         };
                         zls.enable = true;
-                        nixd.enable = true;
                     };
                     keymaps.lspBuf = {
                         K = "hover";
