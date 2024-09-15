@@ -28,6 +28,7 @@ in
             clonehero
             hunspell
             hunspellDicts.en_GB-ise
+            processing
         ];
     };
 }
