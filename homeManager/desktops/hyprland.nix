@@ -108,8 +108,6 @@
 
                 ",Print, exec, grimblast --freeze copy area"
                 "$mainMod, p, exec, grimblast --freeze copy area"
-
-                "$mainMod, x, exec, curl https://linode.cookbook.org.uk/light"
             ];
 
             bindel = [
