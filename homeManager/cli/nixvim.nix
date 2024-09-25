@@ -132,7 +132,7 @@
             lsp = {
                 enable = true;
                 servers = {
-                    ts-ls.enable = true;
+                    tsserver.enable = true;
                     lua-ls = {
                         enable = true;
                         settings.telemetry.enable = false;
@@ -212,7 +212,6 @@
             };
             lazygit.enable = true;
             transparent.enable = true;
-            web-devicons.enable = true;
             # packer = {
                 #enable = true;
                 #plugins = [
