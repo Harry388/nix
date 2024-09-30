@@ -11,7 +11,7 @@
             "$mainMod" = "SUPER";
             "$terminal" = "alacritty";
             "$menu" = "fuzzel";
-            "$browser" = "steam-run ~/zen/zen";
+            "$browser" = "google-chrome-stable";
             "$lifx" = "/home/harry/programming/zig/lifx/zig-out/bin/lifx 192.168.1.252 d073d5303445 toggle";
 
             "exec-once" = [
