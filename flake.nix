@@ -20,6 +20,10 @@
             url = "github:hyprwm/hyprland-plugins";
             inputs.hyprland.follows = "hyprland";
         };
+
+        lifx = {
+            url = "git+file:/home/harry/programming/zig/lifx";
+        };
     };
 
     outputs = { self, nixpkgs, ... }@inputs: 
