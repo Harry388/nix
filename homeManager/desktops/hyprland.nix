@@ -21,9 +21,10 @@
                 "swaync"
             ];
 
-            windowrule = "float, title:^(Calculator)$";
-
-            windowrulev2 = "float, class:(pavucontrol)";
+            windowrulev2 = [
+                "float, class:(calculator)"
+                "float, class:(pavucontrol)"
+            ];
 
             general = {
                 "gaps_out" = 10;
