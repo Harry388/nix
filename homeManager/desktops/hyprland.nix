@@ -22,7 +22,7 @@
             ];
 
             windowrulev2 = [
-                "float, Title:(Calculator)"
+                "float, title:(Calculator)"
                 "float, class:(pavucontrol)"
             ];
 
