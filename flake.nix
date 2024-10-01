@@ -23,6 +23,7 @@
 
         lifx = {
             url = "git+file:/home/harry/programming/zig/lifx";
+            inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 

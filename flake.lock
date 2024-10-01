@@ -412,14 +412,17 @@
     },
     "lifx": {
       "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "zig2nix": "zig2nix"
       },
       "locked": {
-        "lastModified": 1727779536,
-        "narHash": "sha256-jUcVWMfc5BdOfYNgGFe5argW180ZTlZ8rmp4trVyZ7k=",
+        "lastModified": 1727780736,
+        "narHash": "sha256-nJVoxQyai1t2J4uK9/sRa/DW6xupSvBRp7BBEwLLStA=",
         "ref": "refs/heads/main",
-        "rev": "eb1c3921aa5e51a1d3fd200c21a95b496d11fbc1",
-        "revCount": 18,
+        "rev": "32da37a35c8cf19a6ee57b1fb6d2afd8c715b861",
+        "revCount": 19,
         "type": "git",
         "url": "file:/home/harry/programming/zig/lifx"
       },
@@ -466,21 +469,6 @@
       }
     },
     "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1726108120,
-        "narHash": "sha256-Ji5wO1lLG99grI0qCRb6FyRPpH9tfdfD1QP/r7IlgfM=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "111ed8812c10d7dc3017de46cbf509600c93f551",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
       "locked": {
         "lastModified": 1726062873,
         "narHash": "sha256-IiA3jfbR7K/B5+9byVi9BZGWTD4VSbWe8VLpp9B/iYk=",
@@ -553,7 +541,7 @@
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "lifx": "lifx",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim"
       }
     },
@@ -656,7 +644,10 @@
     "zig2nix": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": [
+          "lifx",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1727746846,
