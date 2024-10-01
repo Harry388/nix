@@ -29,7 +29,7 @@
             krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
             generation = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
             sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
-            lifx = "/home/harry/programming/zig/lifx/zig-out/bin/lifx 192.168.1.252 d073d5303445 toggle";
+            #lifx = "/home/harry/programming/zig/lifx/zig-out/bin/lifx 192.168.1.252 d073d5303445 toggle";
         };
 
         oh-my-zsh = {
