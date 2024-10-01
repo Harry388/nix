@@ -418,17 +418,17 @@
         "zig2nix": "zig2nix"
       },
       "locked": {
-        "lastModified": 1727780736,
-        "narHash": "sha256-nJVoxQyai1t2J4uK9/sRa/DW6xupSvBRp7BBEwLLStA=",
-        "ref": "refs/heads/main",
-        "rev": "32da37a35c8cf19a6ee57b1fb6d2afd8c715b861",
-        "revCount": 19,
-        "type": "git",
-        "url": "file:/home/harry/programming/zig/lifx"
+        "lastModified": 1727782007,
+        "narHash": "sha256-jDLNpvjgXnyeihg4zRObUok4+1IVna+2tSrUui+LHUE=",
+        "owner": "harry388",
+        "repo": "lifx",
+        "rev": "7d83e568bb43fd90fc8c7333000893079e60713d",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/harry/programming/zig/lifx"
+        "owner": "harry388",
+        "repo": "lifx",
+        "type": "github"
       }
     },
     "nix-darwin": {

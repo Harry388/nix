@@ -22,7 +22,7 @@
         };
 
         lifx = {
-            url = "git+file:/home/harry/programming/zig/lifx";
+            url = "github:harry388/lifx";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
