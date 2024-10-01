@@ -22,7 +22,7 @@
             ];
 
             "windowrule" = [
-                "float,^(pavucontrol)$"
+                "float, title:^(pavucontrol)$"
                 "float, title:^(Calculator)$"
             ];
 
