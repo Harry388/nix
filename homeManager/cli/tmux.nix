@@ -18,7 +18,7 @@
 
         extraConfig = ''
             set -ag terminal-overrides ",alacritty:RGB"
-            bind -n M-C-L next-window
+            bind M-C-L next-window
             bind -n M-C-H previous-window
             bind -T copy-mode-vi v send -X begin-selection
             bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel
