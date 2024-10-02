@@ -204,20 +204,7 @@
             };
             lazygit.enable = true;
             transparent.enable = true;
-            # packer = {
-                #enable = true;
-                #plugins = [
-                    #{
-                        #name = "VonHeikemen/fine-cmdline.nvim";
-                        #requires = "MunifTanjim/nui.nvim";
-                    #}
-                    #{
-                        #name = "VonHeikemen/searchbox.nvim";
-                        #requires = "MunifTanjim/nui.nvim";
-                    #}
-                #];
-            #};
-            # copilot-vim.enable = true;
+            web-devicons.enable = true;
         };
 
         extraPlugins = with pkgs.vimPlugins; [
