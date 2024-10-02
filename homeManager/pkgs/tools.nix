@@ -4,6 +4,7 @@
 } {
 
     home.packages = with pkgs; [
+        fzf
         ripgrep
         pkg-config
         openssl

@@ -19,11 +19,27 @@
                 echo "$new_generation: No Change"
             fi
         '')
+        (writeShellScriptBin "session" ''
+            dir=$(find ~ ~/work ~/programming ~/programming/js ~/programming/zig ~/programming/rust ~/programming/gleam ~/programming/golang -maxdepth 1 -type d ! -path "*/.*" | fzf)
+            if [[ -n $dir ]] then
+                tmux new-session -c $dir -d
+                name=$(tmux ls | tail -1 | awk -F: '{print $1}')
+                if [[ -n $TMUX ]] then
+                    tmux switch -t $name
+                else
+                    tmux attach -t $name
+                fi
+            fi
+        '')
     ];
 
     programs.zsh = {
         enable = true;
         enableCompletion = true;
+
+        initExtra = ''
+            bindkey -s "^F" 'session^M'
+        '';
 
         shellAliases = {
             krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
