@@ -52,7 +52,6 @@
 
         filetype = {
             extension = {
-                matcha = "matcha";
                 templ = "templ";
             };
         };
@@ -89,7 +88,6 @@
             treesitter = {
                 enable = true;
                 languageRegister = {
-                    html = [ "matcha" ];
                     templ = [ "templ" ];
                 };
                 settings = {
@@ -132,7 +130,7 @@
             lsp = {
                 enable = true;
                 servers = {
-                    tsserver.enable = true;
+                    ts-ls.enable = true;
                     lua-ls = {
                         enable = true;
                         settings.telemetry.enable = false;
@@ -152,18 +150,12 @@
                         filetypes = [ "vue" "typescript" "javascript" "json" ];
                     };
                     tailwindcss.enable = true;
-                    html = {
-                        enable = true;
-                        filetypes = [ "html" "matcha" ];
-                    };
+                    html.enable = true;
                     htmx = {
                         enable = true;
-                        filetypes = [ "html" "matcha" "templ" ];
+                        filetypes = [ "html" "templ" ];
                     };
-                    emmet-ls = {
-                        enable = true;
-                        filetypes = [ "html" "matcha" ];
-                    };
+                    emmet-ls.enable = true;
                     zls.enable = true;
                 };
                 keymaps.lspBuf = {
