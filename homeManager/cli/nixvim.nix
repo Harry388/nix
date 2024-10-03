@@ -143,7 +143,6 @@
                     gopls.enable = true;
                     templ.enable = true;
                     gleam.enable = true;
-                    intelephense.enable = true;
                     svelte.enable = true;
                     volar = {
                         enable = true;
