@@ -4,7 +4,7 @@
 } {
 
     home.packages = with pkgs; [
-        discord-screenaudio
+        lime3ds
         prismlauncher
         spotify
         obsidian

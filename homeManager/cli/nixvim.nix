@@ -92,8 +92,14 @@
                 };
                 settings = {
                     auto_install = true;
+                    ignore_install = [
+                        "php"
+                    ];
                     highlight = {
                         enable = true;
+                        disable = [
+                            "php"
+                        ];
                     };
                 };
             };
@@ -108,6 +114,18 @@
                 keymaps = {
                     "<leader>pg" = "git_files";
                     "<leader>pf" = "find_files";
+                };
+                settings.defaults = {
+                    mappings = {
+                        i = {
+                            "<C-p>" = {
+                                __raw = "require('telescope.actions.layout').toggle_preview";
+                            };
+                        };
+                    };
+                    preview = {
+                        hide_on_startup = true;
+                    };
                 };
             };
             harpoon = {
