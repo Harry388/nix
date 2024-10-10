@@ -23,7 +23,6 @@
         hunspell
         hunspellDicts.en_GB-ise
         processing
-        obs-studio
     ];
 
 }
