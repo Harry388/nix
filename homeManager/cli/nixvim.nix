@@ -174,6 +174,7 @@
                     };
                     emmet-ls.enable = true;
                     zls.enable = true;
+                    phpactor.enable = true;
                 };
                 keymaps.lspBuf = {
                     K = "hover";
