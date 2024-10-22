@@ -11,7 +11,7 @@
             "$mainMod" = "SUPER";
             "$terminal" = "alacritty";
             "$menu" = "fuzzel";
-            "$browser" = "google-chrome-stable";
+            "$browser" = "firefox";
             "$lifx" = "lifx 192.168.1.252 d073d5303445 toggle";
 
             "exec-once" = [
