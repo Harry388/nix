@@ -13,6 +13,9 @@
             "$menu" = "fuzzel";
             "$browser" = "firefox";
             "$lifx" = "lifx 192.168.1.252 d073d5303445 toggle";
+            # "$borderColour" = "rgb(8ec07c)";
+            # "$borderColour" = "rgb(ce8d25)";
+            "$borderColour" = "rgb(ffffff)";
 
             "exec-once" = [
                 "waybar"
@@ -28,7 +31,7 @@
 
             general = {
                 "gaps_out" = 10;
-                "col.active_border" = "rgb(8ec07c)";
+                "col.active_border" = "$borderColour";
                 "border_size" = 3;
             };
 
@@ -133,8 +136,8 @@
     services.hyprpaper = {
         enable = true;
         settings = {
-            preload = [ "~/Pictures/background" ];
-            wallpaper = [ ", ~/Pictures/background" ];
+            preload = [ "~/nix/wallpaper/chinese-hills.jpg" ];
+            wallpaper = [ ", ~/nix/wallpaper/chinese-hills.jpg" ];
         };
     };
 

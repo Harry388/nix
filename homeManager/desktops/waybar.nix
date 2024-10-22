@@ -12,6 +12,8 @@
                 mode = "dock";
                 height = 20;
                 margin-top = 10;
+                margin-left = 10;
+                margin-right = 10;
                 modules-left = ["hyprland/workspaces" "battery" "backlight"];
                 modules-center = ["clock"];
                 modules-right = ["network" "pulseaudio" "tray"];
@@ -52,94 +54,71 @@
         };
         style = ''
 * {
-font-family: 'SF Mono', sans-serif;
-font-weight: bold;
-font-size: 10px;
-border-radius: 10px;
+    font-family: 'SF Mono', sans-serif;
+    font-weight: bold;
+    font-size: 10px;
 }
 
 window#waybar {
-background-color: transparent;
-color: #ebdbb2;
-}
-
-.modules-left {
-padding-left: 10px;
-padding-right: 10px;
-}
-
-#workspaces {
-background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.6);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 2px;
 }
 
 #workspaces button {
-padding: 0 15px 0 15px;
-color: #ffffff;
-border: 2px solid rgba(0,0,0,0);
+    background: transparent;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    color: #ffffff;
 }
 
 #workspaces button.active {
-background-color: #8ec07c;
-color: #282828;
-border: 2px solid #8ec07c;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 10px;
 }
 
 .modules-right {
-padding-right: 10px;
-padding-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 #battery {
-padding-right: 20px;
-padding-left: 20px;
-margin-right: 15px;
-margin-left: 15px;
-color: #83a598;
-border: 2px solid #83a598;
-background-color: rgba(0,0,0,0.6);
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 #clock {
-padding-right: 20px;
-padding-left: 20px;
-background-color: rgba(0,0,0,0.6);
-color: #b8bb26;
-border: 2px solid #b8bb26;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 #tray {
-padding-right: 20px;
-padding-left: 20px;
-background-color: rgba(0,0,0,0.6);
-color: #ffffff;
-border: 2px solid #ffffff;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 #network {
-padding-right: 20px;
-padding-left: 20px;
-background-color: rgba(0,0,0,0.6);
-color: #d3869b;
-border: 2px solid #d3869b;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 #pulseaudio {
-padding-right: 20px;
-padding-left: 20px;
-margin-left: 15px;
-margin-right: 15px;
-background-color: rgba(0,0,0,0.6);
-color: #fabd2f;
-border: 2px solid #fabd2f;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #backlight {
-padding-right: 20px;
-padding-left: 20px;
-
-background-color: rgba(0,0,0,0.6);
-color: #fe8019;
-border: 2px solid #fe8019;
+    padding-right: 20px;
+    padding-left: 20px;
 }
         '';
     };
