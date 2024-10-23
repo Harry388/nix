@@ -31,6 +31,12 @@
                 fi
             fi
         '')
+        (writeShellScriptBin "firefoxFuzzel" ''
+            profile=$(cat ~/.mozilla/firefox/profiles.ini | grep Name= | awk -F= '{print $2}' | fuzzel --dmenu)
+            if [[ -n $dir ]] then
+                firefox -P $profile
+            fi
+        '')
     ];
 
     programs.zsh = {

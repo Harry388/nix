@@ -12,7 +12,7 @@
             "$terminal" = "alacritty";
             "$menu" = "fuzzel";
             "$browser" = "firefox";
-            "$browserProfiles" = "firefox -P \"$(cat ~/.mozilla/firefox/profiles.ini | grep Name= | awk -F= '{print $2}' | fuzzel --dmenu)\"";
+            "$browserProfiles" = "firefoxFuzzel";
             "$lifx" = "lifx 192.168.1.252 d073d5303445 toggle";
             # "$borderColour" = "rgb(8ec07c)";
             # "$borderColour" = "rgb(ce8d25)";
