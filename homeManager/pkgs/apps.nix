@@ -4,6 +4,7 @@
 } {
 
     home.packages = with pkgs; [
+        discord
         lime3ds
         prismlauncher
         spotify
