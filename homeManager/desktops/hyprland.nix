@@ -136,8 +136,8 @@
     services.hyprpaper = {
         enable = true;
         settings = {
-            preload = [ "~/nix/wallpaper/chinese-hills.jpg" ];
-            wallpaper = [ ", ~/nix/wallpaper/chinese-hills.jpg" ];
+            preload = [ "~/nix/wallpaper/moon.png" ];
+            wallpaper = [ ", ~/nix/wallpaper/moon.png" ];
         };
     };
 
