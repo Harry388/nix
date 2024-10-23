@@ -28,6 +28,7 @@
             windowrulev2 = [
                 "float, title:(Calculator)"
                 "float, class:(pavucontrol)"
+                "float, title:(Firefox - Choose User Profile)"
             ];
 
             general = {
