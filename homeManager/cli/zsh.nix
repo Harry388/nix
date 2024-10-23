@@ -48,7 +48,6 @@
         '';
 
         shellAliases = {
-            krisp = "nix run \"github:steinerkelvin/dotfiles#discord-krisp-patch\"";
             generation = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
             sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
         };
