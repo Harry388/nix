@@ -61,23 +61,23 @@
 
 window#waybar {
     background-color: rgba(0,0,0,0.6);
-    color: #ffffff;
+    color: #fce99f;
     border-radius: 10px;
     padding: 2px;
 }
 
 #workspaces button {
     background: transparent;
-    color: #ffffff;
+    color: #fce99f;
     border-radius: 10px;
 }
 
 #workspaces button:hover {
-    color: #ffffff;
+    color: #fce99f;
 }
 
 #workspaces button.active {
-    background: #ffffff;
+    background: #fce99f;
     color: #000000;
     border-radius: 10px;
 }
