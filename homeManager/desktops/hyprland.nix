@@ -12,6 +12,7 @@
             "$terminal" = "alacritty";
             "$menu" = "fuzzel";
             "$browser" = "firefox";
+            "$browserProfiles" = "firefox -ProfileManager";
             "$lifx" = "lifx 192.168.1.252 d073d5303445 toggle";
             # "$borderColour" = "rgb(8ec07c)";
             # "$borderColour" = "rgb(ce8d25)";
@@ -61,6 +62,7 @@
                 "$mainMod, Q, killactive"
                 "$mainMod, M, exit"
                 "$mainMod, X, exec, $lifx"
+                "$mainMod, E, exec, $browserProfiles"
 
                 "$mainMod, h, movefocus, l"
                 "$mainMod, l, movefocus, r"
