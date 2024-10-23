@@ -33,7 +33,7 @@
         '')
         (writeShellScriptBin "firefoxFuzzel" ''
             profile=$(cat ~/.mozilla/firefox/profiles.ini | grep Name= | awk -F= '{print $2}' | fuzzel --dmenu)
-            if [[ -n $dir ]] then
+            if [[ -n $profile ]] then
                 firefox -P $profile
             fi
         '')
