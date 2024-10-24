@@ -1,10 +1,9 @@
-{ util, pkgs, ... }@confInps: util.mkModule { 
+{ util, pkgs, inputs, ... }@confInps: util.mkModule { 
     inherit confInps;
     name = "apps";
 } {
 
     home.packages = with pkgs; [
-        #lime3ds
         prismlauncher
         spotify
         obsidian
@@ -23,6 +22,8 @@
         hunspell
         hunspellDicts.en_GB-ise
         processing
+    ] ++ [
+        inputs.lime-3ds-nixpkgs.legacyPackages."x86_64-linux".lime3ds
     ];
 
 }
