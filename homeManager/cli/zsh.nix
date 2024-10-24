@@ -22,12 +22,14 @@
         (writeShellScriptBin "session" ''
             dir=$(find ~ ~/work ~/programming ~/programming/js ~/programming/zig ~/programming/rust ~/programming/gleam ~/programming/golang -maxdepth 1 -type d ! -path "*/.*" | fzf)
             if [[ -n $dir ]] then
-                tmux new-session -c $dir -d
-                name=$(tmux ls | tail -1 | awk -F: '{print $1}')
+                tmux has-session -t $dir
+                if [[ $? != 0 ]] then
+                    tmux new-session -c $dir -s $dir -d
+                fi
                 if [[ -n $TMUX ]] then
-                    tmux switch -t $name
+                    tmux switch -t $dir
                 else
-                    tmux attach -t $name
+                    tmux attach -t $dir
                 fi
             fi
         '')
