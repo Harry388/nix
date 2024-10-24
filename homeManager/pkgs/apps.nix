@@ -4,7 +4,7 @@
 } {
 
     home.packages = with pkgs; [
-        lime3ds
+        #lime3ds
         prismlauncher
         spotify
         obsidian

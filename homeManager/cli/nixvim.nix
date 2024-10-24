@@ -148,12 +148,12 @@
             lsp = {
                 enable = true;
                 servers = {
-                    ts-ls.enable = true;
-                    lua-ls = {
+                    ts_ls.enable = true;
+                    lua_ls = {
                         enable = true;
                         settings.telemetry.enable = false;
                     };
-                    rust-analyzer = {
+                    rust_analyzer = {
                         enable = true;
                         installCargo = false;
                         installRustc = false;
@@ -172,7 +172,7 @@
                         enable = true;
                         filetypes = [ "html" "templ" ];
                     };
-                    emmet-ls.enable = true;
+                    emmet_ls.enable = true;
                     zls.enable = true;
                     phpactor.enable = true;
                 };
