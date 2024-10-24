@@ -4,6 +4,7 @@
 } {
 
     home.packages = with pkgs; [
+        neocities
         fzf
         ripgrep
         pkg-config
