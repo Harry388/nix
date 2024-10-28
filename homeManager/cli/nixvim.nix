@@ -116,13 +116,6 @@
                     "<leader>pf" = "find_files";
                 };
                 settings.defaults = {
-                    mappings = {
-                        i = {
-                            "<C-p>" = {
-                                __raw = "require('telescope.actions.layout').toggle_preview";
-                            };
-                        };
-                    };
                     preview = {
                         hide_on_startup = true;
                     };
@@ -215,7 +208,7 @@
             rainbow-delimiters = {
                 enable = true;
                 highlight = [ "RainbowDelimiterYellow" "RainbowDelimiterBlue" "RainbowDelimiterOrange" "RainbowDelimiterGreen" "RainbowDelimiterViolet" "RainbowDelimiterCyan" ];
-                blacklist = [ "zig" ];
+                blacklist = [ "zig" "markdown" ];
             };
             tmux-navigator = {
                 enable = true;
