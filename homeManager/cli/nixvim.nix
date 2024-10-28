@@ -168,6 +168,7 @@
                     emmet_ls.enable = true;
                     zls.enable = true;
                     phpactor.enable = true;
+                    elixirls.enable = true;
                 };
                 keymaps.lspBuf = {
                     K = "hover";

@@ -4,7 +4,6 @@
 } {
 
     home.packages = with pkgs; [
-        rustc
         cargo
         cargo-shuttle
         go
@@ -20,6 +19,7 @@
         erlang
         gcc
         rebar3
+        elixir
         (python311.withPackages (ps: with ps; [
              numpy # these two are
              scipy # probably redundant to pandas
