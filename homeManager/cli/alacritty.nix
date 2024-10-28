@@ -14,7 +14,13 @@
                 opacity = 0.8;
                 blur = true;
             };
-            font.size = 12;
+            font = {
+                size = 12;
+                normal = {
+                    family = "monospace";
+                    style = "JetBrainsMono Nerd Font Mono";
+                };
+            };
         };
     };
 
