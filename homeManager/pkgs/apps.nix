@@ -5,6 +5,7 @@
 
     home.packages = with pkgs; [
         prismlauncher
+        sqlitebrowser
         spotify
         obsidian
         gittyup
