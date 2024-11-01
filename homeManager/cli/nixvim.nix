@@ -46,6 +46,16 @@
                 action = "<cmd>tabprev<CR>";
                 mode = "n";
             }
+            {
+                key = "<leader>c";
+                action = "\"+";
+                mode = "n";
+            }
+            {
+                key = "<leader>v";
+                action = "\"_";
+                mode = "n";
+            }
         ];
 
         clipboard.providers.wl-copy.enable = true;
