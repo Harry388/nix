@@ -102,14 +102,8 @@
                 };
                 settings = {
                     auto_install = true;
-                    ignore_install = [
-                        "php"
-                    ];
                     highlight = {
                         enable = true;
-                        disable = [
-                            "php"
-                        ];
                     };
                 };
             };
@@ -193,33 +187,28 @@
                     "<leader>k" = "goto_prev";
                 };
             };
+            luasnip.enable = true;
             cmp = {
                 enable = true;
-                autoEnableSources = true;
                 settings = {
                     sources = [
-                    {name = "nvim_lsp";}
-                    {name = "path";}
-                    {name = "buffer";}
-                    {name = "luasnip";}
+                        { name = "nvim_lsp"; }
+                        { name = "path"; }
+                        { name = "buffer"; }
+                        { name = "luasnip"; }
                     ];
                     mapping = {
                         "<CR>" = "cmp.mapping.confirm({ select = true })";
                         "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
                         "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
                     };
-                    snippet.expand = ''
-                        function(args)
-                        require('snippy').expand_snippet(args.body)
-                        end
-                        '';
+                    snippet.expand = "luasnip";
                 };
             };
-            cmp-snippy.enable = true;
             rainbow-delimiters = {
                 enable = true;
                 highlight = [ "RainbowDelimiterYellow" "RainbowDelimiterBlue" "RainbowDelimiterOrange" "RainbowDelimiterGreen" "RainbowDelimiterViolet" "RainbowDelimiterCyan" ];
-                blacklist = [ "zig" "markdown" ];
+                blacklist = [ "zig" ];
             };
             tmux-navigator = {
                 enable = true;
