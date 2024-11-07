@@ -4,6 +4,7 @@
 } {
 
     home.packages = with pkgs; [
+        vesktop
         prismlauncher
         sqlitebrowser
         spotify
