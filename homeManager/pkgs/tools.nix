@@ -15,8 +15,8 @@
         lazygit
         nmap
         wayvnc
-    ] ++ [
-        inputs.lifx.packages.${pkgs.system}.default
+    #] ++ [
+        #inputs.lifx.packages.${pkgs.system}.default
     ];
 
 }
