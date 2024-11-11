@@ -47,7 +47,7 @@
                 drop_shadow = false;
             };
 
-            #animation = "global,1,2.5,default";
+            animation = "global,1,2.5,default";
 
             input = {
                 "kb_layout" = "gb";
