@@ -37,12 +37,12 @@
                 mode = "n";
             }
             {
-                key = "<C-m>";
+                key = "<C-.>";
                 action = "<cmd>tabnext<CR>";
                 mode = "n";
             }
             {
-                key = "<C-n>";
+                key = "<C-,>";
                 action = "<cmd>tabprev<CR>";
                 mode = "n";
             }
