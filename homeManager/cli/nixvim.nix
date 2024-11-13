@@ -140,6 +140,7 @@
             lsp = {
                 enable = true;
                 servers = {
+                    denols.enable = true;
                     ts_ls.enable = true;
                     lua_ls = {
                         enable = true;
