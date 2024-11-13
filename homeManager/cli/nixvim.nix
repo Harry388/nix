@@ -144,11 +144,13 @@
                         enable = true;
                         rootDir = "require('lspconfig').util.root_pattern(\"deno.json\", \"deno.jsonc\")";
                     };
-                    ts_ls.enable = true;
+                    ts_ls = {
+                        enable = true;
+                        rootDir = "require('lspconfig').util.root_pattern(\"package.json\")";
+                    };
                     lua_ls = {
                         enable = true;
                         settings.telemetry.enable = false;
-                        rootDir = "require('lspconfig').util.root_pattern(\"package.json\")";
                     };
                     rust_analyzer = {
                         enable = true;
