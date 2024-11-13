@@ -147,6 +147,9 @@
                     ts_ls = {
                         enable = true;
                         rootDir = "require('lspconfig').util.root_pattern(\"package.json\")";
+                        settings = {
+                            single_file_support = false;
+                        };
                     };
                     lua_ls = {
                         enable = true;
