@@ -142,9 +142,7 @@
                 servers = {
                     denols = {
                         enable = true;
-                        settings = {
-                            root_dir = "lspconfig.util.root_pattern(\"deno.json\")";
-                        };
+                        rootDir = "lspconfig.util.root_pattern(\"deno.json\")";
                         onAttach.function = ''
                         local active_clients = vim.lsp.get_active_clients()
                         for _, client in pairs(active_clients) do
