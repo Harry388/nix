@@ -223,6 +223,9 @@
             vim.keymap.set('n', '<leader>ps', function()
                 telescope.grep_string({ search = vim.fn.input("Grep > ") });
             end)
+            vim.g.markdown_fenced_languages = {
+                "ts=typescript"
+            }
         '';
 
     };
