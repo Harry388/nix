@@ -119,11 +119,6 @@
                     "<leader>pg" = "git_files";
                     "<leader>pf" = "find_files";
                 };
-                settings.defaults = {
-                    preview = {
-                        hide_on_startup = true;
-                    };
-                };
             };
             harpoon = {
                 enable = true;
