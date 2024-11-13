@@ -143,20 +143,12 @@
                     denols = {
                         enable = true;
                         rootDir = "require('lspconfig').util.root_pattern(\"deno.json\", \"deno.jsonc\")";
-                        onAttach.function = ''
-                        local active_clients = vim.lsp.get_active_clients()
-                        for _, client in pairs(active_clients) do
-                            -- stop tsserver if denols is already active
-                            if client.name == "ts_ls" then
-                                client.stop()
-                            end
-                        end
-                        '';
                     };
                     ts_ls.enable = true;
                     lua_ls = {
                         enable = true;
                         settings.telemetry.enable = false;
+                        rootDir = "require('lspconfig').util.root_pattern(\"package.json\")";
                     };
                     rust_analyzer = {
                         enable = true;
