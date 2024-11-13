@@ -142,7 +142,7 @@
                 servers = {
                     denols = {
                         enable = true;
-                        rootDir = "vim.fs.dirname(vim.fs.find({ \"deno.json\", \"deno.jsonc\" }, { upward = true })[1])";
+                        autostart = false;
                         onAttach.function = ''
                         local active_clients = vim.lsp.get_active_clients()
                         for _, client in pairs(active_clients) do
