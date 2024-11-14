@@ -15,6 +15,9 @@
         lazygit
         nmap
         wayvnc
+        wl-clipboard
+        wtype
+        bemoji
     #] ++ [
         #inputs.lifx.packages.${pkgs.system}.default
     ];
