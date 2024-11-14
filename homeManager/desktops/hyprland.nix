@@ -44,7 +44,7 @@
             decoration = {
                 rounding = 10;
                 
-                drop_shadow = false;
+                shadow.enabled = false;
             };
 
             animation = "global,1,2.5,default";
