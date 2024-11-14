@@ -15,7 +15,6 @@
         lazygit
         nmap
         wayvnc
-        udisks
     #] ++ [
         #inputs.lifx.packages.${pkgs.system}.default
     ];
