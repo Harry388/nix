@@ -65,6 +65,7 @@
                 "$mainMod, M, exit"
                 "$mainMod, X, exec, $lifx"
                 "$mainMod, E, exec, $browserProfiles"
+                "$mainMod, N, exec, swaync-client -t"
 
                 "$mainMod, h, movefocus, l"
                 "$mainMod, l, movefocus, r"
