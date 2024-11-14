@@ -114,6 +114,8 @@
 
                 ",Print, exec, grimblast --freeze copy area"
                 "$mainMod, p, exec, grimblast --freeze copy area"
+
+                "$mainMod, ., exec, bemoji -t"
             ];
 
             bindel = [
