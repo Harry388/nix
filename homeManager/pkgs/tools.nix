@@ -18,6 +18,7 @@
         wl-clipboard
         wtype
         bemoji
+        udiskie
     #] ++ [
         #inputs.lifx.packages.${pkgs.system}.default
     ];

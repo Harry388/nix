@@ -23,6 +23,7 @@
                 "nm-applet --indicator"
                 "blueman-applet"
                 "swaync"
+                "udiskie"
             ];
 
             windowrulev2 = [
