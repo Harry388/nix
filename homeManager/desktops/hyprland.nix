@@ -152,6 +152,15 @@
         size = 24;
     };
 
+    gtk = {
+        enable = true;
+
+        iconTheme = {
+            package = pkgs.gruvbox-plus-icons;
+            name = "Gruvbox-Plus-Dark";
+        };
+    };
+
     home.packages = with pkgs; [
         fuzzel
         waybar

@@ -24,6 +24,12 @@
         hunspell
         hunspellDicts.en_GB-ise
         processing
+        nautilus
+        gnome-calculator
+        gnome-disk-utility
+        loupe
+        seahorse
+        file-roller
     ] ++ [
         inputs.lime-3ds-nixpkgs.legacyPackages."x86_64-linux".lime3ds
     ];
