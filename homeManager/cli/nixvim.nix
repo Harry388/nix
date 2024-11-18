@@ -57,12 +57,12 @@
                 mode = "n";
             }
             {
-                key = "<C-j";
+                key = "<C-j>";
                 action = "<cmd>m +1<CR>";
                 mode = "n";
             }
             {
-                key = "<C-k";
+                key = "<C-k>";
                 action = "<cmd>m -2<CR>";
                 mode = "n";
             }
