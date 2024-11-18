@@ -20,6 +20,7 @@
         bemoji
         udiskie
         pywal16
+        imagemagick
     ];
 
 }
