@@ -24,6 +24,7 @@
         (python311.withPackages (ps: with ps; [
              numpy # these two are
              scipy # probably redundant to pandas
+             pillow
              jupyterlab
              pandas
              statsmodels

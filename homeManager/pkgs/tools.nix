@@ -19,8 +19,7 @@
         wtype
         bemoji
         udiskie
-        pywal16
-        imagemagick
+        colorz
     ];
 
 }
