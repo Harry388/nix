@@ -10,10 +10,9 @@
                 layer = "top";
                 position = "top";
                 mode = "dock";
-                height = 20;
-                margin-top = 10;
-                margin-left = 10;
-                margin-right = 10;
+                height = 5;
+                margin-left = 400;
+                margin-right = 400;
                 modules-left = ["hyprland/workspaces" "battery" "backlight"];
                 modules-center = ["clock"];
                 modules-right = ["network" "pulseaudio" "tray"];
@@ -37,7 +36,7 @@
                 network = {
                     format = "{ifname}";
                     format-wifi = "wifi: {essid}";
-                    format-ethernet = "eth: {ipaddr}/{cidr}";
+                    format-ethernet = "eth: {essid}";
                     format-disconnected = "disconnected";
                     max-length = 50;
                 };
@@ -52,75 +51,7 @@
                 };
             };
         };
-        style = ''
-* {
-    font-family: 'SF Mono', sans-serif;
-    font-weight: bold;
-    font-size: 10px;
-}
-
-window#waybar {
-    background-color: rgba(0,0,0,0.6);
-    color: #fce99f;
-    border-radius: 10px;
-    padding: 2px;
-}
-
-#workspaces button {
-    background: transparent;
-    color: #fce99f;
-    border-radius: 10px;
-}
-
-#workspaces button:hover {
-    color: #fce99f;
-}
-
-#workspaces button.active {
-    background: #fce99f;
-    color: #000000;
-    border-radius: 10px;
-}
-
-.modules-right {
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-#battery {
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-right: 15px;
-    margin-left: 15px;
-}
-
-#clock {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-#tray {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-#network {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-#pulseaudio {
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-#backlight {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-        '';
+        style = builtins.readFile ./waybar.css;
     };
 
 }

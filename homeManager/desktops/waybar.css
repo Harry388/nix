@@ -1,0 +1,67 @@
+* {
+    font-family: 'SF Mono', sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.6);
+    color: #fce99f;
+    border-radius: 0px 0px 10px 10px;
+    padding: 2px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #fce99f;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#workspaces button:hover {
+    color: #fce99f;
+}
+
+#workspaces button.active {
+    background: #fce99f;
+    color: #000000;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.modules-right {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+#battery {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#clock {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#tray {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#network {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#pulseaudio {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#backlight {
+    padding-right: 15px;
+    padding-left: 15px;
+}
