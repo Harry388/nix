@@ -56,6 +56,16 @@
                 action = "\"_";
                 mode = "n";
             }
+            {
+                key = "<C-j";
+                action = "<cmd>m +1<CR>";
+                mode = "x";
+            }
+            {
+                key = "<C-k";
+                action = "<cmd>m -2<CR>";
+                mode = "x";
+            }
         ];
 
         clipboard.providers.wl-copy.enable = true;
