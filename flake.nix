@@ -22,11 +22,6 @@
             url = "github:hyprwm/hyprland-plugins";
             inputs.hyprland.follows = "hyprland";
         };
-
-        #lifx = {
-            #url = "github:harry388/lifx";
-            #inputs.nixpkgs.follows = "nixpkgs";
-        #};
     };
 
     outputs = { self, nixpkgs, ... }@inputs: 
