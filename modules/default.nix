@@ -15,5 +15,6 @@
     nvidia.enable = lib.mkDefault false;
     gdm.enable = lib.mkDefault true;
     keyring.enable = lib.mkDefault true;
+    services.gvfs.enable = true;
 
 }
