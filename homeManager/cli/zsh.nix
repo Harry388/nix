@@ -55,7 +55,6 @@
         };
 
         oh-my-zsh = {
-            # 2023-07-28: oh-my-zsh doesn't have a plugin that shows me the exit code if it was not 0 (I'd probably have to define my own prompt)
             enable = true;
             theme = "gallifrey";
             plugins = [ # List of plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
