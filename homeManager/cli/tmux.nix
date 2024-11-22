@@ -23,6 +23,8 @@
             bind -T copy-mode-vi v send -X begin-selection
             bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel
             bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel
+            bind -n C-M-h select-window -t -1
+            bind -n C-M-l select-window -t +1
             bind '"' split-window -v -c "#{pane_current_path}"
             bind % split-window -h -c "#{pane_current_path}"
             set -g status-style bg=default
