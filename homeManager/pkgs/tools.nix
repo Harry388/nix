@@ -20,6 +20,7 @@
         bemoji
         udiskie
         colorz
+        live-server
     ];
 
 }
