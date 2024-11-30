@@ -16,7 +16,7 @@
         nodejs_22
         bun
         jdk
-        erlang
+        erlang_27
         gcc
         rebar3
         elixir
