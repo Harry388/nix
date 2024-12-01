@@ -6,7 +6,13 @@
     programs.nixvim = {
         enable = true;
 
-        colorschemes.rose-pine.enable = true;
+        colorschemes.kanagawa = {
+            enable = true;
+            settings = {
+                colors.theme.all.ui.bg_gutter = "none";
+                theme = "dragon";
+            };
+        };
 
         globals.mapleader = " ";
 
