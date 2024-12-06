@@ -33,9 +33,9 @@
             ];
 
             general = {
-                "gaps_out" = 10;
+                "gaps_out" = 5;
                 "col.active_border" = "$borderColour";
-                "border_size" = 3;
+                "border_size" = 2;
             };
 
             cursor = {
