@@ -188,6 +188,7 @@
                     zls.enable = true;
                     phpactor.enable = true;
                     elixirls.enable = true;
+                    bashls.enable = true;
                 };
                 keymaps.lspBuf = {
                     K = "hover";
