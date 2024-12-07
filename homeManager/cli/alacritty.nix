@@ -11,7 +11,7 @@
             window = {
                 decorations = "None";
                 startup_mode = "Maximized";
-                opacity = 0.8;
+                opacity = 0.9;
                 blur = true;
             };
             font = {

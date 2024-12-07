@@ -33,9 +33,9 @@
             ];
 
             general = {
-                "gaps_out" = 5;
+                "gaps_out" = 8;
                 "col.active_border" = "$borderColour";
-                "border_size" = 2;
+                "border_size" = 0;
             };
 
             cursor = {
@@ -44,8 +44,6 @@
 
             decoration = {
                 rounding = 10;
-                
-                shadow.enabled = false;
             };
 
             animation = "global,1,2.5,default";
@@ -143,8 +141,8 @@
     services.hyprpaper = {
         enable = true;
         settings = {
-            preload = [ "~/nix/wallpaper/moon.png" ];
-            wallpaper = [ ", ~/nix/wallpaper/moon.png" ];
+            preload = [ "~/nix/wallpaper/house.jpg" ];
+            wallpaper = [ ", ~/nix/wallpaper/house.jpg" ];
         };
     };
 
