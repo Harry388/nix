@@ -10,7 +10,7 @@
 
         mouse = true;
 
-        prefix = "C-space";
+        prefix = "a";
 
         terminal = "tmux-256color";
 
@@ -37,13 +37,13 @@
             bind -n M-0 select-window -t 0
             bind '"' split-window -v -c "#{pane_current_path}"
             bind % split-window -h -c "#{pane_current_path}"
+            bind h select-pane -L
+            bind j select-pane -D
+            bind k select-pane -U
+            bind l select-pane -R
             set -g status-style bg=default
             set -g status-fg white
             '';
-
-        plugins = with pkgs; [
-            tmuxPlugins.vim-tmux-navigator
-        ];
 
         keyMode = "vi";
     };

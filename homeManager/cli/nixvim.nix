@@ -37,13 +37,28 @@
                 mode = "n";
             }
             {
-                key = "<C-m>";
+                key = "<M-l>";
                 action = "<cmd>tabnext<CR>";
                 mode = "n";
             }
             {
-                key = "<C-n>";
+                key = "<M-h>";
                 action = "<cmd>tabprev<CR>";
+                mode = "n";
+            }
+            {
+                key = "<M-j>";
+                action = "<cmd>cnext<CR>";
+                mode = "n";
+            }
+            {
+                key = "<M-k>";
+                action = "<cmd>cprevious<CR>";
+                mode = "n";
+            }
+            {
+                key = "<leader>qq";
+                action = "<cmd>copen<CR>";
                 mode = "n";
             }
             {
@@ -136,10 +151,10 @@
                     toggleQuickMenu = "<C-e>";
                     addFile = "<leader>a";
                     navFile = {
-                        "1" = "<M-h>";
-                        "2" = "<M-j>";
-                        "3" = "<M-k>";
-                        "4" = "<M-l>";
+                        "1" = "<C-h>";
+                        "2" = "<C-j>";
+                        "3" = "<C-k>";
+                        "4" = "<C-l>";
                     };
                 };
             };
@@ -225,9 +240,6 @@
                 enable = true;
                 highlight = [ "RainbowDelimiterYellow" "RainbowDelimiterBlue" "RainbowDelimiterOrange" "RainbowDelimiterGreen" "RainbowDelimiterViolet" "RainbowDelimiterCyan" ];
                 blacklist = [ "zig" ];
-            };
-            tmux-navigator = {
-                enable = true;
             };
             lazygit.enable = true;
             transparent.enable = true;
