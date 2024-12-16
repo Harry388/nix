@@ -10,7 +10,7 @@
 
         mouse = true;
 
-        prefix = "a";
+        prefix = "C-a";
 
         terminal = "tmux-256color";
 
