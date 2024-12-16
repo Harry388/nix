@@ -35,8 +35,8 @@
             bind -n M-8 select-window -t 8
             bind -n M-9 select-window -t 9
             bind -n M-0 select-window -t 0
-            bind '"' split-window -v -c "#{pane_current_path}"
-            bind % split-window -h -c "#{pane_current_path}"
+            bind s split-window -v -c "#{pane_current_path}"
+            bind v split-window -h -c "#{pane_current_path}"
             bind h select-pane -L
             bind j select-pane -D
             bind k select-pane -U
