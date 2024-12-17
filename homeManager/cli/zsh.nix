@@ -9,7 +9,7 @@
 
             sudo nixos-rebuild switch --flake ~/nix
 
-            current_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
+            new_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
 
             if [[ $current_generation != $new_generation ]] then
                 git stage *
