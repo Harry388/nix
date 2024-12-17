@@ -5,11 +5,11 @@
 
     home.packages = with pkgs; [
         (writeShellScriptBin "switch" ''
-            current_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+            current_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
 
             sudo nixos-rebuild switch --flake ~/nix
 
-            new_generation=$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')
+            current_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
 
             if [[ $current_generation != $new_generation ]] then
                 git stage *
