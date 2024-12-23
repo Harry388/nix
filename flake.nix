@@ -4,8 +4,6 @@
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-        lime-3ds-nixpkgs.url = "github:nixos/nixpkgs/999b0e7a38606abd48d461c8225509740b886011";
-
         home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";

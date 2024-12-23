@@ -518,22 +518,6 @@
         "type": "github"
       }
     },
-    "lime-3ds-nixpkgs": {
-      "locked": {
-        "lastModified": 1725144489,
-        "narHash": "sha256-diL1+CobDU+zMgF6dMR4F555fg73oNs9DhsbOSInWqY=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "999b0e7a38606abd48d461c8225509740b886011",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "999b0e7a38606abd48d461c8225509740b886011",
-        "type": "github"
-      }
-    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -683,7 +667,6 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
-        "lime-3ds-nixpkgs": "lime-3ds-nixpkgs",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim"
       }
