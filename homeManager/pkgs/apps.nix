@@ -30,8 +30,7 @@
         loupe
         seahorse
         file-roller
-    ] ++ [
-        inputs.lime-3ds-nixpkgs.legacyPackages."x86_64-linux".lime3ds
+        lime3ds
     ];
 
 }
