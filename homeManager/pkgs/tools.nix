@@ -20,7 +20,7 @@
         bemoji
         udiskie
         colorz
-        openvpn
+        openvpn3
     ];
 
 }
