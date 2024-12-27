@@ -3,7 +3,11 @@
     name = "zsh";
 } {
 
-    home.sessionPath = [ "$HOME/nix/homeManager/cli/scripts" ];
+    home.packages = with pkgs; [
+        (writeShellScriptBin "switch" (builtins.readFile ./scripts/switch.sh))
+        (writeShellScriptBin "session" (builtins.readFile ./scripts/session.sh))
+        (writeShellScriptBin "firefoxFuzzel" (builtins.readFile ./scripts/firefoxFuzzel.sh))
+    ];
 
     programs.zsh = {
         enable = true;
