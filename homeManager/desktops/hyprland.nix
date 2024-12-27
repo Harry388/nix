@@ -9,7 +9,7 @@
         settings = {
 
             "$mainMod" = "SUPER";
-            "$terminal" = "alacritty";
+            "$terminal" = "ghostty";
             "$menu" = "fuzzel";
             "$browser" = "firefox";
             "$browserProfiles" = "firefoxFuzzel";

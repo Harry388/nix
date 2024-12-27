@@ -4,41 +4,9 @@
 } {
 
     home.packages = with pkgs; [
-        (writeShellScriptBin "switch" ''
-            current_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
-
-            sudo nixos-rebuild switch --flake ~/nix
-
-            new_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
-
-            if [[ $current_generation != $new_generation ]] then
-                git stage *
-                git commit -m "$new_generation $1"
-                echo "$new_generation: $1"
-            else
-                echo "$new_generation: No Change"
-            fi
-        '')
-        (writeShellScriptBin "session" ''
-            dir=$(find ~ ~/work ~/programming ~/programming/js ~/programming/zig ~/programming/rust ~/programming/gleam ~/programming/golang ~/programming/elixir -maxdepth 1 -type d ! -path "*/.*" | fzf)
-            if [[ -n $dir ]] then
-                tmux has-session -t $dir
-                if [[ $? != 0 ]] then
-                    tmux new-session -c $dir -s $dir -d
-                fi
-                if [[ -n $TMUX ]] then
-                    tmux switch -t $dir
-                else
-                    tmux attach -t $dir
-                fi
-            fi
-        '')
-        (writeShellScriptBin "firefoxFuzzel" ''
-            profile=$(cat ~/.mozilla/firefox/profiles.ini | grep Name= | awk -F= '{print $2}' | fuzzel --placeholder="Firefox Pofile" --background-color=000000FF --border-color=E66000FF --border-width=2 --text-color=FFFFFFFF --selection-color=331E54FF --selection-text-color=FFFFFFFF --prompt-color=FFFFFFFF --selection-match-color=E66000FF --dmenu)
-            if [[ -n $profile ]] then
-                firefox -P $profile
-            fi
-        '')
+        (writeShellScriptBin "switch" (builtins.readFile ./scripts/switch.sh))
+        (writeShellScriptBin "session" (builtins.readFile ./scripts/session.sh))
+        (writeShellScriptBin "firefoxFuzzel" (builtins.readFile ./scripts/firefoxFuzzel.sh))
     ];
 
     programs.zsh = {
