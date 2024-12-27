@@ -8,7 +8,9 @@ if [[ -n $dir ]] then
     tmux has-session -t $name
     if [[ $? != 0 ]] then
         tmux new-session -c $dir -s $name -d
-        tmux send-keys -t $name "source $dir/.session" c-M
+        if [ -f $dir/.session ]; then
+            tmux send-keys -t $name "source $dir/.session" c-M
+        fi
     fi
     if [[ -n $TMUX ]] then
         tmux switch -t $name
