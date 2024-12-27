@@ -20,6 +20,10 @@
             url = "github:hyprwm/hyprland-plugins";
             inputs.hyprland.follows = "hyprland";
         };
+
+        ghostty = {
+            url = "github:ghostty-org/ghostty";
+        };
     };
 
     outputs = { self, nixpkgs, ... }@inputs: 

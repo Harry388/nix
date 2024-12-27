@@ -31,6 +31,8 @@
         seahorse
         file-roller
         lime3ds
+    ] ++ [
+        inputs.ghostty.packages.x86_64-linux.default
     ];
 
 }
