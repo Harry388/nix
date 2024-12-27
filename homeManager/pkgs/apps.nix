@@ -1,4 +1,4 @@
-{ util, pkgs, inputs, ... }@confInps: util.mkModule { 
+{ util, pkgs, ... }@confInps: util.mkModule {
     inherit confInps;
     name = "apps";
 } {
@@ -31,8 +31,6 @@
         seahorse
         file-roller
         lime3ds
-    ] ++ [
-        inputs.ghostty.packages.x86_64-linux.default
     ];
 
 }
