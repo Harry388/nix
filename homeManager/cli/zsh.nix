@@ -3,44 +3,7 @@
     name = "zsh";
 } {
 
-    home.packages = with pkgs; [
-        (writeShellScriptBin "switch" ''
-            current_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
-
-            sudo nixos-rebuild switch --flake ~/nix
-
-            new_generation=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
-
-            if [[ $current_generation != $new_generation ]] then
-                git stage *
-                git commit -m "$new_generation $1"
-                echo "$new_generation: $1"
-            else
-                echo "$new_generation: No Change"
-            fi
-        '')
-        (writeShellScriptBin "session" ''
-            dir=$(find ~ ~/work ~/programming ~/programming/js ~/programming/zig ~/programming/rust ~/programming/gleam ~/programming/golang ~/programming/elixir -maxdepth 1 -mindepth 1 -type d ! -path "*/.*" 2> /dev/null | fzf)
-            name=$(basename $dir)
-            if [[ -n $dir ]] then
-                tmux has-session -t $name
-                if [[ $? != 0 ]] then
-                    tmux new-session -c $dir -s $name -d
-                fi
-                if [[ -n $TMUX ]] then
-                    tmux switch -t $name
-                else
-                    tmux attach -t $name
-                fi
-            fi
-        '')
-        (writeShellScriptBin "firefoxFuzzel" ''
-            profile=$(cat ~/.mozilla/firefox/profiles.ini | grep Name= | awk -F= '{print $2}' | fuzzel --placeholder="Firefox Pofile" --background-color=000000FF --border-color=E66000FF --border-width=2 --text-color=FFFFFFFF --selection-color=331E54FF --selection-text-color=FFFFFFFF --prompt-color=FFFFFFFF --selection-match-color=E66000FF --dmenu)
-            if [[ -n $profile ]] then
-                firefox -P $profile
-            fi
-        '')
-    ];
+    home.sessionPath = [ "$HOME/nix/homeManager/cli/scripts" ];
 
     programs.zsh = {
         enable = true;
