@@ -1,4 +1,4 @@
-{ util, pkgs, ... }@confInps: util.mkModule {
+{ util, pkgs, inputs, ... }@confInps: util.mkModule {
     inherit confInps;
     name = "apps";
 } {
@@ -9,13 +9,9 @@
         sqlitebrowser
         spotify
         obsidian
-        gittyup
-        #dbeaver-bin
-        mysql-workbench
         postman
         dolphin-emu
         zed-editor
-        bottles
         firefox
         transmission_4-gtk
         vlc
@@ -30,7 +26,11 @@
         loupe
         seahorse
         file-roller
+    ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.x86_64-linux; [
         lime3ds
-    ];
+        gittyup
+        bottles
+        mysql-workbench
+    ]);
 
 }
