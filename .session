@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "DOING STUFF"
+
+export myvar="some value"
