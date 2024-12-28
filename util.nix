@@ -25,4 +25,13 @@ in
         config = confInps.lib.mkIf confInps.config.${name}.enable module;
 
     };
+
+    mkHome = name: extraConf: { inputs, ... }: {
+        imports = [
+            ./users/${name}.nix
+            ./homeManager/default.nix
+            inputs.nixvim.homeManagerModules.nixvim
+            extraConf
+        ];
+    };
 }

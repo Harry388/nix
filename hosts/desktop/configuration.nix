@@ -4,7 +4,13 @@
 
     home-manager = {
         extraSpecialArgs = { inherit inputs util; };
-        users.harry = import ./home.nix;
+        users.harry = util.mkHome "harry" {
+            wayland.windowManager.hyprland.settings.monitor = [
+                "DVI-D-1, 1680x1050, 0x0, 1"
+                "HDMI-A-1, 1920x1080, 1680x0, 1"
+                "fake, 2000x1200@60.00, 0x1050, 2"
+            ];
+        };
     };
 
     defaultModules.enable = true;
