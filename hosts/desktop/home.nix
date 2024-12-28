@@ -3,25 +3,16 @@
 {
 
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-    ../../homeManager/default.nix
+      inputs.nixvim.homeManagerModules.nixvim
+      ../../homeManager/default.nix
   ];
 
   nixpkgs.config = {
-    allowUnfree = true;
+      allowUnfree = true;
   };
 
   home.username = "harry";
   home.homeDirectory = "/home/harry";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
 
   programs.home-manager.enable = true;
  
@@ -32,5 +23,14 @@
       "HDMI-A-1, 1920x1080, 1680x0, 1"
       "fake, 2000x1200@60.00, 0x1050, 2"
   ];
+
+  # This value determines the Home Manager release that your configuration is
+  # compatible with. This helps avoid breakage when a new Home Manager release
+  # introduces backwards incompatible changes.
+  #
+  # You should not change this value, even if you update Home Manager. If you do
+  # want to update the value, then make sure to first check the Home Manager
+  # release notes.
+  home.stateVersion = "23.11"; # Please read the comment before changing.
 
 }
