@@ -21,7 +21,7 @@
         };
     };
 
-    outputs = { self, nixpkgs, ... }@inputs: 
+    outputs = inputs:
     let
         util = import ./util.nix { inherit inputs; };
     in
@@ -29,6 +29,9 @@
         nixosConfigurations = {
             laptop = mkSystem "laptop";
             desktop = mkSystem "desktop";
+        };
+        homeConfigurations = {
+            harry = mkHome "harry" {}; # UNTESTED
         };
     };
 }

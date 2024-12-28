@@ -4,7 +4,7 @@
 
     home-manager = {
         extraSpecialArgs = { inherit inputs util; };
-        users.harry = util.mkHome "harry" {
+        users.harry = util.mkUser "harry" {
             wayland.windowManager.hyprland.settings.monitor = [
                 "eDP-1, 1920x1200, 0x0, 1"
                 "HDMI-A-1, 1920x1080, 1920x0, 1"
