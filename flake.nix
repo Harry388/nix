@@ -31,7 +31,10 @@
             desktop = mkSystem "desktop";
         };
         homeConfigurations = {
-            harry = mkHome "harry" {}; # UNTESTED
+            harry = mkHome "harry" {
+                defaultHomeDesktop.enable = false;
+                apps.enable = false;
+            }; # UNTESTED
         };
     };
 }
