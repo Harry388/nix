@@ -10,10 +10,6 @@
                 "HDMI-A-1, 1920x1080, 1680x0, 1"
                 "fake, 2000x1200@60.00, 0x1050, 2"
             ];
-
-            home.sessionVariables = {
-                honk = "this is a test from the config";
-            };
         };
     };
 
