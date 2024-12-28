@@ -5,9 +5,10 @@ let
 in
 {
     mkSystem = host: inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs util; };
+        specialArgs = { inherit inputs util host; };
         modules = [
             ./hosts/${host}/configuration.nix
+            ./hosts/${host}/hardware-configuration.nix
             ./modules/default.nix
             inputs.home-manager.nixosModules.default
         ];

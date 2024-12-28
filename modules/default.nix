@@ -5,17 +5,17 @@
         ./desktops/default.nix
         ./apps/default.nix
         ./nvidia.nix
-        ./gdm.nix
+        ./smallGnome.nix
         ./fonts.nix
-        ./other.nix
+        ./base.nix
     ];
 } {
 
     defaultDesktop.enable = lib.mkDefault true;
     defaultApps.enable = lib.mkDefault true;
     nvidia.enable = lib.mkDefault false;
-    gdm.enable = lib.mkDefault true;
+    smallGnome.enable = lib.mkDefault true;
     fonts.enable = lib.mkDefault true;
-    other.enable = lib.mkDefault true;
+    base.enable = lib.mkDefault true;
 
 }
