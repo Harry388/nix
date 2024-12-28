@@ -9,9 +9,9 @@ if [ -n "$dir" ]; then
     if ! tmux has-session -t "$name"; then
         tmux new-session -c "$dir" -s "$name" -d
         if [ -f "$dir/.session" ]; then
-            tmux send-keys -t "$name" "source $dir/.session" c-M clear c-M
+            tmux send-keys -t "$name" "source $dir/.session" c-M
         elif [ -f "$HOME/nix/homeManager/cli/scripts/.session" ]; then
-            tmux send-keys -t "$name" "source $HOME/nix/homeManager/cli/scripts/.session" c-M clear c-M
+            tmux send-keys -t "$name" "source $HOME/nix/homeManager/cli/scripts/.session" c-M
         fi
     fi
     if [ -n "$TMUX" ]; then
