@@ -21,16 +21,7 @@
         rebar3
         elixir
         deno
-        (python311.withPackages (ps: with ps; [
-             numpy # these two are
-             scipy # probably redundant to pandas
-             pillow
-             jupyterlab
-             pandas
-             statsmodels
-             scikitlearn
-             matplotlib
-        ]))
+        python314
     ];
 
 }
