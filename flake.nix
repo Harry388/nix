@@ -32,9 +32,12 @@
         };
         homeConfigurations = {
             harry = mkHome "harry" {
-                defaultHomeDesktop.enable = false;
-                apps.enable = false;
-            }; # UNTESTED
+                languages.enable = true;
+                tools.enable = true;
+                defaultHomeCli.enable = true;
+                ghostty.enable = false;
+                home.stateVersion = "24.11"; # Don't change
+            };
         };
     };
 }
