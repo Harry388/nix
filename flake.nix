@@ -31,7 +31,7 @@
             desktop = mkSystem "desktop";
         };
         homeConfigurations = {
-            harry = mkHome "harry" {
+            harry = mkHome "harry" { # unused
                 languages.enable = true;
                 tools.enable = true;
                 defaultHomeCli.enable = true;
