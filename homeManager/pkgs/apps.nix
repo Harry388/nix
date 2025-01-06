@@ -4,6 +4,7 @@
 } {
 
     home.packages = with pkgs; [
+        vesktop
         prismlauncher
         sqlitebrowser
         spotify
@@ -26,7 +27,6 @@
         seahorse
         file-roller
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.x86_64-linux; [
-        vesktop
         lime3ds
         gittyup
         bottles
