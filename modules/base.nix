@@ -62,6 +62,11 @@
         wget
     ];
 
+    hardware.graphics = {
+        enable = true;
+        enable32Bit = true;
+    };
+
     # networking.firewall.allowedTCPPorts = [ 5900 ];
     # networking.firewall.allowedUDPPorts = [ 56700 5900 ];
 
