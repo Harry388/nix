@@ -20,6 +20,7 @@
         bemoji
         udiskie
         colorz
+        git-filter-repo
     ];
 
 }
