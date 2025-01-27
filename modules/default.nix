@@ -8,6 +8,7 @@
         ./smallGnome.nix
         ./fonts.nix
         ./base.nix
+        ./openssh.nix
     ];
 } {
 
@@ -17,5 +18,5 @@
     smallGnome.enable = lib.mkDefault true;
     fonts.enable = lib.mkDefault true;
     base.enable = lib.mkDefault true;
-
+    openssh.enable = lib.mkDefault false;
 }
