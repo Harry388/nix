@@ -1,4 +1,4 @@
-{ util, config, ... }@confInps: util.mkModule { 
+{ util, config, lib, ... }@confInps: util.mkModule {
     inherit confInps;
     name = "nvidia";
 } {
@@ -36,11 +36,15 @@
         nvidiaSettings = true;
 
 # Optionally, you may need to select the appropriate driver version for your specific GPU.
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
-    };
-
-    environment.sessionVariables = {
-        NIXOS_OZONE_WL = "1";
+        #package = config.boot.kernelPackages.nvidiaPackages.stable;
+        package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+            version = "565.77";
+            sha256_64bit = "sha256-CnqnQsRrzzTXZpgkAtF7PbH9s7wbiTRNcM0SPByzFHw=";
+            sha256_aarch64 = "sha256-CnqnQsRrzzTXZpgkAtF7PbH9s7wbiTRNcM0SPByzFHw=";
+            openSha256 = "sha256-ZpuVZybW6CFN/gz9rx+UJvQ715FZnAOYfHn5jt5Z2C8=";
+            settingsSha256 = "sha256-ZpuVZybW6CFN/gz9rx+UJvQ715FZnAOYfHn5jt5Z2C8=";
+            persistencedSha256 = lib.fakeSha256;
+        };
     };
 
 }

@@ -26,8 +26,6 @@
                 "udiskie"
             ];
 
-            env = "ELECTRON_OZONE_PLATFORM_HINT,auto";
-
             windowrulev2 = [
                 "float, title:(Calculator)"
                 "float, class:(pavucontrol)"
