@@ -46,7 +46,10 @@
                 rounding = 10;
             };
 
-            animation = "global,1,2.5,default";
+            animation = [
+                "global, 1, 2, default"
+                "workspaces, 0, 2.5, default"
+            ];
 
             input = {
                 "kb_layout" = "gb";
