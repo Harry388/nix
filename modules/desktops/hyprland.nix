@@ -5,6 +5,8 @@
 
     programs.hyprland.enable = true;
 
+    programs.xwayland.enable = true;
+
     services.udisks2.enable = true;
 
     environment.sessionVariables = {

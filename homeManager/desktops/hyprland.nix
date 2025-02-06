@@ -174,7 +174,6 @@
         brightnessctl
         grimblast
         networkmanagerapplet
-        blueman
         swaynotificationcenter
     ];
 
