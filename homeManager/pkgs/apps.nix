@@ -11,7 +11,7 @@
         obsidian
         postman
         dolphin-emu
-        zed-editor
+        # zed-editor
         firefox
         transmission_4-gtk
         vlc
