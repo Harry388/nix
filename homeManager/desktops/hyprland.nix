@@ -161,8 +161,8 @@
         enable = true;
 
         iconTheme = {
-            package = pkgs.reversal-icon-theme;
-            name = "Reversal-green";
+            package = pkgs.papirus-icon-theme;
+            name = "Papirus-Light";
         };
     };
 
