@@ -22,6 +22,7 @@
         elixir
         deno
         python314
+        php
     ];
 
 }
