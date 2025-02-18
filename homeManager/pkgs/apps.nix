@@ -26,6 +26,7 @@
         loupe
         seahorse
         file-roller
+        gimp
         musescore
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.x86_64-linux; [
         lime3ds
