@@ -160,10 +160,10 @@
     gtk = {
         enable = true;
 
-        # iconTheme = {
-        #     package = pkgs.gruvbox-plus-icons;
-        #     name = "Gruvbox-Plus-Dark";
-        # };
+        iconTheme = {
+            package = pkgs.reversal-icon-theme;
+            name = "Reversal-green";
+        };
     };
 
     home.packages = with pkgs; [
