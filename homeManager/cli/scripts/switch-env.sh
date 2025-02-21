@@ -18,3 +18,4 @@ move_config () {
 }
 
 move_config "ghostty"
+move_config "tmux"
