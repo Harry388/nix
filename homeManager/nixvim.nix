@@ -1,4 +1,4 @@
-{ util, pkgs, ... }@confInps: util.mkModule { 
+{ util, pkgs, ... }@confInps: util.mkModule {
     inherit confInps;
     name = "nixvim";
 } {
