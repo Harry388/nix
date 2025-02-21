@@ -6,7 +6,7 @@
     home.packages = with pkgs; [
         (writeShellScriptBin "switch" (builtins.readFile ./scripts/switch.sh))
         (writeShellScriptBin "session" (builtins.readFile ./scripts/session.sh))
-        (writeShellScriptBin "firefoxFuzzel" (builtins.readFile ./scripts/firefoxFuzzel.sh))
+        (writeShellScriptBin "firefox-fuzzel" (builtins.readFile ./scripts/firefox-fuzzel.sh))
     ];
 
     programs.zsh = {
