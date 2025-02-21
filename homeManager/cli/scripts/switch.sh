@@ -11,3 +11,5 @@ if [ "$current_generation" != "$new_generation" ]; then
 else
     echo "$new_generation: No Change"
 fi
+
+switch-env

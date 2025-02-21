@@ -28,6 +28,7 @@
         file-roller
         gimp
         musescore
+        ghostty
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.x86_64-linux; [
         lime3ds
         gittyup

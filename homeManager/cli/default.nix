@@ -8,7 +8,6 @@
         ./zsh.nix
         ./alacritty.nix
         ./btop.nix
-        ./ghostty.nix
     ];
 } {
 
@@ -18,6 +17,5 @@
     zsh.enable = lib.mkDefault true;
     alacritty.enable = lib.mkDefault false;
     btop.enable = lib.mkDefault true;
-    ghostty.enable = lib.mkDefault true;
 
 }
