@@ -17,4 +17,4 @@ move_config () {
     move "$MY_CONFIG/$1" "$XDG_CONFIG_HOME/$1"
 }
 
-move_config "test"
+move_config "ghostty"
