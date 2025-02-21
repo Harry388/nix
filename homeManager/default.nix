@@ -4,7 +4,7 @@
     imports = [
         ./pkgs/default.nix
         ./desktops/default.nix
-        ./zsh.nix
+        ./scripts.nix
         ./nixvim.nix
     ];
 } {
@@ -12,8 +12,7 @@
     programs.google-chrome.enable = lib.mkDefault true;
     defaultHomePkgs.enable = lib.mkDefault true;
     defaultHomeDesktop.enable = lib.mkDefault true;
-
-    zsh.enable = lib.mkDefault true;
+    scripts.enable = lib.mkDefault true;
     nixvim.enable = lib.mkDefault true;
 
 }

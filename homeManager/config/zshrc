@@ -1,0 +1,33 @@
+typeset -U path cdpath fpath manpath
+
+for profile in ${(z)NIX_PROFILES}; do
+  fpath+=($profile/share/zsh/site-functions $profile/share/zsh/$ZSH_VERSION/functions $profile/share/zsh/vendor-completions)
+done
+
+plugins=(z)
+
+ZSH_THEME="gallifrey"
+source $ZSH/oh-my-zsh.sh
+
+HISTSIZE="9999999"
+SAVEHIST="9999999"
+
+HISTFILE="$HOME/.zsh_history"
+mkdir -p "$(dirname "$HISTFILE")"
+
+setopt HIST_FCNTL_LOCK
+unsetopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+unsetopt HIST_IGNORE_ALL_DUPS
+unsetopt HIST_SAVE_NO_DUPS
+unsetopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+unsetopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+
+# Session
+bindkey -s "^F" 'session^M'
+
+# Aliases
+alias -- sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
