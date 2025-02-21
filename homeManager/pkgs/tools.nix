@@ -21,6 +21,8 @@
         udiskie
         colorz
         git-filter-repo
+        git
+        btop
     ];
 
 }

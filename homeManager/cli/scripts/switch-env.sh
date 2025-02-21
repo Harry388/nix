@@ -19,3 +19,5 @@ move_config () {
 
 move_config "ghostty"
 move_config "tmux"
+move_config "git"
+move_config "btop"

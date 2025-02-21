@@ -1,0 +1,6 @@
+[pull]
+	rebase = false
+
+[user]
+	email = "harrythompson3765@gmail.com"
+	name = "Harry Thompson"
