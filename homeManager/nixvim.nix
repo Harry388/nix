@@ -6,7 +6,10 @@
     programs.nixvim = {
         enable = true;
 
-        colorschemes.rose-pine.enable = true;
+        colorschemes.rose-pine = {
+            enable = true;
+            settings.variant = "moon";
+        };
 
         globals.mapleader = " ";
 
