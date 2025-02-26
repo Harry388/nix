@@ -16,7 +16,7 @@
         keymaps = [
             {
                 key = "-";
-                action = "<cmd>Oil<CR>";
+                action = "<cmd>Yazi<CR>";
                 mode = "n";
             }
             {
@@ -165,6 +165,7 @@
                 enable = true;
                 settings.columns = [ "icon" ];
             };
+            yazi.enable = true;
             lsp = {
                 enable = true;
                 servers = {
