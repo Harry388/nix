@@ -144,8 +144,8 @@
     services.hyprpaper = {
         enable = true;
         settings = {
-            preload = [ "~/nix/wallpaper/house.jpg" ];
-            wallpaper = [ ", ~/nix/wallpaper/house.jpg" ];
+            preload = [ "~/nix/wallpaper/space.png" ];
+            wallpaper = [ ", ~/nix/wallpaper/space.png" ];
         };
     };
 
