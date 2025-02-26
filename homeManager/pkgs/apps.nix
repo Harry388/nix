@@ -30,6 +30,7 @@
         musescore
         ghostty
         tmux
+        yazi
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.x86_64-linux; [
         lime3ds
         gittyup
