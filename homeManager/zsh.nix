@@ -23,6 +23,7 @@
                 --color=spinner:#f6c177,info:#9ccfd8
                 --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
             "
+            eval "$(zoxide init zsh)"
         '';
 
         shellAliases = {
