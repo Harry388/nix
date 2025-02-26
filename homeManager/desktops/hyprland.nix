@@ -66,7 +66,7 @@
                 "windows, 1, 5, myBezier, slide"
                 "windowsOut, 1, 5, myBezier, slide"
                 "border, 1, 10, default"
-                "fade, 1, 7, default"
+                "fade, 1, 3, default"
             ];
 
             input = {
