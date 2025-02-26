@@ -24,7 +24,7 @@
 
         oh-my-zsh = {
             enable = true;
-            theme = "gallifrey";
+            theme = "robbyrussell";
             plugins = [ # List of plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
                 "z" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z
             ];

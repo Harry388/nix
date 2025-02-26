@@ -6,7 +6,7 @@
     programs.nixvim = {
         enable = true;
 
-        colorschemes.melange.enable = true;
+        colorschemes.rose-pine.enable = true;
 
         globals.mapleader = " ";
 
