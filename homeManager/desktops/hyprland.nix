@@ -47,7 +47,7 @@
             };
 
             animation = [
-                "global, 1, 2, default"
+                # "global, 1, 2, default"
                 "workspaces, 0, 2.5, default"
             ];
 
