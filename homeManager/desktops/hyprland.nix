@@ -44,11 +44,28 @@
 
             decoration = {
                 rounding = 10;
+                blur = {
+                    enabled = true;
+                    size = 7;
+                    passes = 4;
+                    new_optimizations = "on";
+                };
+
+                drop_shadow = "yes";
+                shadow_range = 4;
+                shadow_render_power = 3;
+                "col.shadow" = "rgba(1a1a1aee)";
             };
+
+            bezier = "myBezier, 0.10, 0.9, 0.1, 1.05";
 
             animation = [
                 # "global, 1, 2, default"
                 "workspaces, 0, 2.5, default"
+                "windows, 1, 5, myBezier, slide"
+                "windowsOut, 1, 5, myBezier, slide"
+                "border, 1, 10, default"
+                "fade, 1, 7, default"
             ];
 
             input = {
