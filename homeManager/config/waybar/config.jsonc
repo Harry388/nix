@@ -1,0 +1,57 @@
+[
+    {
+        "backlight": {
+            "device": "intel_backlight",
+            "format": "bl: {percent}%"
+        },
+        "battery": {
+            "format": "bat: {capacity}%",
+            "format-charging": "charging: {capacity}%"
+        },
+        "clock": {
+            "format": "{:%I:%M %p}",
+            "format-alt": "{:%a, %d. %b  %I:%M %p}"
+        },
+        "height": 5,
+        "hyprland/workspaces": {
+            "format": "{icon}",
+            "on-click": "activate",
+            "sort-by-number": true
+        },
+        "layer": "top",
+        "margin-left": 400,
+        "margin-right": 400,
+        "mode": "dock",
+        "modules-center": [
+            "clock"
+        ],
+        "modules-left": [
+            "hyprland/workspaces",
+            "battery",
+            "backlight"
+        ],
+        "modules-right": [
+            "network",
+            "pulseaudio",
+            "tray"
+        ],
+        "network": {
+            "format": "{ifname}",
+            "format-disconnected": "disconnected",
+            "format-ethernet": "eth: {essid}",
+            "format-wifi": "wifi: {essid}",
+            "max-length": 50
+        },
+        "position": "top",
+        "pulseaudio": {
+            "format": "vol: {volume}%",
+            "format-bluetooth": "blu: {volume}%",
+            "format-muted": "vol: muted",
+            "ignored-sinks": [
+                "Easy Effects Sink"
+            ],
+            "on-click": "pavucontrol",
+            "scroll-step": 1
+        }
+    }
+]

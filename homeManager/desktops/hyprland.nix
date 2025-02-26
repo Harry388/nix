@@ -1,7 +1,6 @@
 { util, pkgs, ... }@confInps: util.mkModule { 
     inherit confInps;
     name = "hyprlandHome";
-    imports = [ ./waybar.nix ];
 } {
 
     wayland.windowManager.hyprland = {
@@ -192,8 +191,7 @@
         grimblast
         networkmanagerapplet
         swaynotificationcenter
+        waybar
     ];
-
-    waybar.enable = true;
 
 }
