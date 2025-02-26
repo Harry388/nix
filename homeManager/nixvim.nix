@@ -8,7 +8,7 @@
 
         colorschemes.rose-pine = {
             enable = true;
-            settings.variant = "moon";
+            settings.variant = "main";
         };
 
         globals.mapleader = " ";
