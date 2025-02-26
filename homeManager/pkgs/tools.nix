@@ -23,6 +23,7 @@
         git-filter-repo
         git
         btop
+        zoxide
     ];
 
 }
