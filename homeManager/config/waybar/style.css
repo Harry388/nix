@@ -5,16 +5,24 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(25,23,36,0.7);
     color: #e0def4;
-    border-radius: 0px 0px 10px 10px;
-    padding: 2px;
+}
+
+#workspaces {
+    padding-left: 8px;
 }
 
 #workspaces button {
     background: transparent;
     color: #e0def4;
-    border-radius: 0px 0px 10px 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    border-radius: 100px;
 }
 
 #workspaces button:hover {
@@ -24,44 +32,34 @@ window#waybar {
 #workspaces button.active {
     background: #e0def4;
     color: #000000;
-    border-radius: 0px 0px 10px 10px;
 }
 
-.modules-right {
+#battery {
     padding-right: 8px;
     padding-left: 8px;
 }
 
-#battery {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
 #clock {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 #tray {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 #network {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 #pulseaudio {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 #backlight {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 8px;
+    padding-left: 8px;
 }

@@ -41,6 +41,11 @@
                 "no_hardware_cursors" = true;
             };
 
+            layerrule = [
+                "blur, waybar"
+                "blur, launcher"
+            ];
+
             decoration = {
                 rounding = 10;
                 blur = {
@@ -157,8 +162,8 @@
     services.hyprpaper = {
         enable = true;
         settings = {
-            preload = [ "~/nix/wallpaper/space.png" ];
-            wallpaper = [ ", ~/nix/wallpaper/space.png" ];
+            preload = [ "~/nix/wallpaper/bridge.jpeg" ];
+            wallpaper = [ ", ~/nix/wallpaper/bridge.jpeg" ];
         };
     };
 
