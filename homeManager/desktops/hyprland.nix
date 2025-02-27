@@ -9,7 +9,7 @@
 
             "$mainMod" = "SUPER";
             "$terminal" = "ghostty";
-            "$menu" = "fuzzel";
+            "$menu" = "ulauncher-toggle";
             "$browser" = "zen";
             "$browserProfiles" = "firefox-fuzzel";
             "$lifx" = "lifx 192.168.1.252 d073d5303445 toggle";
@@ -23,6 +23,7 @@
                 "blueman-applet"
                 "swaync"
                 "udiskie"
+                "ulauncher"
             ];
 
             windowrulev2 = [
@@ -194,6 +195,7 @@
         networkmanagerapplet
         swaynotificationcenter
         waybar
+        ulauncher
     ];
 
 }

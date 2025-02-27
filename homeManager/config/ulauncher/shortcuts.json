@@ -1,0 +1,12 @@
+{
+    "357ec6c0-5020-4b47-86a9-89282a0c97f4": {
+        "id": "357ec6c0-5020-4b47-86a9-89282a0c97f4",
+        "name": "UnDuck",
+        "keyword": "g",
+        "cmd": "https://unduck.link?q=%s",
+        "icon": null,
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1740671621.4622571
+    }
+}
