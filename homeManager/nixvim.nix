@@ -169,16 +169,8 @@
             lsp = {
                 enable = true;
                 servers = {
-                    # denols = {
-                    #     enable = true;
-                    #     rootDir = "require('lspconfig').util.root_pattern(\"deno.json\", \"deno.jsonc\")";
-                    # };
                     ts_ls = {
                         enable = true;
-                        # rootDir = "require('lspconfig').util.root_pattern(\"package.json\")";
-                        # extraOptions = {
-                        #     single_file_support = false;
-                        # };
                     };
                     lua_ls = {
                         enable = true;
