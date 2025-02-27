@@ -36,6 +36,8 @@
         gittyup
         bottles
         mysql-workbench
-    ]);
+    ]) ++ [
+        inputs.zen-browser.packages.x86_64-linux.default
+    ];
 
 }
