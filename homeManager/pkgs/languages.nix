@@ -23,6 +23,8 @@
         deno
         python314
         php
+        php83Packages.composer
+        laravel
     ];
 
 }
