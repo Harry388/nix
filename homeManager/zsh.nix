@@ -28,6 +28,10 @@
 
         shellAliases = {
             sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
+            gs = "git status";
+            gd = "git diff";
+            ga = "git stage *";
+            ac = "git commit -a -m";
         };
 
         oh-my-zsh = {
