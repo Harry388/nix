@@ -200,6 +200,7 @@
                     phpactor.enable = true;
                     elixirls.enable = true;
                     bashls.enable = true;
+                    cssls.enable = true;
                 };
                 keymaps.lspBuf = {
                     K = "hover";
