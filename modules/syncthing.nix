@@ -5,13 +5,6 @@
 
     services.syncthing = {
         enable = true;
-        settings = {
-            folders = {
-                documents = {
-                    path = "/home/harry/sync/documents";
-                };
-            };
-        };
         user = "harry";
     };
 
