@@ -10,6 +10,9 @@
                 documents = {
                     path = "/home/harry/sync/documents";
                 };
+                photos = {
+                    path = "/home/harry/sync/photos";
+                };
             };
         };
     };
