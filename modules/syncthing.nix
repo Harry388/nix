@@ -8,16 +8,11 @@
         settings = {
             folders = {
                 documents = {
-                    path = "/var/lib/syncthing/documents";
+                    path = "/home/harry/sync/documents";
                 };
             };
         };
-    };
-
-    users.groups = {
-        sync = {
-            members = [ "harry" "syncthing" ];
-        };
+        user = "harry";
     };
 
 }
