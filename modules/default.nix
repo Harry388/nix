@@ -10,7 +10,6 @@
         ./base.nix
         ./openssh.nix
         ./tailscale.nix
-        ./syncthing.nix
     ];
 } {
 
@@ -22,5 +21,4 @@
     base.enable = lib.mkDefault true;
     openssh.enable = lib.mkDefault false;
     tailscale.enable = lib.mkDefault true;
-    syncthing.enable = lib.mkDefault true;
 }
