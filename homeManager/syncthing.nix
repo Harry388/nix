@@ -17,7 +17,7 @@
                 };
                 photos = {
                     path = "/home/harry/sync/photos";
-                    devices = [ "desktop" ];
+                    devices = [ "desktop" "laptop" ];
                 };
             };
         };
