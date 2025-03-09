@@ -5,6 +5,13 @@
 
     services.syncthing = {
         enable = true;
+        settings = {
+            folders = {
+                documents = {
+                    path = "/var/lib/syncthing/documents";
+                };
+            };
+        };
     };
 
     users.groups = {
