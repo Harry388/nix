@@ -30,6 +30,7 @@
         nixosConfigurations = {
             laptop = mkSystem "laptop";
             desktop = mkSystem "desktop";
+            pi = mkSystem "pi";
         };
         homeConfigurations = {
             harry = mkHome "harry" { # unused
