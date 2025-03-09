@@ -5,6 +5,13 @@
 
     services.syncthing = {
         enable = true;
+        settings = {
+            folders = {
+                "sync" = {
+                    path = "/home/harry/sync";
+                };
+            };
+        };
     };
 
     users.groups = {
