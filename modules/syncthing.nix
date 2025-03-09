@@ -7,4 +7,10 @@
         enable = true;
     };
 
+    users.groups = {
+        sync = {
+            members = [ "harry" "syncthing" ];
+        };
+    };
+
 }
