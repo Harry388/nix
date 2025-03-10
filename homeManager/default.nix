@@ -10,11 +10,11 @@
     ];
 } {
 
-    programs.google-chrome.enable = lib.mkDefault true;
     defaultHomePkgs.enable = lib.mkDefault true;
     defaultHomeDesktop.enable = lib.mkDefault true;
-    syncthing.enable = lib.mkDefault true;
 
+    programs.google-chrome.enable = lib.mkDefault true;
+    syncthing.enable = lib.mkDefault true;
     zsh.enable = lib.mkDefault true;
     nixvim.enable = lib.mkDefault true;
 
