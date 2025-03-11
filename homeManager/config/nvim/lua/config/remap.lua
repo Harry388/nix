@@ -1,9 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "-", "<cmd>Yazi<CR>")
-vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>")
-vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>")
 vim.keymap.set("n", "<leader>t", "<cmd>tabnew<CR>")
 vim.keymap.set("n", "<M-l>", "<cmd>tabnext<CR>")
 vim.keymap.set("n", "<M-h>", "<cmd>tabprev<CR>")
