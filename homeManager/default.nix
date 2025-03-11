@@ -1,4 +1,4 @@
-{ util, lib, ... }@confInps: util.mkModule { 
+{ util, lib, ... }@confInps: util.mkModule {
     inherit confInps;
     name = "defaultHome";
     imports = [
@@ -16,6 +16,6 @@
     programs.google-chrome.enable = lib.mkDefault true;
     syncthing.enable = lib.mkDefault true;
     zsh.enable = lib.mkDefault true;
-    nixvim.enable = lib.mkDefault true;
+    nixvim.enable = lib.mkDefault false;
 
 }
