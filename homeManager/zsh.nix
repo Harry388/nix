@@ -35,6 +35,7 @@
             ac = "git commit -a -m";
             gp = "git pull";
             gP = "git push";
+            gf = "git fetch";
         };
 
         oh-my-zsh = {
