@@ -47,6 +47,13 @@ return {
                     "cssls",
                     "intelephense",
             },
+            handlers = {
+                function(server_name) -- default handler (optional)
+                    require("lspconfig")[server_name].setup {
+                        capabilities = capabilities
+                    }
+                end,
+            }
         })
         local lspconfig = require('lspconfig')
   
@@ -66,8 +73,6 @@ return {
                 "vue",
             },
         }
-        lspconfig.volar.setup {}
-
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
