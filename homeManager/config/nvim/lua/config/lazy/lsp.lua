@@ -39,7 +39,7 @@ return {
                     "volar",
                     "tailwindcss",
                     "html",
-                    -- "htmx",
+                    "htmx",
                     "emmet_ls",
                     "zls",
                     "elixirls",
@@ -47,25 +47,26 @@ return {
                     "cssls",
                     "intelephense",
             },
-            handlers = {
-                function(server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
-                    }
-                end,
-            }
         })
         local lspconfig = require('lspconfig')
   
-        lspconfig.volar.setup {
-            filetypes = { "vue" },
+        lspconfig.ts_ls.setup {
             init_options = {
-                vue = {
-                    hybridMode = false,
+                plugins = {
+                    {
+                        name = "@vue/typescript-plugin",
+                        location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                        languages = {"javascript", "typescript", "vue"},
+                    },
                 },
             },
+            filetypes = {
+                "javascript",
+                "typescript",
+                "vue",
+            },
         }
-        lspconfig.ts_ls.setup {}
+        lspconfig.volar.setup {}
 
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -88,17 +89,6 @@ return {
             }, {
                 { name = 'buffer' },
             })
-        })
-
-        vim.diagnostic.config({
-            float = {
-                focusable = false,
-                style = "minimal",
-                border = "rounded",
-                source = "always",
-                header = "",
-                prefix = "",
-            },
         })
 
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
