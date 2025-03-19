@@ -30,7 +30,8 @@
             sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
             gs = "git status";
             gd = "git diff";
-            ga = "git stage *";
+            ga = "git add -A";
+            gc = "git commit -m";
             ac = "git commit -a -m";
             gp = "git pull";
             gP = "git push";
