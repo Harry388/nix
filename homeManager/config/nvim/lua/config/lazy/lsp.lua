@@ -42,7 +42,7 @@ return {
                     -- "htmx",
                     "emmet_ls",
                     "zls",
-                    -- "elixirls",
+                    "elixirls",
                     "bashls",
                     "cssls",
                     "intelephense",
