@@ -32,6 +32,8 @@
             gd = "git diff";
             ga = "git stage *";
             ac = "git commit -a -m";
+            gp = "git pull";
+            gP = "git push";
         };
 
         oh-my-zsh = {
