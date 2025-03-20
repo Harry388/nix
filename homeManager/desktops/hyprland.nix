@@ -11,7 +11,7 @@
             "$terminal" = "ghostty";
             "$menu" = "ulauncher-toggle";
             "$browser" = "zen";
-            "$browserProfiles" = "firefox-fuzzel";
+            "$browserProfiles" = "$(which firefox-fuzzel)";
             "$lifx" = "lifx 192.168.1.252 d073d5303445 toggle";
             # "$borderColour" = "rgb(8ec07c)";
             # "$borderColour" = "rgb(ce8d25)";
