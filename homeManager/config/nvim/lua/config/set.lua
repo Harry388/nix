@@ -25,3 +25,15 @@ vim.opt.updatetime = 50
 vim.opt.signcolumn = "yes:1"
 
 vim.opt.foldlevelstart = 99
+
+vim.g.have_nerd_font = true
+
+vim.opt.inccommand = 'split'
+
+-- vim.api.nvim_create_autocmd('TextYankPost', {
+--     desc = 'Highlight when yanking (copying) text',
+--     group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+--     callback = function()
+--         vim.highlight.on_yank()
+--     end,
+-- })
