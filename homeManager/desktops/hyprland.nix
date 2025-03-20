@@ -11,7 +11,6 @@
             "$terminal" = "ghostty";
             "$menu" = "ulauncher-toggle";
             "$browser" = "zen";
-            "$browserProfiles" = "$(which firefox-fuzzel)";
             "$lifx" = "lifx 192.168.1.252 d073d5303445 toggle";
             # "$borderColour" = "rgb(8ec07c)";
             # "$borderColour" = "rgb(ce8d25)";
@@ -84,7 +83,6 @@
                 "$mainMod, Q, killactive"
                 "$mainMod, M, exit"
                 "$mainMod, X, exec, $lifx"
-                "$mainMod, E, exec, $browserProfiles"
                 "$mainMod, N, exec, swaync-client -t"
 
                 "$mainMod, h, movefocus, l"
