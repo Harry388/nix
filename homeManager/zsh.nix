@@ -21,7 +21,7 @@
                 --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
             "
             eval "$(zoxide init zsh)"
-            export PATH="$PATH:$HOME/.local/scripts"
+            PATH="$PATH:$HOME/.local/scripts"
         '';
 
         shellAliases = {
