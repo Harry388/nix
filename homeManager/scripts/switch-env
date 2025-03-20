@@ -1,9 +1,19 @@
+#!/usr/bin/env bash
+
 if [ -z "$XDG_CONFIG_HOME" ]; then
     XDG_CONFIG_HOME="$HOME/.config"
 fi
 
 if [ -z "$MY_CONFIG" ]; then
     MY_CONFIG="$HOME/nix/homeManager/config"
+fi
+
+if [ -z "$SCRIPTS_HOME" ]; then
+    SCRIPTS_HOME="$HOME/.local/scripts"
+fi
+
+if [ -z "$MY_SCRIPTS" ]; then
+    MY_SCRIPTS="$HOME/nix/homeManager/scripts"
 fi
 
 move () {
@@ -16,6 +26,9 @@ move () {
 move_config () {
     move "$MY_CONFIG/$1" "$XDG_CONFIG_HOME/$1"
 }
+
+move "$MY_SCRIPTS" "$SCRIPTS_HOME"
+chmod -R +x "$SCRIPTS_HOME"
 
 move_config "ghostty"
 move_config "tmux"

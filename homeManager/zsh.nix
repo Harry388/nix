@@ -4,10 +4,7 @@
 } {
 
     home.packages = with pkgs; [
-        (writeShellScriptBin "switch" (builtins.readFile ./scripts/switch.sh))
-        (writeShellScriptBin "switch-env" (builtins.readFile ./scripts/switch-env.sh))
-        (writeShellScriptBin "session" (builtins.readFile ./scripts/session.sh))
-        (writeShellScriptBin "firefox-fuzzel" (builtins.readFile ./scripts/firefox-fuzzel.sh))
+        (writeShellScriptBin "switch-env" (builtins.readFile ./scripts/switch-env))
     ];
 
     programs.zsh = {
@@ -24,6 +21,7 @@
                 --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
             "
             eval "$(zoxide init zsh)"
+            export PATH="$PATH:$HOME/.local/scripts"
         '';
 
         shellAliases = {
