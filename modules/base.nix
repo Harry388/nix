@@ -3,11 +3,6 @@
     name = "base";
 } {
 
-    boot.loader = {
-        efi.canTouchEfiVariables = true;
-        systemd-boot.enable = true;
-    };
-
     networking.hostName = host;
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

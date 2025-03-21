@@ -17,10 +17,20 @@
         loupe
         gimp
         musescore
+        firefox
+        vlc
+        nautilus
+        gnome-calculator
+        gnome-disk-utility
+        file-roller
+        seahorse
+        ghostty
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
         gittyup
         bottles
         mysql-workbench
-    ]);
+    ]) ++ [
+        inputs.zen-browser.packages.${pkgs.system}.default
+    ];
 
 }

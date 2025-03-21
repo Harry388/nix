@@ -26,6 +26,11 @@
         };
     };
 
+    boot.loader = {
+        efi.canTouchEfiVariables = true;
+        systemd-boot.enable = true;
+    };
+
     defaultModules.enable = true;
 
     nvidia.enable = true;
