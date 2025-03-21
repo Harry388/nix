@@ -8,6 +8,9 @@
 
             defaultHome.enable = true;
 
+            gaming.enable = false;
+            apps.enable = false;
+
             home.stateVersion = "23.11"; # Don't change
         };
     };
