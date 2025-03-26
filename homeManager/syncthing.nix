@@ -20,6 +20,14 @@
                     path = "/home/harry/sync/photos";
                     devices = [ "desktop" "laptop" "pi" ];
                 };
+                backup = {
+                    path = "/home/harry/sync/backup";
+                    devices = [ "desktop" "laptop" "pi" ];
+                };
+                obsidian = {
+                    path = "/home/harry/sync/obsidian";
+                    devices = [ "desktop" "laptop" "pi" ];
+                };
             };
         };
     };
