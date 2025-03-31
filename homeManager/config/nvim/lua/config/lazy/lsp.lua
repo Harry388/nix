@@ -56,7 +56,7 @@ return {
                     "volar",
                     "tailwindcss",
                     "html",
-                    "htmx",
+                    -- "htmx",
                     "emmet_ls",
                     "zls",
                     "elixirls",
