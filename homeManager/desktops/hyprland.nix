@@ -89,15 +89,11 @@
                 "$mainMod, j, workspace, 2"
                 "$mainMod, k, workspace, 3"
                 "$mainMod, l, workspace, 4"
-                "$mainMod, ;, workspace, 5"
-                "$mainMod, ', workspace, 6"
 
                 "$mainMod SHIFT, h, movetoworkspace, 1"
                 "$mainMod SHIFT, j, movetoworkspace, 2"
                 "$mainMod SHIFT, k, movetoworkspace, 3"
                 "$mainMod SHIFT, l, movetoworkspace, 4"
-                "$mainMod SHIFT, ;, movetoworkspace, 5"
-                "$mainMod SHIFT, ', movetoworkspace, 6"
 
                 "$mainMod, 1, workspace, 1"
                 "$mainMod, 2, workspace, 2"
