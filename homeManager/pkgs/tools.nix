@@ -26,6 +26,7 @@
         btop
         zoxide
         unzip
+        tldr
     ];
 
 }
