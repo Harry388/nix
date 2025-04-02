@@ -32,7 +32,8 @@
             ];
 
             general = {
-                "gaps_out" = 8;
+                "gaps_out" = 0;
+                "gaps_in" = 0;
                 "col.active_border" = "$borderColour";
                 "border_size" = 0;
             };
@@ -47,7 +48,7 @@
             ];
 
             decoration = {
-                rounding = 10;
+                rounding = 0;
                 blur = {
                     enabled = true;
                     size = 7;
@@ -63,8 +64,8 @@
 
             animation = [
                 "workspaces, 0, 2.5, default"
-                "windows, 1, 5, myBezier, slide"
-                "windowsOut, 1, 5, myBezier, slide"
+                "windows, 1, 5, myBezier"
+                "windowsOut, 1, 5, myBezier"
                 "border, 1, 10, default"
                 "fade, 1, 3, default"
             ];
