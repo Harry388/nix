@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+
+import sys
+
+def get_cards(file):
+    global rarities
+
+    current_pack = []
+    current_pack_level = 0
+
+    cards = []
+
+    for line in file:
+        words = line.split(" ")
+
+        # Header
+        if "#" in words[0]:
+            if words[0] == "#":
+                continue
+            pack_level = len(words[0])
+            if pack_level <= current_pack_level:
+                current_pack = current_pack[:pack_level - current_pack_level - 1]
+            current_pack_level = pack_level
+            current_pack.append(" ".join(words[1:]).strip())
+
+        # Card
+        if words[0] == "-":
+            if line[3] == " ":
+                continue
+            parts = line.split("-")
+            card = {
+                "id": parts[1].strip().split("[x]")[1].strip(),
+                "rarity": int(parts[2].strip()),
+                "name": parts[3].strip(),
+                "pack": " ".join(current_pack)
+            }
+            rarities.add(card["rarity"])
+            cards.append(card)
+
+    return cards
+
+
+if len(sys.argv) <= 2:
+    exit(0)
+
+one = sys.argv[1]
+two = sys.argv[2]
+
+file_name_one = one + ".md"
+file_name_two = two + ".md"
+
+file_one = open(file_name_one, "r")
+file_two = open(file_name_two, "r")
+
+rarities = set()
+
+cards_one = get_cards(file_one)
+cards_two = get_cards(file_two)
+
+cards = {}
+
+for rarity in rarities:
+    cards[rarity] = { one: [], two: [] }
+
+for card_one in cards_one:
+    cards[card_one["rarity"]][one].append(card_one)
+
+for card_two in cards_two:
+    cards[card_two["rarity"]][two].append(card_two)
+
+trade = "-> 🃟   " + one.title() + " and " + two.title() + " TCG Trades  🃟  <-\n\n"
+
+longest_cell = {}
+
+tables = {}
+
+for rarity in cards:
+
+    table = [["Trader", "Id", "Name", "Pack", "<=>", "Trader", "Id", "Name", "Pack"]]
+
+    this_cards_one = cards[rarity][one]
+    this_cards_two = cards[rarity][two]
+
+    for i in range(len(this_cards_two)):
+        row = []
+        row.append(one.title())
+        row.append(this_cards_two[i]["id"])
+        row.append(this_cards_two[i]["name"])
+        row.append(this_cards_two[i]["pack"])
+        if i < len(this_cards_one):
+            row.append("<=>")
+            row.append(two.title())
+            row.append(this_cards_one[i]["id"])
+            row.append(this_cards_one[i]["name"])
+            row.append(this_cards_one[i]["pack"])
+        else:
+            for _ in range(5):
+                row.append("")
+        table.append(row)
+
+    start = i + 1 if len(this_cards_two) > 0 else 0
+
+    for i in range(start, len(this_cards_one)):
+        row = []
+        for _ in range(5):
+            row.append("")
+        row.append(two.title())
+        row.append(this_cards_one[i]["id"])
+        row.append(this_cards_one[i]["name"])
+        row.append(this_cards_one[i]["pack"])
+        table.append(row)
+
+    for r in range(len(table)):
+        for c in range(len(table[r])):
+            cell_len = len(table[r][c])
+            if (c not in longest_cell) or (cell_len > longest_cell[c]):
+                longest_cell[c] = cell_len
+
+    tables[rarity] = table
+
+for rarity in tables:
+
+    table = tables[rarity]
+
+    trade += "# Rarity " + str(rarity) + "\n"
+
+    for r in range(len(table)):
+        for c in range(len(table[r])):
+            table[r][c] = " " + table[r][c] + (" " * (longest_cell[c] - len(table[r][c]))) + " "
+
+    divider = ["-" * (longest_cell[c] + 2) for c in longest_cell]
+
+    table.insert(1, divider)
+
+    for row in table:
+        trade += "\n|" + "|".join(row) + "|"
+
+    trade += "\n\n"
+
+trade_file = open("trade.md", "w")
+trade_file.write(trade)

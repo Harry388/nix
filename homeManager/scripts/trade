@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+gen-trade "$1" "$2"
+
+if [ "$?" = 0 ]; then
+    mdp trade.md
+fi
