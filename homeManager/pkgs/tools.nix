@@ -27,6 +27,7 @@
         zoxide
         unzip
         tldr
+        mdp
     ];
 
 }
