@@ -25,10 +25,10 @@
         file-roller
         seahorse
         ghostty
+        mysql-workbench
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
         gittyup
         bottles
-        mysql-workbench
     ]) ++ [
         inputs.zen-browser.packages.${pkgs.system}.default
     ];
