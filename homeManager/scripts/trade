@@ -3,5 +3,5 @@
 gen-trade "$1" "$2"
 
 if [ "$?" = 0 ]; then
-    mdp trade.md
+    mdp trade.md --nofade
 fi
