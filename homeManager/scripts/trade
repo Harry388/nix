@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
-gen-trade "$1" "$2"
+gen () {
+    gen-trade "$1" "$2"
+    if [ "$?" = 0 ]; then
+        mdp trade.md --nofade
+    fi
+}
 
-if [ "$?" = 0 ]; then
-    mdp trade.md --nofade
-fi
+while true; do
+    gen "$1" "$2" &
+    PID=$!
+    inotifywait -e modify -e move -e create -e delete -e attrib "$1.md" "$2.md"
+    kill $PID
+done
