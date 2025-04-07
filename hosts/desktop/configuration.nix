@@ -31,8 +31,6 @@
         systemd-boot.enable = true;
     };
 
-    gnome.enable = true;
-
     defaultModules.enable = true;
 
     nvidia.enable = true;
