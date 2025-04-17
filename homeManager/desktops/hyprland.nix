@@ -86,15 +86,15 @@
                 "$mainMod, X, exec, $lifx"
                 "$mainMod, N, exec, swaync-client -t"
 
-                "$mainMod, h, workspace, 1"
-                "$mainMod, j, workspace, 2"
-                "$mainMod, k, workspace, 3"
-                "$mainMod, l, workspace, 4"
+                "$mainMod, h, movefocus, l"
+                "$mainMod, j, movefocus, d"
+                "$mainMod, k, movefocus, u"
+                "$mainMod, l, movefocus, r"
 
-                "$mainMod SHIFT, h, movetoworkspace, 1"
-                "$mainMod SHIFT, j, movetoworkspace, 2"
-                "$mainMod SHIFT, k, movetoworkspace, 3"
-                "$mainMod SHIFT, l, movetoworkspace, 4"
+                "$mainMod SHIFT, h, movewindow, l"
+                "$mainMod SHIFT, j, movewindow, d"
+                "$mainMod SHIFT, k, movewindow, u"
+                "$mainMod SHIFT, l, movewindow, r"
 
                 "$mainMod, 1, workspace, 1"
                 "$mainMod, 2, workspace, 2"
