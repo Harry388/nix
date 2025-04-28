@@ -32,7 +32,6 @@ in
         modules = [
             ./users/${name}.nix
             ./homeManager/default.nix
-            inputs.nixvim.homeManagerModules.nixvim
             extraConf
         ];
     };
@@ -41,7 +40,6 @@ in
         imports = [
             ./users/${name}.nix
             ./homeManager/default.nix
-            inputs.nixvim.homeManagerModules.nixvim
             extraConf
         ];
     };
