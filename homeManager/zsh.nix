@@ -11,7 +11,7 @@
         enable = true;
         enableCompletion = true;
 
-        initExtra = ''
+        initContent = ''
             bindkey -s "^F" 'session^M'
             export FZF_DEFAULT_OPTS="
                 --color=fg:#908caa,bg:#191724,hl:#ebbcba
