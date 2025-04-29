@@ -26,6 +26,7 @@
         seahorse
         ghostty
         mysql-workbench
+        celestia
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
         gittyup
         bottles
