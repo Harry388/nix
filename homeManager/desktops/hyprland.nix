@@ -159,13 +159,13 @@
     #     };
     # };
 
-    services.hyprpaper = {
-        enable = true;
-        # settings = {
-        #     preload = [ "~/nix/wallpaper/bridge.jpeg" ];
-        #     wallpaper = [ ", ~/nix/wallpaper/bridge.jpeg" ];
-        # };
-    };
+    # services.hyprpaper = {
+    #     enable = true;
+    #     settings = {
+    #         preload = [ "~/nix/wallpaper/bridge.jpeg" ];
+    #         wallpaper = [ ", ~/nix/wallpaper/bridge.jpeg" ];
+    #     };
+    # };
 
     home.pointerCursor = {
         gtk.enable = true;
@@ -199,6 +199,7 @@
         swaynotificationcenter
         waybar
         ulauncher
+        hyprpaper
     ];
 
 }
