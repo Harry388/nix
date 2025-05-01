@@ -31,8 +31,7 @@
             gd = "git diff";
             ga = "git add -A";
             gc = "git commit -m";
-            ac = "git commit -a -m";
-            gac = "ga && ac";
+            ac = "ga && gc";
             gp = "git pull";
             gP = "git push";
             gf = "git fetch";
