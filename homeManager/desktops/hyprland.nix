@@ -161,10 +161,10 @@
 
     services.hyprpaper = {
         enable = true;
-        settings = {
-            preload = [ "~/nix/wallpaper/bridge.jpeg" ];
-            wallpaper = [ ", ~/nix/wallpaper/bridge.jpeg" ];
-        };
+        # settings = {
+        #     preload = [ "~/nix/wallpaper/bridge.jpeg" ];
+        #     wallpaper = [ ", ~/nix/wallpaper/bridge.jpeg" ];
+        # };
     };
 
     home.pointerCursor = {
