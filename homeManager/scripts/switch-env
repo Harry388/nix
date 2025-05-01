@@ -41,6 +41,4 @@ move_config "ulauncher"
 move_config "nvim"
 move_config "hypr"
 
-export HOSTNAME="$(hostname)"
-
 hyprctl reload
