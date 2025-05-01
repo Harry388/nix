@@ -6,19 +6,31 @@ dirs=(
     "$HOME/programming/gleam" "$HOME/programming/golang" "$HOME/programming/elixir"
 )
 dir=$(find "${dirs[@]}" -maxdepth 1 -mindepth 1 -type d ! -path "*/.*" 2> /dev/null | fzf)
-if [ -n "$dir" ]; then
-    name=$(basename "$dir")
-    if ! tmux has-session -t "$name"; then
-        tmux new-session -c "$dir" -s "$name" -d
-        if [ -f "$dir/.session" ]; then
-            tmux send-keys -t "$name" "source $dir/.session $name" c-M
-        elif [ -f "$HOME/nix/homeManager/scripts/.session" ]; then
-            tmux send-keys -t "$name" "source $HOME/nix/homeManager/scripts/.session $name" c-M
-        fi
-    fi
-    if [ -n "$TMUX" ]; then
-        tmux switch -t "$name"
-    else
-        tmux attach -t "$name"
-    fi
+if [ -z "$dir" ]; then
+    exit 1
 fi
+
+name=$(basename "$dir")
+
+open () {
+    if [ -n "$TMUX" ]; then
+        tmux switch -t "$1"
+    else
+        tmux attach -t "$1"
+    fi
+}
+
+
+if tmux has-session -t "$name"; then
+    open "$name"
+    exit 0
+fi
+
+tmux new-session -c "$dir" -s "$name" -d
+if [ -f "$dir/.session" ]; then
+    tmux send-keys -t "$name" "source $dir/.session $name" c-M
+elif [ -f "$HOME/nix/homeManager/scripts/.session" ]; then
+    tmux send-keys -t "$name" "source $HOME/nix/homeManager/scripts/.session $name" c-M
+fi
+
+open "$name"

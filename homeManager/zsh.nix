@@ -22,9 +22,6 @@
             "
             eval "$(zoxide init zsh)"
             PATH="$PATH:$HOME/.local/scripts"
-            if [ -z "$TMUX" ]; then
-                tmux
-            fi
         '';
 
         shellAliases = {
