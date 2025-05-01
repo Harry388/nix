@@ -60,14 +60,14 @@
                 };
             };
 
-            # bezier = "myBezier, 0.10, 0.9, 0.1, 1.05";
+            bezier = "myBezier, 0.10, 0.9, 0.1, 1.05";
 
             animation = [
                 "workspaces, 0, 2.5, default"
-                # "windows, 1, 5, myBezier"
-                # "windowsOut, 1, 5, myBezier"
-                # "border, 1, 10, default"
-                # "fade, 1, 3, default"
+                "windows, 1, 5, myBezier"
+                "windowsOut, 1, 5, myBezier"
+                "border, 1, 10, default"
+                "fade, 1, 3, default"
             ];
 
             input = {
