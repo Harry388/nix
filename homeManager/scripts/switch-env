@@ -40,3 +40,5 @@ move_config "yazi"
 move_config "ulauncher"
 move_config "nvim"
 move_config "hypr"
+
+hyprctl reload
