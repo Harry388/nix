@@ -41,4 +41,6 @@ move_config "ulauncher"
 move_config "nvim"
 move_config "hypr"
 
+export HYPR_CONF="$XDG_CONFIG_HOME/hypr/hosts/$HOST.conf"
+
 hyprctl reload
