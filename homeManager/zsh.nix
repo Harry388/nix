@@ -22,6 +22,7 @@
             "
             eval "$(zoxide init zsh)"
             PATH="$PATH:$HOME/.local/scripts"
+            auto-tmux
         '';
 
         shellAliases = {
