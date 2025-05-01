@@ -5,23 +5,7 @@
     home-manager = {
         extraSpecialArgs = { inherit inputs util; };
         users.harry = util.mkUser "harry" {
-
             defaultHome.enable = true;
-
-            wayland.windowManager.hyprland.settings = {
-                monitor = [
-                    "DVI-D-1, 1680x1050, 0x0, 1"
-                    "HDMI-A-1, 1920x1080, 1680x0, 1"
-                    "fake, 2000x1200@60.00, 0x1050, 2"
-                ];
-
-                env = [
-                    "LIBVA_DRIVER_NAME,nvidia"
-                    "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-                    "ELECTRON_OZONE_PLATFORM_HINT,auto"
-                ];
-            };
-
             home.stateVersion = "23.11"; # Don't change
         };
     };
