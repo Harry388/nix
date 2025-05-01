@@ -170,10 +170,7 @@
     home.pointerCursor = {
         gtk.enable = true;
         x11.enable = true;
-        hyprcursor = {
-            enable = true;
-            size = 32;
-        };
+        sway.enable = true;
         package = pkgs.banana-cursor;
         name = "Banana";
         size = 32;
