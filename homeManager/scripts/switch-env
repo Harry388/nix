@@ -8,6 +8,10 @@ if [ -z "$MY_CONFIG" ]; then
     MY_CONFIG="$HOME/nix/homeManager/config"
 fi
 
+if [ -z "$MY_HOST_CONFIG" ]; then
+    MY_HOST_CONFIG="$HOME/nix/homeManager/hostConfig/$HOST"
+fi
+
 if [ -z "$SCRIPTS_HOME" ]; then
     SCRIPTS_HOME="$HOME/.local/scripts"
 fi
@@ -21,6 +25,12 @@ move () {
     to="$2"
     rm -rf "$to"
     cp -R "$dir" "$to"
+}
+
+append_host_to_config () {
+    config="$MY_CONFIG/$1"
+    host="$MY_HOST_CONFIG/$1"
+    cat "$host" >> "$config"
 }
 
 move_config () {
@@ -40,3 +50,4 @@ move_config "yazi"
 move_config "ulauncher"
 move_config "nvim"
 move_config "hypr/hyprpaper.conf"
+append_host_to_config "hypr/hyprpaper.conf"
