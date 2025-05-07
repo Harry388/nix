@@ -61,7 +61,3 @@ move_config "ulauncher"
 move_config "nvim"
 move_config "hypr"
 append_host_to_config "hypr/hyprland.conf"
-
-if command -v hyprctl > /dev/null; then
-    hyprctl reload
-fi
