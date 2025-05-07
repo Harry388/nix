@@ -17,6 +17,7 @@
             "$borderColour" = "rgb(fce99f)";
 
             "exec-once" = [
+                "hyprpaper"
                 "waybar"
                 "nm-applet --indicator"
                 "blueman-applet"
@@ -159,14 +160,6 @@
         };
     };
 
-    services.hyprpaper = {
-        enable = true;
-        settings = {
-            preload = [ "~/nix/wallpaper/bridge.jpeg" ];
-            wallpaper = [ ", ~/nix/wallpaper/bridge.jpeg" ];
-        };
-    };
-
     home.pointerCursor = {
         gtk.enable = true;
         x11.enable = true;
@@ -189,6 +182,7 @@
     };
 
     home.packages = with pkgs; [
+        hyprpaper
         fuzzel
         waybar
         playerctl
