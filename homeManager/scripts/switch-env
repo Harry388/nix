@@ -32,7 +32,7 @@ move () {
 }
 
 append_host_to_config () {
-    config="$MY_CONFIG/$1"
+    config="$XDG_CONFIG_HOME/$1"
     host="$MY_HOST_CONFIG/$1"
     cat "$host" >> "$config"
 }
