@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [ -z "$HOST" ]; then
+    HOST=$(hostname)
+fi
+
 if [ -z "$XDG_CONFIG_HOME" ]; then
     XDG_CONFIG_HOME="$HOME/.config"
 fi
