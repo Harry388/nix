@@ -59,5 +59,9 @@ move_config "fuzzel"
 move_config "yazi"
 move_config "ulauncher"
 move_config "nvim"
-move_config "hypr"
-append_host_to_config "hypr/hyprland.conf"
+
+if [ "$1" = "--hypr" ]; then
+    move_config "hypr"
+    append_host_to_config "hypr/hyprland.conf"
+    hyprctl reload
+fi
