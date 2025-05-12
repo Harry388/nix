@@ -7,12 +7,12 @@
         gtk.enable = true;
         x11.enable = true;
         sway.enable = true;
-        package = pkgs.banana-cursor;
-        name = "Banana";
-        size = 32;
-        # package = pkgs.apple-cursor;
-        # name = "macOS";
-        # size = 24;
+        # package = pkgs.banana-cursor;
+        # name = "Banana";
+        # size = 32;
+        package = pkgs.apple-cursor;
+        name = "macOS";
+        size = 24;
     };
 
     gtk = {
