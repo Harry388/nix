@@ -28,6 +28,7 @@
         unzip
         tldr
         mdp
+        gtypist
     ];
 
 }
