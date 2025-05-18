@@ -15,7 +15,7 @@
         systemd-boot.enable = true;
     };
 
-    services.tlp.enable = true;
+    tlp.enable = true;
 
     defaultModules.enable = true;
 
