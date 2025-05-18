@@ -15,6 +15,8 @@
         systemd-boot.enable = true;
     };
 
+    tlp.enable = true;
+
     defaultModules.enable = true;
 
     # This value determines the NixOS release from which the default

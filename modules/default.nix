@@ -10,6 +10,7 @@
         ./base.nix
         ./openssh.nix
         ./tailscale.nix
+        ./tlp.nix
     ];
 } {
 
@@ -21,4 +22,5 @@
     base.enable = lib.mkDefault true;
     openssh.enable = lib.mkDefault false;
     tailscale.enable = lib.mkDefault true;
+    tlp.enable = lib.mkDefault false;
 }
