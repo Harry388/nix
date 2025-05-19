@@ -1,4 +1,4 @@
-{ util, pkgs, ... }@confInps: util.mkModule { 
+{ util, pkgs, inputs, ... }@confInps: util.mkModule {
     inherit confInps;
     name = "hyprlandHome";
 } {
@@ -35,7 +35,8 @@
         networkmanagerapplet
         swaynotificationcenter
         waybar
+    ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
         ulauncher
-    ];
+    ]);
 
 }
