@@ -26,10 +26,9 @@
         seahorse
         ghostty
         mysql-workbench
-    ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
         gittyup
         bottles
-    ]) ++ [
+    ] ++ [
         inputs.zen-browser.packages.${pkgs.system}.default
     ];
 
