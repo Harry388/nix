@@ -3,6 +3,8 @@
     name = "tlp";
 } {
 
+    # copied from https://nixos.wiki/wiki/Laptop
+
     services.tlp = {
         enable = true;
         settings = {
