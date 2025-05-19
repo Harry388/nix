@@ -25,6 +25,7 @@
         '';
 
         shellAliases = {
+            clear = "clear -x";
             sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
             ahoj = "sail artisan";
             nuke = "git reset --hard HEAD && git clean -fd";
