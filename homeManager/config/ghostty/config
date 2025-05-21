@@ -1,3 +1,5 @@
+gtk-single-instance = true
+
 window-decoration = false
 
 background = 181818
