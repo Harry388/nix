@@ -21,10 +21,12 @@
                 --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
             "
             eval "$(zoxide init zsh)"
+            eval "$(starship init zsh)"
             PATH="$PATH:$HOME/.local/scripts"
         '';
 
         shellAliases = {
+            cd = "z";
             cat = "bat";
             clear = "clear -x";
             sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
