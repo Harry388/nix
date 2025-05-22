@@ -25,6 +25,7 @@
         '';
 
         shellAliases = {
+            cat = "bat";
             clear = "clear -x";
             sail = "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)";
             ahoj = "sail artisan";

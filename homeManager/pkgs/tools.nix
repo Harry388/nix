@@ -29,6 +29,7 @@
         tldr
         mdp
         gtypist
+        bat
     ];
 
 }
