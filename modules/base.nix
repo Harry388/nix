@@ -55,10 +55,11 @@
         isNormalUser = true;
         description = "Harry";
         extraGroups = [ "networkmanager" "wheel" "docker" ];
-        shell = pkgs.zsh;
+        shell = pkgs.fish;
     };
 
     programs.zsh.enable = true;
+    programs.fish.enable = true;
 
     nixpkgs.config.allowUnfree = true;
 
