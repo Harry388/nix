@@ -15,7 +15,7 @@ fish_add_path "$HOME/.local/scripts"
 bind ctrl-f session
 bind \; accept-autosuggestion
 
-set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml
+set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
 
 alias cd "z"
 alias cat "bat"
