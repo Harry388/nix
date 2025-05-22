@@ -14,8 +14,6 @@ fish_add_path "$HOME/.local/scripts"
 
 bind ctrl-f session
 
-zoxide init fish | source
-
 alias cd "z"
 alias cat "bat"
 alias clear "clear -x"
@@ -36,3 +34,6 @@ alias gfs "git fetch && git status"
 alias gr "git restore"
 alias gl "git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
 alias gla "gl --all"
+
+zoxide init fish | source
+starship init fish | source
