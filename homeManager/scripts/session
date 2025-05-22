@@ -14,14 +14,14 @@ name=$(basename "$dir")
 
 open () {
     if [ -n "$TMUX" ]; then
-        tmux switch -t "$1"
+        tmux switch -t "$1" &> /dev/null
     else
-        tmux attach -t "$1"
+        tmux attach -t "$1" &> /dev/null
     fi
 }
 
 
-if tmux has-session -t "$name"; then
+if tmux has-session -t "$name" &> /dev/null ; then
     open "$name"
     exit 0
 fi
