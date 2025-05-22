@@ -59,6 +59,7 @@ move_config "fuzzel"
 move_config "yazi"
 move_config "ulauncher"
 move_config "nvim"
+move_config "fish"
 
 if [ "$1" = "--hypr" ]; then
     move_config "hypr"
