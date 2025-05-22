@@ -8,6 +8,8 @@ set -x FZF_DEFAULT_OPTS "
     --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
 "
 
+set -x LESS "-R"
+
 fish_add_path "$HOME/.local/scripts"
 
 bind ctrl-f session
