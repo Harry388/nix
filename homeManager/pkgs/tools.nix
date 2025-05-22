@@ -30,6 +30,7 @@
         mdp
         gtypist
         bat
+        delta
     ];
 
 }
