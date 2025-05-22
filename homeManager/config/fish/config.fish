@@ -13,7 +13,7 @@ set -x LESS "-R"
 fish_add_path "$HOME/.local/scripts"
 
 bind ctrl-f session
-bind \; accept-autosuggestion
+bind ctrl-space accept-autosuggestion
 
 set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
 
