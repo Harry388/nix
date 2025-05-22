@@ -30,7 +30,6 @@
         mdp
         gtypist
         bat
-        starship
     ];
 
 }
