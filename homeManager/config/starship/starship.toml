@@ -14,6 +14,7 @@ $haskell\
 $java\
 $julia\
 $nodejs\
+$bun\
 $nim\
 $rust\
 $scala\
@@ -141,6 +142,11 @@ style = "fg:pine"
 format = " [ $symbol$version ]($style)"
 disabled = false
 symbol = "󰎙 "
+
+[bun]
+style = "fg:pine"
+format = " [ $symbol$version ]($style)"
+disabled = false
 
 [nim]
 style = "fg:pine"
