@@ -20,6 +20,9 @@ open () {
     fi
 }
 
+pushd "$dir" > /dev/null
+(git fetch &> /dev/null)&
+popd > /dev/null
 
 if tmux has-session -t "$name" &> /dev/null ; then
     open "$name"
