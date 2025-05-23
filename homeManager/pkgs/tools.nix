@@ -31,6 +31,7 @@
         gtypist
         bat
         starship
+        fselect
     ];
 
 }
