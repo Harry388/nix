@@ -1,12 +1,11 @@
 set -U fish_greeting
 
-set -x FZF_DEFAULT_OPTS "
-    --color=fg:#908caa,bg:#191724,hl:#ebbcba
-    --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-    --color=border:#403d52,header:#31748f,gutter:#191724
-    --color=spinner:#f6c177,info:#9ccfd8
-    --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa
-"
+set -x FZF_DEFAULT_OPTS '
+  --color=fg:#d0d0d0,fg+:#d0d0d0
+  --color=hl:#6db760,hl+:#ff9c5e,info:#afaf87,marker:#6db760
+  --color=prompt:#cd9bff,spinner:#ff48ad,pointer:#cd9bff,header:#87afaf
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --prompt="> " --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 
 set -x LESS "-R"
 
