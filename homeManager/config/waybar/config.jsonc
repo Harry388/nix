@@ -1,45 +1,49 @@
-[
-    {
-        "position": "bottom",
-        "layer": "top",
-        "mode": "dock",
-        "height": 5,
-        "modules-left": [
-            "hyprland/workspaces",
+{
+    // General Waybar configuration
+    "layer": "top",
+    "position": "bottom",
+    "height": 22,
+    // Modules configuration
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "tray",
+        "clock",
+    ],
+    "custom/launcher": {
+        "format": "",
+        "on-click": "ulauncher-toggle"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "󰃞\t{percent}%"
+    },
+    "battery": {
+        "format": "󰁹\t{capacity}%",
+        "format-charging": "󰂄\t{capacity}%"
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%a, %d. %b  %I:%M %p}"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    "pulseaudio": {
+        "format": " \t{volume}%",
+        "format-bluetooth": "󰥰\t{volume}%",
+        "format-muted": " ",
+        "ignored-sinks": [
+            "Easy Effects Sink"
         ],
-        "modules-right": [
-            "battery",
-            "backlight",
-            "pulseaudio",
-            "tray",
-            "clock",
-        ],
-        "backlight": {
-            "device": "intel_backlight",
-            "format": "bl: {percent}%"
-        },
-        "battery": {
-            "format": "bat: {capacity}%",
-            "format-charging": "charging: {capacity}%"
-        },
-        "clock": {
-            "format": "{:%I:%M %p}",
-            "format-alt": "{:%a, %d. %b  %I:%M %p}"
-        },
-        "hyprland/workspaces": {
-            "format": "{icon}",
-            "on-click": "activate",
-            "sort-by-number": true
-        },
-        "pulseaudio": {
-            "format": "vol: {volume}%",
-            "format-bluetooth": "blu: {volume}%",
-            "format-muted": "vol: muted",
-            "ignored-sinks": [
-                "Easy Effects Sink"
-            ],
-            "on-click": "pavucontrol",
-            "scroll-step": 1
-        }
+        "on-click": "pavucontrol",
+        "scroll-step": 1
     }
-]
+}
