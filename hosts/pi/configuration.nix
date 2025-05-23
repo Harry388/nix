@@ -11,7 +11,6 @@
             defaultHomeDesktop.enable = false;
             gaming.enable = false;
             apps.enable = false;
-            programs.google-chrome.enable = false;
 
             home.stateVersion = "23.11"; # Don't change
         };

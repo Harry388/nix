@@ -58,7 +58,7 @@
         shell = pkgs.fish;
     };
 
-    programs.zsh.enable = true;
+    # programs.zsh.enable = true;
     programs.fish.enable = true;
 
     nixpkgs.config.allowUnfree = true;

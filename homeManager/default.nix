@@ -6,6 +6,7 @@
         ./desktops/default.nix
         ./zsh.nix
         ./syncthing.nix
+        ./switchEnv.nix
     ];
 } {
 
@@ -14,6 +15,7 @@
 
     programs.google-chrome.enable = lib.mkDefault true;
     syncthing.enable = lib.mkDefault true;
-    zsh.enable = lib.mkDefault true;
+    zsh.enable = lib.mkDefault false;
+    switchEnv.enable = lib.mkDefault true;
 
 }

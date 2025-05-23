@@ -3,10 +3,6 @@
     name = "zsh";
 } {
 
-    home.packages = with pkgs; [
-        (writeShellScriptBin "switch-env" (builtins.readFile ./scripts/switch-env))
-    ];
-
     programs.zsh = {
         enable = true;
         enableCompletion = true;

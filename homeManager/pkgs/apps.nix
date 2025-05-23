@@ -3,6 +3,8 @@
     name = "apps";
 } {
 
+    programs.google-chrome.enable = true;
+
     home.packages = with pkgs; [
         sqlitebrowser
         spotify
