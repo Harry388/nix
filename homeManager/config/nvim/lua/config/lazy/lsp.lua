@@ -53,7 +53,7 @@ return {
                     "gopls",
                     "templ",
                     "svelte",
-                    "vue-language-server",
+                    "vue_ls",
                     "tailwindcss",
                     "html",
                     -- "htmx",
