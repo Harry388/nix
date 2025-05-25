@@ -32,6 +32,7 @@
         bat
         starship
         fselect
+        jq
     ];
 
 }
