@@ -56,7 +56,7 @@ return {
                     "vue_ls",
                     "tailwindcss",
                     "html",
-                    -- "htmx",
+                    "htmx",
                     "emmet_ls",
                     "zls",
                     "elixirls",
@@ -89,6 +89,12 @@ return {
                 "typescript",
                 "vue",
             },
+        }
+
+        lspconfig.tailwindcss.config = {
+            userLanguages = {
+                templ = "html"
+            }
         }
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
