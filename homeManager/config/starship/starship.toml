@@ -1,7 +1,6 @@
 add_newline = false
 
 format = """
-$character\
 $username\
 $hostname\
 $localip\
@@ -84,6 +83,7 @@ $mise\
 $crystal\
 $custom\
 $sudo\
+$line_break\
 $jobs\
 $battery\
 $time\
@@ -91,7 +91,8 @@ $status\
 $os\
 $container\
 $netns\
-$shell"""
+$shell\
+$character"""
 
 [character]
 success_symbol = '[➜](bold green)'
