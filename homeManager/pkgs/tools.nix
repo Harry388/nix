@@ -34,6 +34,7 @@
         fselect
         jq
         tokei
+        caddy
     ];
 
 }
