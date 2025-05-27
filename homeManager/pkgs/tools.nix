@@ -35,6 +35,7 @@
         jq
         tokei
         caddy
+        go-task
     ];
 
 }
