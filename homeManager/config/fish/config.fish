@@ -16,7 +16,6 @@ bind ctrl-space accept-autosuggestion
 
 set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
 
-alias cd "z"
 alias cat "bat"
 alias clear "clear -x"
 alias sail "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)"
