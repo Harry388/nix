@@ -33,6 +33,7 @@
         starship
         fselect
         jq
+        tokei
     ];
 
 }
