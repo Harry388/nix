@@ -56,7 +56,7 @@ return {
                     "vue_ls",
                     "tailwindcss",
                     "html",
-                    "htmx",
+                    -- "htmx", // WARN: completely breaks hover for all lsp on attached bufs
                     "emmet_ls",
                     "zls",
                     "elixirls",
