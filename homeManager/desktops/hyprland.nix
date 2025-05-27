@@ -35,8 +35,7 @@
         networkmanagerapplet
         swaynotificationcenter
         waybar
-    ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
         ulauncher
-    ]);
+    ];
 
 }
