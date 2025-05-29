@@ -20,7 +20,7 @@
     padding-right: 8px;
     color: white;
     font-weight: 600;
-    font-size: 12;
+    font-size: 12px;
 }
 
 #workspaces button {
@@ -55,5 +55,5 @@
 #custom-launcher {
     color: white;
     padding: 0 20px 0 13px;
-    font-size: 20;
+    font-size: 20px;
 }

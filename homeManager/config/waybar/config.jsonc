@@ -2,7 +2,7 @@
     // General Waybar configuration
     "layer": "top",
     "position": "bottom",
-    "height": 22,
+    "height": 34,
     // Modules configuration
     "modules-left": [
         "custom/launcher",
