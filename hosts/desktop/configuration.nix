@@ -7,6 +7,7 @@
         users.harry = util.mkUser "harry" {
             defaultHome.enable = true;
             home.stateVersion = "23.11"; # Don't change
+            services.kdeconnect.enable = true;
         };
     };
 
