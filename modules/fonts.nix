@@ -7,6 +7,7 @@
       enableDefaultPackages = true;
       packages = with pkgs; [
           nerd-fonts.jetbrains-mono
+          nerd-fonts.gohufont
           noto-fonts
       ];
       fontconfig = {
