@@ -34,7 +34,9 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
-        "sort-by-number": true
+        "sort-by-number": true,
+        "show-special": true,
+        "special-visible-only": true
     },
     "pulseaudio": {
         "format": " \t{volume}%",
