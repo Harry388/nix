@@ -6,6 +6,7 @@
     programs.google-chrome.enable = true;
 
     home.packages = with pkgs; [
+        alacritty
         sqlitebrowser
         spotify
         obsidian
