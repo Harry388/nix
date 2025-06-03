@@ -50,6 +50,7 @@ move_config () {
 move "$MY_SCRIPTS" "$SCRIPTS_HOME"
 chmod -R +x "$SCRIPTS_HOME"
 
+move_config "alacritty"
 move_config "ghostty"
 move_config "tmux"
 move_config "git"
