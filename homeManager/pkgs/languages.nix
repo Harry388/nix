@@ -26,7 +26,6 @@
         php83Packages.composer
         laravel
         lua
-        lua-language-server
     ];
 
 }

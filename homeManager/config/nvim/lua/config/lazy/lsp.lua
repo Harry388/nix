@@ -63,7 +63,6 @@ return {
                     "bashls",
                     "cssls",
                     "intelephense",
-                    "lua_ls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
