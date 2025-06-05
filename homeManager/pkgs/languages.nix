@@ -25,6 +25,7 @@
         php
         php83Packages.composer
         laravel
+        lua
     ];
 
 }
