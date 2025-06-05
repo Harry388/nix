@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 dirs=(
-    "$HOME" "$HOME/work" "$HOME/programming"
+    "$HOME" "$HOME/work" "$HOME/programming" "$HOME/programming/lua"
     "$HOME/programming/js" "$HOME/programming/zig" "$HOME/programming/rust"
     "$HOME/programming/gleam" "$HOME/programming/golang" "$HOME/programming/elixir"
 )
