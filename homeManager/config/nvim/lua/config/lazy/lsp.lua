@@ -73,6 +73,8 @@ return {
             }
         })
         local lspconfig = require('lspconfig')
+
+        lspconfig.gleam.setup({})
   
         lspconfig.ts_ls.setup {
             init_options = {
