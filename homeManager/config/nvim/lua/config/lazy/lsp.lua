@@ -108,7 +108,7 @@ return {
                 end,
             },
             mapping = cmp.mapping.preset.insert({
-                ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+                ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
