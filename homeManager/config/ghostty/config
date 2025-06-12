@@ -2,7 +2,7 @@ gtk-single-instance = true
 
 window-decoration = false
 
-background = 181818
+background = 171a16
 background-opacity = 0.75
 
 # background = 191724
