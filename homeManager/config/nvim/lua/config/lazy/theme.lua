@@ -7,12 +7,14 @@
 -- }
 
 return {
-  "sainnhe/everforest",
-  config = function()
-      -- " Available values: 'hard', 'medium'(default), 'soft'
-      vim.g.everforest_background = "hard"
-      -- For better performance
-      vim.g.everforest_better_performance = 1
-      vim.cmd("colorscheme everforest")
-  end
+    "neanias/everforest-nvim",
+    version = false,
+    priority = 1000, -- make sure to load this before all the other start plugins
+    -- Optional; default configuration will be used if setup isn't called.
+    config = function()
+        require("everforest").setup({
+            background = "hard", -- "hard", "medium", "soft"
+        })
+       vim.cmd("colorscheme everforest")
+    end
 }
