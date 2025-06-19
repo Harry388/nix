@@ -20,7 +20,7 @@
         gcc
         rebar3
         elixir
-        deno
+        # deno
         python314
         php
         php83Packages.composer
