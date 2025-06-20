@@ -2,9 +2,11 @@ gtk-single-instance = true
 
 window-decoration = false
 
+# Matches waybar for everforest
 background = 171a16
 background-opacity = 0.75
 
+# Dark blue for rose pine
 # background = 191724
 
 cursor-style = block
