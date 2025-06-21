@@ -28,7 +28,7 @@
         file-roller
         seahorse
         ghostty
-        mysql-workbench
+        # mysql-workbench
         gittyup
         bottles
     ] ++ [
