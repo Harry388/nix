@@ -48,7 +48,7 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
-                    -- "ts_ls",
+                    -- "ts_ls", -- installed through package manager; this fixes duplicate servers spawning
                     "rust_analyzer",
                     "gopls",
                     "templ",
@@ -56,7 +56,7 @@ return {
                     "vue_ls",
                     "tailwindcss",
                     "html",
-                    -- "htmx", // WARN: completely breaks hover for all lsp on attached bufs
+                    -- "htmx", --  WARN: completely breaks hover for all lsp on attached bufs
                     "emmet_ls",
                     "zls",
                     "elixirls",
