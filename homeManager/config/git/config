@@ -1,5 +1,5 @@
 [pull]
-	rebase = false
+	rebase = true
 
 [user]
 	email = "harrythompson3765@gmail.com"
