@@ -13,6 +13,7 @@
         zls
         mysql84
         typescript
+        typescript-language-server
         nodejs_22
         bun
         jdk
