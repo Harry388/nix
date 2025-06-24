@@ -7,7 +7,6 @@
         vesktop
         prismlauncher
         dolphin-emu
-        modrinth-app
         clonehero
     ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
         lime3ds
