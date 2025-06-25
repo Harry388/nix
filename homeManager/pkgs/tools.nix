@@ -36,6 +36,7 @@
         tokei
         caddy
         go-task
+        jujutsu
     ];
 
 }
