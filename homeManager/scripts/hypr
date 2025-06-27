@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if [ -z "$MY_HYPR" ]; then
-    MY_HYPR="$HOME/.local/scripts/hyprScripts"
-fi
-
-if [ -f "$MY_HYPR/$1" ]; then
-    bash "$MY_HYPR/$1"
-fi
