@@ -30,10 +30,8 @@
         ghostty
         gittyup
         bottles
+        mysql-workbench
     ] ++ [
         inputs.zen-browser.packages.${pkgs.system}.default
-    ] ++ (with inputs.dated19dec-nixpkgs.legacyPackages.${pkgs.system}; [
-        mysql-workbench
-    ]);
-
+    ];
 }
