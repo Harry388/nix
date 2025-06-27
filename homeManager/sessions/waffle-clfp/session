@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+tmux neww -d
+tmux neww -d
+tmux split-window -t "$1:2" -h
+
+tmux send-keys -t "$1:1" nvim c-M
+tmux send-keys -t "$1:2.1" "sail up" c-M
+tmux send-keys -t "$1:2.2" "sleep 5" c-M "sail bun run dev" c-M

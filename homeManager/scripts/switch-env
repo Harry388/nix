@@ -24,6 +24,14 @@ if [ -z "$MY_SCRIPTS" ]; then
     MY_SCRIPTS="$HOME/nix/homeManager/scripts"
 fi
 
+if [ -z "$SESSIONS_HOME" ]; then
+    SESSIONS_HOME="$HOME/.local/sessions"
+fi
+
+if [ -z "$MY_SESSIONS" ]; then
+    MY_SESSIONS="$HOME/nix/homeManager/sessions"
+fi
+
 move () {
     dir="$1"
     to="$2"
@@ -49,6 +57,9 @@ move_config () {
 
 move "$MY_SCRIPTS" "$SCRIPTS_HOME"
 chmod -R +x "$SCRIPTS_HOME"
+
+move "$MY_SESSIONS" "$SESSIONS_HOME"
+chmod -R +x "$SESSIONS_HOME"
 
 move_config "alacritty"
 move_config "ghostty"

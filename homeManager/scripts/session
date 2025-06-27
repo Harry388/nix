@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [ -z "$SESSIONS_HOME" ]; then
+    SESSIONS_HOME="$HOME/.local/sessions"
+fi
+
 dirs=(
     "$HOME" "$HOME/work" "$HOME/programming" "$HOME/programming/lua"
     "$HOME/programming/js" "$HOME/programming/zig" "$HOME/programming/rust"
@@ -30,10 +34,17 @@ if tmux has-session -t "$name" &> /dev/null ; then
 fi
 
 tmux new-session -c "$dir" -s "$name" -d
-if [ -f "$dir/.session" ]; then
-    tmux send-keys -t "$name" "source $dir/.session $name" c-M
-elif [ -f "$HOME/nix/homeManager/scripts/.session" ]; then
-    tmux send-keys -t "$name" "source $HOME/nix/homeManager/scripts/.session $name" c-M
+
+if [ -f "$SESSIONS_HOME/$name/shell.fish" ]; then
+    tmux set-option -t "$name" -s default-command "fish -C \"source $SESSIONS_HOME/$name/shell.fish $name\""
+else 
+    tmux set-option -t "$name" -s default-command "fish -C \"source $(which default-session-shell.fish) $name\""
+fi
+
+if [ -f "$SESSIONS_HOME/$name/session" ]; then
+    tmux send-keys -t "$name" "$SESSIONS_HOME/$name/session $name" c-M
+else
+    tmux send-keys -t "$name" "default-session $name" c-M
 fi
 
 open "$name"

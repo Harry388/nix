@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+if [ -z "TMUX" ]; then
+    echo "Error: Not inside a tmux session"
+    exit 1
+fi
+
+if [ -z "$MY_SESSIONS" ]; then
+    MY_SESSIONS="$HOME/nix/homeManager/sessions"
+fi
+
+if [ -z "$SESSIONS_HOME" ]; then
+    SESSIONS_HOME="$HOME/.local/sessions"
+fi
+
+name=$(tmux display-message -p '#S')
+
+if ! [ -d "$MY_SESSIONS/$name" ]; then
+    mkdir "$MY_SESSIONS/$name"
+    mkdir "$MY_SESSIONS/$name/scripts"
+fi
+
+nvim "$MY_SESSIONS/$name"
+
+switch-env
+
+if [ -f "$SESSIONS_HOME/$name/shell.fish" ]; then
+    tmux set-option -t "$name" -s default-command "fish -C \"source $SESSIONS_HOME/$name/shell.fish $name\""
+else 
+    tmux set-option -t "$name" -s default-command "fish -C \"source $(which default-session-shell.fish) $name\""
+fi
