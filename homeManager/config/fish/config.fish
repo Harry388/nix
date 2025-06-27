@@ -9,6 +9,8 @@ set -x FZF_DEFAULT_OPTS '
 
 set -x LESS "-R"
 
+set -x EDITOR "nvim"
+
 fish_add_path "$HOME/.local/scripts"
 
 bind ctrl-f session
