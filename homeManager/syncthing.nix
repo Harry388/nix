@@ -30,20 +30,8 @@
                 };
             };
             folders = {
-                documents = {
-                    path = "/home/harry/sync/documents";
-                    devices = [ "desktop" "laptop" "pi" ];
-                };
-                photos = {
-                    path = "/home/harry/sync/photos";
-                    devices = [ "desktop" "laptop" "pi" ];
-                };
-                backup = {
-                    path = "/home/harry/sync/backup";
-                    devices = [ "desktop" "laptop" "pi" ];
-                };
-                obsidian = {
-                    path = "/home/harry/sync/obsidian";
+                sync = {
+                    path = "/home/harry/sync";
                     devices = [ "desktop" "laptop" "pi" ];
                 };
             };
