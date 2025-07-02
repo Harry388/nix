@@ -37,6 +37,7 @@
         caddy
         go-task
         jujutsu
+        elinks
     ];
 
 }
