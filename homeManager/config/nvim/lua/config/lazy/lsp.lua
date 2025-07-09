@@ -53,7 +53,7 @@ return {
                     "gopls",
                     "templ",
                     "svelte",
-                    "vue_ls",
+                    "vue_ls@2.2.8",
                     "tailwindcss",
                     "html",
                     -- "htmx", --  WARN: completely breaks hover for all lsp on attached bufs
