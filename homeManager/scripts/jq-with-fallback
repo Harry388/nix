@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+input=$(</dev/stdin)
+
+result=$(jq "$@" <<< "$input")
+
+if [ $? == 5 ]; then # jq exits with 5 if the input is not valid JSON
+    elinks -dump -dump-color-mode 1 <<< "$input"
+    exit 0
+fi
+
+echo "$result" | jq
