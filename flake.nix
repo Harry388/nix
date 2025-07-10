@@ -27,14 +27,5 @@
             desktop = mkSystem "desktop";
             pi = mkSystem "pi";
         };
-        homeConfigurations = {
-            harry = mkHome "harry" { # unused
-                languages.enable = true;
-                tools.enable = true;
-                defaultHomeCli.enable = true;
-                ghostty.enable = false;
-                home.stateVersion = "24.11"; # Don't change
-            };
-        };
     };
 }

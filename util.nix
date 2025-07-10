@@ -26,16 +26,6 @@ in
 
     };
 
-    mkHome = name: extraConf: inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = { inherit inputs util; };
-        modules = [
-            ./users/${name}.nix
-            ./homeManager/default.nix
-            extraConf
-        ];
-    };
-
     mkUser = name: extraConf: { inputs, ... }: {
         imports = [
             ./users/${name}.nix
