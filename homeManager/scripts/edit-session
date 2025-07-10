@@ -17,7 +17,6 @@ name=$(tmux display-message -p '#S')
 
 if ! [ -d "$MY_SESSIONS/$name" ]; then
     mkdir "$MY_SESSIONS/$name"
-    mkdir "$MY_SESSIONS/$name/scripts"
 fi
 
 nvim "$MY_SESSIONS/$name"
@@ -27,5 +26,5 @@ switch-env
 if [ -f "$SESSIONS_HOME/$name/shell.fish" ]; then
     tmux set-option -t "$name" -s default-command "fish -C \"source $SESSIONS_HOME/$name/shell.fish $name\""
 else 
-    tmux set-option -t "$name" -s default-command "fish -C \"source $(which default-session-shell.fish) $name\""
+    tmux set-option -t "$name" -s default-command "fish"
 fi

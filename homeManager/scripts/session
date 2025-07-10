@@ -37,8 +37,6 @@ tmux new-session -c "$dir" -s "$name" -d
 
 if [ -f "$SESSIONS_HOME/$name/shell.fish" ]; then
     tmux set-option -t "$name" -s default-command "fish -C \"source $SESSIONS_HOME/$name/shell.fish $name\""
-else 
-    tmux set-option -t "$name" -s default-command "fish -C \"source $(which default-session-shell.fish) $name\""
 fi
 
 if [ -f "$SESSIONS_HOME/$name/session" ]; then
