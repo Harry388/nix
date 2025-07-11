@@ -1,4 +1,4 @@
-{ util, pkgs, ... }@confInps: util.mkModule {
+{ util, pkgs, config, ... }@confInps: util.mkModule {
     inherit confInps;
     name = "syncthing";
 } {
@@ -31,7 +31,7 @@
             };
             folders = {
                 sync = {
-                    path = "/home/harry/sync";
+                    path = "${config.home.homeDirectory}/sync";
                     devices = [ "desktop" "laptop" "pi" ];
                 };
             };
