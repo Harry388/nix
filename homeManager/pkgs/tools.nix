@@ -4,6 +4,9 @@
 } {
 
     home.packages = with pkgs; [
+        tmux
+        neovim
+        yazi
         air
         neocities
         fzf
