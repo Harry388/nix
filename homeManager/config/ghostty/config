@@ -10,7 +10,7 @@ window-decoration = false
 # background = 191724
 
 background = 000000
-background-opacity = 0.8
+background-opacity = 1
 
 cursor-style = block
 cursor-style-blink = false
