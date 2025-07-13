@@ -41,6 +41,7 @@
         go-task
         jujutsu
         elinks
+        openvpn
     ];
 
 }
