@@ -42,6 +42,7 @@
         jujutsu
         elinks
         openvpn
+        smartmontools
     ];
 
 }
