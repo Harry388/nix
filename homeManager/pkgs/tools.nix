@@ -41,7 +41,8 @@
         go-task
         jujutsu
         elinks
-        openvpn
+        # openvpn
+        # networkmanager-openvpn
         smartmontools
     ];
 
