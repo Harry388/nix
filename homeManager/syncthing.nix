@@ -8,7 +8,7 @@
         settings = {
             devices = {
                 desktop = {
-                    id = "LR4PA7T-7SMOYD3-IO5UQZO-3FQQCTB-2X5O4XP-OR5UEG2-32SA5E2-365HZQF";
+                    id = "7OKHHUD-JCVRHB3-FMSFDEX-UJUXCAP-YOGSIED-LFCRZQ3-RSGWEUV-RJFDOQQ";
                     addresses = [
                         "tcp://desktop:22000"
                         "quic://desktop:22000"

@@ -4,7 +4,6 @@
     imports = [
         ./desktops/default.nix
         ./apps/default.nix
-        ./nvidia.nix
         ./smallGnome.nix
         ./fonts.nix
         ./base.nix
@@ -16,7 +15,6 @@
 
     defaultDesktop.enable = lib.mkDefault true;
     defaultApps.enable = lib.mkDefault true;
-    nvidia.enable = lib.mkDefault false;
     smallGnome.enable = lib.mkDefault true;
     fonts.enable = lib.mkDefault true;
     base.enable = lib.mkDefault true;
