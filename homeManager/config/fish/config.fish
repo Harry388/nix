@@ -13,7 +13,7 @@ set -x EDITOR "nvim"
 
 fish_add_path "$HOME/.local/scripts"
 
-bind ctrl-f session
+bind ctrl-f find-session
 bind ctrl-space accept-autosuggestion
 
 set -x STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
@@ -26,3 +26,7 @@ alias git-log-pretty "git log --graph --abbrev-commit --decorate --format=format
 
 zoxide init fish | source
 starship init fish | source
+
+if test -z "$TMUX"
+    session "$HOME"
+end

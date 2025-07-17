@@ -4,15 +4,12 @@ if [ -z "$SESSIONS_HOME" ]; then
     SESSIONS_HOME="$HOME/.local/sessions"
 fi
 
-dirs=(
-    "$HOME" "$HOME/work" "$HOME/programming" "$HOME/programming/lua"
-    "$HOME/programming/js" "$HOME/programming/zig" "$HOME/programming/rust"
-    "$HOME/programming/gleam" "$HOME/programming/golang" "$HOME/programming/elixir"
-)
-dir=$(find "${dirs[@]}" -maxdepth 1 -mindepth 1 -type d ! -path "*/.*" 2> /dev/null | fzf)
-if [ -z "$dir" ]; then
+if [ -z "$1" ]; then
+    echo "Session directory required"
     exit 1
 fi
+
+dir="$1"
 
 name=$(basename "$dir")
 

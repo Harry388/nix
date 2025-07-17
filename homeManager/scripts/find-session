@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+dirs=(
+    "$HOME" "$HOME/work" "$HOME/programming" "$HOME/programming/lua"
+    "$HOME/programming/js" "$HOME/programming/zig" "$HOME/programming/rust"
+    "$HOME/programming/gleam" "$HOME/programming/golang" "$HOME/programming/elixir"
+)
+dir=$(find "${dirs[@]}" -maxdepth 1 -mindepth 1 -type d ! -path "*/.*" 2> /dev/null | cat - <(echo "$HOME") | fzf)
+if [ -z "$dir" ]; then
+    exit 1
+fi
+
+session "$dir"
