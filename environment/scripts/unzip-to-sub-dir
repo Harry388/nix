@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+from="$1"
+to="${from%.zip}"
+
+unzip "$from" -d "$to"
