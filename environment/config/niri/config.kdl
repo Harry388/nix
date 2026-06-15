@@ -63,12 +63,6 @@ hotkey-overlay {
 
 screenshot-path null
 
-// animations {
-//     workspace-switch {
-//         off
-//     }
-// }
-
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
@@ -88,12 +82,6 @@ window-rule {
 layer-rule {
     match namespace="^noctalia-overview*"
     place-within-backdrop true
-}
-
-layer-rule {
-    background-effect {
-        xray false
-    }
 }
 
 overview {
