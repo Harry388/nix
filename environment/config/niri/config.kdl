@@ -26,7 +26,7 @@ input {
 }
 
 layout {
-    gaps 8
+    gaps 10
 
     center-focused-column "on-overflow"
     always-center-single-column
@@ -88,6 +88,9 @@ window-rule {
 window-rule {
     match app-id="ghostty"
     default-column-width { proportion 1.0; }
+    background-effect {
+        blur true
+    }
 }
 
 layer-rule {

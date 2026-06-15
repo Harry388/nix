@@ -31,3 +31,14 @@ vim.opt.foldlevelstart = 99
 vim.g.have_nerd_font = true
 
 vim.opt.inccommand = 'split'
+
+local function transparent_tabline()
+    -- vim.api.nvim_set_hl(0, "TabLine", { bg = "NONE", ctermbg = "NONE" })
+    -- vim.api.nvim_set_hl(0, "TabLineSel", { bg = "NONE", ctermbg = "NONE" })
+    vim.api.nvim_set_hl(0, "TabLineFill", { bg = "NONE", ctermbg = "NONE" })
+end
+
+transparent_tabline()
+vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = transparent_tabline,
+})
