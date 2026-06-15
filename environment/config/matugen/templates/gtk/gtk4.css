@@ -102,3 +102,6 @@
     --shade-color: rgba(0, 0, 0, 0.36);
 }
 
+popover contents {
+    background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.6);
+}

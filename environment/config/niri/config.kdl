@@ -64,12 +64,23 @@ hotkey-overlay {
 screenshot-path null
 
 window-rule {
-    geometry-corner-radius 10
+    geometry-corner-radius 15
     clip-to-geometry true
+
 }
 
 window-rule {
-    match title="Calculator"
+    match app-id="org.gnome.*"
+    popups {
+        geometry-corner-radius 15
+        background-effect {
+            blur true
+        }
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.Calculator"
     open-floating true
     default-window-height { proportion 0.5; }
 }
@@ -82,6 +93,13 @@ window-rule {
 layer-rule {
     match namespace="^noctalia-overview*"
     place-within-backdrop true
+}
+
+// Shell bar, launcher, etc.
+layer-rule {
+    background-effect {
+        xray false;
+    }
 }
 
 overview {
