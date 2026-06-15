@@ -6,5 +6,12 @@
 	"includePaths": [
         "~/env",
         "~"
-	]
+	],
+    "favourites": {
+        "e": "~/env",
+        "wd": "~/work/waffle/waffle-planner-dev",
+        "wc": "~/work/waffle/waffle-planner-clean",
+        "ws": "~/work/waffle/waffle-planner-scratch",
+        "ems": "~/work/evaluatemyschool/evaluatemyschool2"
+    }
 }
