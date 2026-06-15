@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set('x', "z/", '<Esc>/\\%V')
+vim.keymap.set('x', "z?", '<Esc>?\\%V')
 vim.keymap.set("n", "<leader>t", "<cmd>tabnew<CR>")
 vim.keymap.set({"n", "v"}, "<leader>c", [["+]])
 vim.keymap.set({"n", "v"}, "<leader>v", [["_]])
