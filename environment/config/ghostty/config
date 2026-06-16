@@ -4,8 +4,8 @@ window-decoration = none
 
 background-opacity = 0.9
 
-window-padding-x = 12
-window-padding-y = 10
+window-padding-x = 10
+window-padding-y = 8
 
 cursor-style = block
 cursor-style-blink = false
