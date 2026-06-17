@@ -1,6 +1,6 @@
 services:
   radicale:
-    image: tomsquest/docker-radicale
+    image: tomsquest/docker-radicale:3.7.3.0
     container_name: radicale
     ports:
       - "${RADICALE_LISTEN:-5232}:5232"
