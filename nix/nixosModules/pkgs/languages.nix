@@ -24,6 +24,7 @@
             php83Packages.composer
             laravel
             lua
+            odin
 
             rust-analyzer
             rustc
@@ -40,6 +41,7 @@
             fish-lsp
             intelephense
             clang-tools
+            ols
         ];
         
     };

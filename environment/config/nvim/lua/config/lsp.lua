@@ -14,6 +14,7 @@ local lsps = {
     "gleam",
     "emmet_ls",
     "clangd",
+    "ols",
 }
 
 -- NOTE: executable property on lsp config is not standard in neovim
