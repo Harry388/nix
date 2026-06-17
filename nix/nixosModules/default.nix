@@ -12,6 +12,7 @@
             self.nixosModules.tailscale
             self.nixosModules.switchEnv
             self.nixosModules.openssh
+            self.nixosModules.sshAgent
 
             self.nixosModules.apps
             self.nixosModules.gaming
