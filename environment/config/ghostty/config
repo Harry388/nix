@@ -6,6 +6,7 @@ background-opacity = 0.9
 
 window-padding-x = 10
 window-padding-y = 8
+window-padding-color = extend-always
 
 cursor-style = block
 cursor-style-blink = false
