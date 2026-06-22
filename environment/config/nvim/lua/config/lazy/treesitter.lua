@@ -29,6 +29,7 @@ return {
             "elixir",
             "nix",
             "kdl",
+            "cpp",
         })
         vim.api.nvim_create_autocmd('FileType', {
             callback = function(ev)
