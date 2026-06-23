@@ -126,9 +126,9 @@ binds {
     Mod+S hotkey-overlay-title="Switch Env" { spawn "switch-env"; }
     Mod+P hotkey-overlay-title="Screenshot (Flameshot)" { spawn-sh "flameshot gui"; }
     Mod+Shift+P hotkey-overlay-title="Colour Picker (Hyprpicker)" { spawn-sh "hyprpicker -a"; }
-    Mod+N hotkey-overlay-title="Notifications" { spawn-sh "noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+N hotkey-overlay-title="Notifications (Noctalia)" { spawn-sh "noctalia-shell ipc call notifications toggleHistory"; }
     Mod+Shift+S hotkey-overlay-title="Select Overlay" { spawn-sh "SELECTOR=vicinae select-overlay"; }
-    Mod+Period hotkey-overlay-title="Emoji Picker" { spawn-sh "vicinae vicinae://launch/core/search-emojis"; }
+    Mod+Period hotkey-overlay-title="Emoji Picker (Vicinae)" { spawn-sh "vicinae vicinae://launch/core/search-emojis"; }
     Mod+Z hotkey-overlay-title="Zoom (Wooz)" { spawn-sh "wooz --invert-scroll"; }
 
     // Exit
@@ -195,7 +195,7 @@ binds {
     Mod+BracketRight { consume-or-expel-window-right; }
 
     Mod+R { switch-preset-column-width; }
-    Mod+D { set-column-width "50%"; }
+    Mod+D hotkey-overlay-title="Set Column Width (50%)" { set-column-width "50%"; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
