@@ -4,7 +4,7 @@
 
     flake.nixosModules.homeServer = { pkgs, config, lib, ... }:
     let
-        cfg = config.homeServer;
+        cfg = config.env.homeServer;
         homeServerScript = pkgs.writeShellScriptBin "home-server" (builtins.readFile ./home-server);
         homeServerBin = "${homeServerScript}/bin/home-server";
         defaultServices = builtins.attrNames (builtins.readDir ./services);
@@ -17,7 +17,7 @@
             self.nixosModules.syncthing
         ];
 
-        options.homeServer = {
+        options.env.homeServer = {
 
             user = lib.mkOption {
                 type = lib.types.str;

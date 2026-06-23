@@ -2,11 +2,11 @@
 
     flake.nixosModules.sshAgent = { config, lib, ... }:
     let
-        cfg = config.sshAgent;
+        cfg = config.env.sshAgent;
     in
     {
 
-        options.sshAgent = {
+        options.env.sshAgent = {
             addKeysToAgent = lib.mkOption {
                 type = lib.types.str;
                 default = "no";
