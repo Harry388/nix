@@ -8,8 +8,8 @@
         homeServerScript = pkgs.writeShellScriptBin "home-server" (builtins.readFile ./home-server);
         homeServerBin = "${homeServerScript}/bin/home-server";
         defaultServices = builtins.attrNames (builtins.readDir ./services);
-        home = config.users.users.${config.homeServer.user}.home;
-        group = config.users.users.${config.homeServer.user}.group;
+        home = config.users.users.${config.env.homeServer.user}.home;
+        group = config.users.users.${config.env.homeServer.user}.group;
     in
     {
 
