@@ -15,7 +15,7 @@
         # NOTE: this is a temporary fix for openldap, which is a dependency of bottles
         nixpkgs.overlays = [
             (_: prev: {
-                    openldap = prev.openldap.overrideAttrs {
+                openldap = prev.openldap.overrideAttrs {
                     doCheck = !prev.stdenv.hostPlatform.isi686;
                 };
             })
