@@ -1,13 +1,11 @@
+{ pkgs, ... }:
+
 {
 
-    flake.nixosModules.kdeconnect = { pkgs, ... }: {
+    programs.kdeconnect.enable = true;
 
-        programs.kdeconnect.enable = true;
-
-        evironment.systemPackages = with pkgs; [
-            kdePackages.qttools
-        ];
-
-    };
+    evironment.systemPackages = with pkgs; [
+        kdePackages.qttools
+    ];
 
 }
