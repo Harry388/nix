@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+inputs: { pkgs, ... }:
 
 let
     unstable-pkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};

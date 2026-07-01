@@ -1,7 +1,7 @@
-{ inputs, pkgs, ... }:
+{ nixpkgs-unstable, ...}: { pkgs, ... }:
 
 let
-    unstable-pkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+    unstable-pkgs = nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in
 {
 

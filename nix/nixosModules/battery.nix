@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+inputs: { config, lib, ... }:
 
 let
     cfg = config.env.battery;

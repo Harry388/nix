@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, self, ... }:
+{ self, ... }@inputs: { lib, ... }:
 
 {
 

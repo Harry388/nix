@@ -22,7 +22,7 @@
         loadFiles = import ./nix/util/loadFiles.nix;
     in
     {
-        nixosModules = loadFiles ./nix/nixosModules {};
+        nixosModules = loadFiles ./nix/nixosModules { args = inputs; };
         nixosConfigurations = loadFiles ./nix/nixosConfigurations { shallow = true; args = inputs; };
     };
 }

@@ -1,4 +1,4 @@
-{ self, pkgs, config, lib, ... }:
+{ self, ... }: { pkgs, config, lib, ... }:
 
 let
     cfg = config.env.homeServer;

@@ -2,11 +2,7 @@ inputs:
 
 inputs.nixpkgs.lib.nixosSystem {
     modules = [
-        ./configuration.nix
+        (import ./configuration.nix inputs)
         ./hardware-configuration.nix
     ];
-    specialArgs = {
-        inherit inputs;
-        self = inputs.self;
-    };
 }
