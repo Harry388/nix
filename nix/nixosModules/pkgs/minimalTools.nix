@@ -25,6 +25,7 @@ in
         socat
         ascii
         wget
+        gcc
     ] ++ [
         session
     ] ++ (with unstable-pkgs; [
