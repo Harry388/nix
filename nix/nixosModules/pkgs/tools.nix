@@ -19,7 +19,6 @@ in
         fastfetch
         gnumake
         inotify-tools
-        lazygit
         nmap
         udiskie
         colorz
