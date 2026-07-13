@@ -38,6 +38,8 @@ in
 
         services.syncthing.user = cfg.user;
 
+        users.users.${cfg.user}.linger = true;
+
         # setup /home/user/services/*/* (docker-compose.yml, start, stop, backup for each service)
         systemd.tmpfiles.rules = [
             "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"

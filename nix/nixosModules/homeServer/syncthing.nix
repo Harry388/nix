@@ -1,9 +1,14 @@
 inputs: { config, ... }:
 
+let
+    syncthingUser = config.services.syncthing.user;
+    syncthingUserHome = config.users.users.${syncthingUser}.home;
+in
 {
 
     services.syncthing = {
         enable = true;
+        systemService = false;
         settings = {
             devices = {
                 desktop = {
@@ -39,8 +44,14 @@ inputs: { config, ... }:
                 globalAnnounceEnabled = false;
             };
         };
-        dataDir = config.users.users.${config.services.syncthing.user}.home;
+        dataDir = syncthingUserHome;
         configDir = "${config.services.syncthing.dataDir}/.local/state/syncthing";
+    };
+
+    systemd.user.services.syncthing = {
+        enable = true;
+        unitConfig.ConditionUser = syncthingUser;
+        wantedBy = [ "default.target" ];
     };
 
 }
