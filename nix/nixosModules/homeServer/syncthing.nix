@@ -18,7 +18,6 @@ in
 
         services.syncthing = {
             enable = true;
-            systemService = false;
             settings = {
                 devices = {
                     desktop = {
@@ -54,13 +53,8 @@ in
                     globalAnnounceEnabled = false;
                 };
             };
+            dataDir = syncthingUserHome;
             configDir = "${syncthingUserHome}/.local/state/syncthing";
-        };
-
-        systemd.user.services.syncthing = {
-            enable = true;
-            unitConfig.ConditionUser = syncthingUser;
-            wantedBy = [ "default.target" ];
         };
 
     };
