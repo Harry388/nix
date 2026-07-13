@@ -11,7 +11,10 @@
         self.nixosModules.battery
     ];
 
-    services.syncthing.user = "harry";
+    services.syncthing = {
+        user = "harry";
+        group = "users";
+    };
 
     boot.loader = {
         efi.canTouchEfiVariables = true;
