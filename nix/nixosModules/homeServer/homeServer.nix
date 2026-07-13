@@ -40,7 +40,7 @@ in
 
         users.users.${cfg.user}.linger = true;
 
-        env.syncthing.baseDir = "${servicesLocation}/syncthing/data";
+        env.syncthing.baseDir = "${cfg.servicesLocation}/syncthing/data";
 
         # setup /home/user/services/*/* (docker-compose.yml, start, stop, backup for each service)
         systemd.tmpfiles.rules = [
