@@ -40,46 +40,44 @@ in
 
         env.syncthing.baseDir = "${cfg.servicesLocation}/syncthing/data";
 
-        # setup /home/user/services/*/* (docker-compose.yml, start, stop, backup for each service)
+        # setup /home/user/services/*
         systemd.tmpfiles.rules = [
             "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"
         ] ++ (map (service:
             "d ${cfg.servicesLocation}/${service} 0755 ${cfg.user} ${group} - -"
-        ) cfg.services) ++ (lib.lists.flatten (
-            map (service:
-                map (file:
-                    "L+ ${cfg.servicesLocation}/${service}/${file} 0755 ${cfg.user} ${group} - ${./services/${service}/${file}}"
-                ) (builtins.attrNames (builtins.readDir ./services/${service}))
-            ) cfg.services
-        ));
+        ) cfg.services);
 
         environment.systemPackages = [
             homeServerScript
-        ];
+        ] ++ (with pkgs; [
+            rclone
+        ]);
 
-        systemd.services.backup-server = {
-            description = "Backup server folders";
-            path = [
-                pkgs.bash
-                pkgs.docker
-                pkgs.gnutar
-                pkgs.gzip
-            ];
-            serviceConfig = {
-                Type = "oneshot";
-                ExecStart = "${pkgs.bash}/bin/bash -c '${homeServerBin} backup && ${homeServerBin} clean 2'";
-                User = cfg.user;
-            };
-        };
+        # systemd.services.backup-server = {
+        #     description = "Backup server folders";
+        #     path = [
+        #         pkgs.bash
+        #         pkgs.docker
+        #         pkgs.gnutar
+        #         pkgs.gzip
+        #     ];
+        #     serviceConfig = {
+        #         Type = "oneshot";
+        #         ExecStart = "${pkgs.bash}/bin/bash -c '
+        #         SERVICES_LOCATION=${cfg.servicesLocation} ${homeServerBin} backup &&
+        #         SERVICES_LOCATION=${cfg.servicesLocation} ${homeServerBin} clean 2
+        #         '";
+        #     };
+        # };
 
-        systemd.timers.backup-server = {
-            description = "Backup server folders on a timer";
-            wantedBy = ["timers.target"];
-            timerConfig = {
-                Unit = "backup-server.service";
-                OnCalendar = "Mon *-*-* 04:00:00";
-            };
-        };
+        # systemd.timers.backup-server = {
+        #     description = "Backup server folders on a timer";
+        #     wantedBy = ["timers.target"];
+        #     timerConfig = {
+        #         Unit = "backup-server.service";
+        #         OnCalendar = "* *-*-* 04:00:00";
+        #     };
+        # };
 
     };
 
