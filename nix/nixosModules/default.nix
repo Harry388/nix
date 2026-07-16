@@ -24,7 +24,7 @@
 
         self.nixosModules.ly
 
-        self.nixosModules.syncthing
+        self.nixosModules.homeServer
     ];
 
 }

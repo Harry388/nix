@@ -40,7 +40,16 @@
 
     hardware.graphics.enable = lib.mkForce false;
 
-    env.homeServer.user = "harry";
+    env.homeServer = {
+        user = "harry";
+
+        services = {
+            syncthing.enable = true;
+            immich.enable = true;
+            navidrome.enable = true;
+            radicale.enable = true;
+        };
+    };
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions

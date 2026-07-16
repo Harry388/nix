@@ -11,9 +11,17 @@
         self.nixosModules.battery
     ];
 
-    services.syncthing = {
+    env.homeServer = {
         user = "harry";
-        group = "users";
+
+        services = {
+            syncthing = {
+                enable = true;
+                serviceLocation = "/home/harry";
+            };
+        };
+
+        backup = false;
     };
 
     boot.loader = {

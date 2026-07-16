@@ -19,9 +19,17 @@
   export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
     '';
 
-    services.syncthing = {
+    env.homeServer = {
         user = "harry";
-        group = "users";
+
+        services = {
+            syncthing = {
+                enable = true;
+                serviceLocation = "/home/harry";
+            };
+        };
+
+        backup = false;
     };
 
     boot.loader = {

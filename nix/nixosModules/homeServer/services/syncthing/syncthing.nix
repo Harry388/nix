@@ -1,20 +1,30 @@
 inputs: { config, lib, ... }:
 
 let
-    cfg = config.env.syncthing;
+    cfg = config.env.homeServer.services.syncthing;
+    homeServerUser = config.env.homeServer.user;
     syncthingUser = config.services.syncthing.user;
+    syncthingUserGroup = config.users.users.${syncthingUser}.group;
     syncthingUserHome = config.users.users.${syncthingUser}.home;
 in
 {
 
-    options.env.syncthing = {
-        baseDir = lib.mkOption {
+    options.env.homeServer.services.syncthing = {
+
+        enable = lib.mkEnableOption "syncthing";
+
+        serviceLocation = lib.mkOption {
             type = lib.types.str;
-            default = syncthingUserHome;
+            default = "${config.env.homeServer.servicesLocation}/syncthing";
         };
+
     };
 
-    config = {
+    config = lib.mkIf cfg.enable {
+
+        systemd.tmpfiles.rules = [
+            "d ${cfg.serviceLocation} 0700 ${syncthingUser} ${syncthingUserGroup} - -"
+        ];
 
         services.syncthing = {
             enable = true;
@@ -44,7 +54,7 @@ in
                 };
                 folders = {
                     sync = {
-                        path = "${cfg.baseDir}/sync";
+                        path = "${cfg.serviceLocation}/sync";
                         devices = [ "desktop" "laptop" "pi" ];
                     };
                 };
@@ -53,6 +63,8 @@ in
                     globalAnnounceEnabled = false;
                 };
             };
+            user = lib.mkDefault homeServerUser;
+            group = lib.mkDefault syncthingUserGroup;
             dataDir = syncthingUserHome;
             configDir = "${syncthingUserHome}/.local/state/syncthing";
         };

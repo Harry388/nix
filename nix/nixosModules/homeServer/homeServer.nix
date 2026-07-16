@@ -2,16 +2,14 @@
 
 let
     cfg = config.env.homeServer;
-    homeServerScript = pkgs.writeShellScriptBin "home-server" (builtins.readFile ./home-server);
-    homeServerBin = "${homeServerScript}/bin/home-server";
-    defaultServices = builtins.attrNames (builtins.readDir ./services);
-    home = config.users.users.${config.env.homeServer.user}.home;
-    group = config.users.users.${config.env.homeServer.user}.group;
 in
 {
 
     imports = [
         self.nixosModules.syncthing
+        self.nixosModules.immich
+        self.nixosModules.navidrome
+        self.nixosModules.radicale
     ];
 
     options.env.homeServer = {
@@ -20,38 +18,23 @@ in
             type = lib.types.str;
         };
 
-        services = lib.mkOption {
-            type = lib.types.listOf lib.types.str;
-            default = defaultServices;
-        };
-
         servicesLocation = lib.mkOption {
             type = lib.types.str;
             default = "${home}/services";
+        };
+
+        backup = lib.mkOption {
+            type = lib.types.bool;
+            default = true;
         };
 
     };
 
     config = {
 
-        virtualisation.docker.enable = true;
-
-        services.syncthing.user = cfg.user;
-
-        env.syncthing.baseDir = "${cfg.servicesLocation}/syncthing/data";
-
-        # setup /home/user/services/*
-        systemd.tmpfiles.rules = [
-            "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"
-        ] ++ (map (service:
-            "d ${cfg.servicesLocation}/${service} 0755 ${cfg.user} ${group} - -"
-        ) cfg.services);
-
-        environment.systemPackages = [
-            homeServerScript
-        ] ++ (with pkgs; [
+        environment.systemPackages = with pkgs; [
             rclone
-        ]);
+        ];
 
         # systemd.services.backup-server = {
         #     description = "Backup server folders";
