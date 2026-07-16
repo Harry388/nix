@@ -2,7 +2,7 @@ quit-after-last-window-closed = false
 
 window-decoration = none
 
-background-opacity = 0.9
+# background-opacity = 0.9
 
 window-padding-x = 10
 window-padding-y = 8
@@ -25,5 +25,5 @@ keybind = alt+7=unbind
 keybind = alt+8=unbind
 keybind = alt+9=unbind
 
-config-file = ?theme
 config-file = ?matugen
+config-file = ?theme
