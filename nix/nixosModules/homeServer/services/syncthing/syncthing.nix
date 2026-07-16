@@ -23,7 +23,7 @@ in
     config = lib.mkIf cfg.enable {
 
         systemd.tmpfiles.rules = [
-            "d ${cfg.serviceLocation} 0700 ${syncthingUser} ${syncthingUserGroup} - -"
+            "d ${cfg.serviceLocation} 0755 ${syncthingUser} ${syncthingUserGroup} - -"
         ];
 
         services.syncthing = {

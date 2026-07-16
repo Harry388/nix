@@ -15,10 +15,7 @@
         user = "harry";
 
         services = {
-            syncthing = {
-                enable = true;
-                serviceLocation = "/home/harry";
-            };
+            syncthing.enable = true;
         };
 
         backup = false;

@@ -2,6 +2,7 @@
 
 let
     cfg = config.env.homeServer;
+    group = config.users.users.${cfg.user}.group;
 in
 {
 
@@ -31,6 +32,10 @@ in
     };
 
     config = {
+
+        systemd.tmpfiles.rules = [
+            "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"
+        ];
 
         environment.systemPackages = with pkgs; [
             rclone
