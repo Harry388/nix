@@ -193,7 +193,7 @@ in
 
         # Volumes
         systemd.services."podman-volume-immich_model-cache" = {
-            path = [ pkgs.podman ];
+            path = [ pkgs.podman "/run/wrappers" ];
             serviceConfig = {
                 Type = "oneshot";
                 RemainAfterExit = true;
