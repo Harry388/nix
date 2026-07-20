@@ -37,6 +37,13 @@ in
             "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"
         ];
 
+        systemd.targets."home-server-root" = {
+            unitConfig = {
+                Description = "Root target for all home server services.";
+            };
+            wantedBy = [ "multi-user.target" ];
+        };
+
         # systemd.services.backup-server = {
         #     description = "Backup server folders";
         #     path = [
