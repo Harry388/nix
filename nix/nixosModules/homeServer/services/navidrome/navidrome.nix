@@ -48,9 +48,9 @@ in
             ports = [
                 "4533:4533/tcp"
             ];
-            user = "${homeServerUser}:${homeServerGroup}";
             log-driver = "journald";
             extraOptions = [
+                "--userns=keep-id"
                 "--network-alias=navidrome"
                 "--network=navidrome_default"
             ];
@@ -77,7 +77,7 @@ in
 
         # Networks
         systemd.services."podman-network-navidrome_default" = {
-            path = [ pkgs.podman ];
+            path = [ pkgs.podman "/run/wrappers" ];
             serviceConfig = {
                 Type = "oneshot";
                 RemainAfterExit = true;

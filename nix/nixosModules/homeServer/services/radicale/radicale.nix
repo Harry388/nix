@@ -86,7 +86,7 @@ in
 
         # Networks
         systemd.services."podman-network-radicale_default" = {
-            path = [ pkgs.podman ];
+            path = [ pkgs.podman "/run/wrappers" ];
             serviceConfig = {
                 Type = "oneshot";
                 RemainAfterExit = true;
