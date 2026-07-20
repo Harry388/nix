@@ -2,6 +2,7 @@
 
 let
     cfg = config.env.homeServer;
+    home = config.users.users.${cfg.user}.home;
     group = config.users.users.${cfg.user}.group;
 in
 {
