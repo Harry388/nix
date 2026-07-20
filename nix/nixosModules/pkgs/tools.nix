@@ -44,6 +44,7 @@ in
         opencode
         socat
         ascii
+        compose2nix
     ] ++ [
         session
     ] ++ (with unstable-pkgs; [
