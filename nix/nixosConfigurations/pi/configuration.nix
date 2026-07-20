@@ -7,7 +7,8 @@
     # nixpkgs.buildPlatform = "x86_64-linux"; # force system to be cross compiled from x86_64
 
     imports = [
-        self.nixosModules.harry
+        self.nixosModules.harryUser
+        self.nixosModules.serverUser
 
         inputs.nixos-hardware.nixosModules.raspberry-pi-4
 
@@ -41,7 +42,7 @@
     hardware.graphics.enable = lib.mkForce false;
 
     env.homeServer = {
-        user = "harry";
+        user = "server";
 
         services = {
             syncthing.enable = true;

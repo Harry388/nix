@@ -7,7 +7,7 @@
     networking.hostName = "desktop";
 
     imports = [
-        self.nixosModules.harry
+        self.nixosModules.harryUser
 
         self.nixosModules.default
 

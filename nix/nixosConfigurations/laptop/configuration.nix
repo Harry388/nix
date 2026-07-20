@@ -5,7 +5,7 @@
     networking.hostName = "laptop";
 
     imports = [
-        self.nixosModules.harry
+        self.nixosModules.harryUser
 
         self.nixosModules.default
         self.nixosModules.battery
