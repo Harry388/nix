@@ -7,6 +7,7 @@ inputs: { pkgs, ... }:
         description = "Server";
         extraGroups = [ ];
         shell = pkgs.fish;
+        linger = true;
     };
 
     programs.fish.enable = true;
