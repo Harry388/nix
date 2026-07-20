@@ -37,10 +37,6 @@ in
             "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"
         ];
 
-        environment.systemPackages = with pkgs; [
-            rclone
-        ];
-
         # systemd.services.backup-server = {
         #     description = "Backup server folders";
         #     path = [
