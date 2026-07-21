@@ -13,7 +13,6 @@
         inputs.nixos-hardware.nixosModules.raspberry-pi-4
 
         self.nixosModules.base
-        self.nixosModules.gvfs
         self.nixosModules.tailscale
         self.nixosModules.openssh
         self.nixosModules.switchEnv
