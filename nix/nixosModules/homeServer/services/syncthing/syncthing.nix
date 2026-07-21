@@ -69,11 +69,6 @@ in
             configDir = "${syncthingUserHome}/.local/state/syncthing";
         };
 
-        systemd.services.syncthing = {
-            partOf = [ "home-server-root.target" ];
-            wantedBy = [ "home-server-root.target" ];
-        };
-
     };
 
 }
