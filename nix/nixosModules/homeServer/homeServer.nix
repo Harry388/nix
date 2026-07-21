@@ -38,32 +38,6 @@ in
             "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"
         ];
 
-        # systemd.services.backup-server = {
-        #     description = "Backup server folders";
-        #     path = [
-        #         pkgs.bash
-        #         pkgs.docker
-        #         pkgs.gnutar
-        #         pkgs.gzip
-        #     ];
-        #     serviceConfig = {
-        #         Type = "oneshot";
-        #         ExecStart = "${pkgs.bash}/bin/bash -c '
-        #         SERVICES_LOCATION=${cfg.servicesLocation} ${homeServerBin} backup &&
-        #         SERVICES_LOCATION=${cfg.servicesLocation} ${homeServerBin} clean 2
-        #         '";
-        #     };
-        # };
-
-        # systemd.timers.backup-server = {
-        #     description = "Backup server folders on a timer";
-        #     wantedBy = ["timers.target"];
-        #     timerConfig = {
-        #         Unit = "backup-server.service";
-        #         OnCalendar = "* *-*-* 04:00:00";
-        #     };
-        # };
-
     };
 
 }
