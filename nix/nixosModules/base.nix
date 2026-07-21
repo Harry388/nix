@@ -33,14 +33,6 @@ inputs: { pkgs, ... }:
 
     console.keyMap = "uk";
 
-    services.printing.enable = true;
-
-    services.avahi = {
-        enable = true;
-        nssmdns4 = true;
-        openFirewall = true;
-    };
-
     security.rtkit.enable = true;
     services.pipewire = {
         enable = true;

@@ -13,6 +13,7 @@
         self.nixosModules.openssh
         self.nixosModules.sshAgent
         self.nixosModules.docker
+        self.nixosModules.printing
 
         self.nixosModules.apps
         self.nixosModules.gaming
