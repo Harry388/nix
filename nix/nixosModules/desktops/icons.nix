@@ -6,22 +6,27 @@ in
 {
 
     options.env.icons = {
+
         cursor = lib.mkOption {
             type = lib.types.str;
             default = "macOS";
         };
+
         cursorSize = lib.mkOption {
             type = lib.types.int;
             default = 24;
         };
+
         theme = lib.mkOption {
             type = lib.types.str;
             default = "Papirus-Dark";
         };
+
         colourScheme = lib.mkOption {
             type = lib.types.str;
             default = "prefer-dark";
         };
+
     };
 
     config = {

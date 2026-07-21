@@ -1,7 +1,7 @@
-{ nixpkgs-unstable, ...}: { pkgs, ... }:
+inputs: { pkgs, ... }:
 
 let
-    unstable-pkgs = nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+    unstable-pkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in
 {
 
@@ -21,7 +21,6 @@ in
     environment.systemPackages = with pkgs; [
         alacritty
         sqlitebrowser
-        # spotify
         obsidian
         postman
         zed-editor

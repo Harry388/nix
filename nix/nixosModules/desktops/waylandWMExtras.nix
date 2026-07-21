@@ -11,7 +11,6 @@ inputs: { pkgs, ... }:
         hyprpicker
         wayvnc
         wl-clipboard
-        # wtype # not sure if this is needed
         networkmanagerapplet
         matugen
         vicinae
