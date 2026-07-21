@@ -22,10 +22,6 @@ in
 
     config = lib.mkIf cfg.enable {
 
-        systemd.tmpfiles.rules = [
-            "d ${cfg.serviceLocation} 0755 ${homeServerUser} ${homeServerGroup} - -"
-        ];
-
         # Runtime
         virtualisation.podman = {
             enable = true;

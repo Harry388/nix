@@ -32,12 +32,4 @@ in
 
     };
 
-    config = {
-
-        systemd.tmpfiles.rules = [
-            "d ${cfg.servicesLocation} 0755 ${cfg.user} ${group} - -"
-        ];
-
-    };
-
 }
