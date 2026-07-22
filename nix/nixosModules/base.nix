@@ -4,16 +4,7 @@ inputs: { pkgs, ... }:
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    networking.networkmanager = {
-        enable = true;
-        plugins = with pkgs; [
-            networkmanager-openvpn
-        ];
-    };
-
-    hardware.bluetooth.enable = true;
-    hardware.bluetooth.powerOnBoot = true;
-    services.blueman.enable = true;
+    nixpkgs.config.allowUnfree = true;
 
     time.timeZone = "Europe/London";
 
@@ -33,25 +24,10 @@ inputs: { pkgs, ... }:
 
     console.keyMap = "uk";
 
-    security.rtkit.enable = true;
-    services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
-    };
-
-    nixpkgs.config.allowUnfree = true;
-
     environment.systemPackages = with pkgs; [
         vim
         wget
     ];
-
-    hardware.graphics = {
-        enable = true;
-        enable32Bit = true;
-    };
 
     networking.firewall = {
         enable = true;

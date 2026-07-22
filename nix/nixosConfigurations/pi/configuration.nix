@@ -1,4 +1,4 @@
-{ self, ... }@inputs: { lib, ... }:
+{ self, ... }@inputs:
 
 {
 
@@ -37,8 +37,6 @@
 
     hardware.enableRedistributableFirmware = true;
     powerManagement.cpuFreqGovernor = "ondemand";
-
-    hardware.graphics.enable = lib.mkForce false;
 
     env.homeServer = {
         user = "server";

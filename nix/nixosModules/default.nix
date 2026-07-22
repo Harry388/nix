@@ -4,6 +4,10 @@
         
     imports = [
         self.nixosModules.base
+        self.nixosModules.networkmanager
+        self.nixosModules.audio
+        self.nixosModules.bluetooth
+        self.nixosModules.graphics
         self.nixosModules.flatpak
         self.nixosModules.fonts
         self.nixosModules.gvfs
