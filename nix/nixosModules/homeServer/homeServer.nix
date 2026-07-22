@@ -1,4 +1,4 @@
-{ self, ... }: { config, lib, ... }:
+inputs: { config, lib, ... }:
 
 let
     cfg = config.env.homeServer;
@@ -7,10 +7,10 @@ in
 {
 
     imports = [
-        self.nixosModules.syncthing
-        self.nixosModules.immich
-        self.nixosModules.navidrome
-        self.nixosModules.radicale
+        (import ./services/immich/_immich.nix inputs)
+        (import ./services/navidrome/_navidrome.nix inputs)
+        (import ./services/radicale/_radicale.nix inputs)
+        (import ./services/syncthing/_syncthing.nix inputs)
     ];
 
     options.env.homeServer = {

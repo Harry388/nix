@@ -7,6 +7,12 @@ let
             lenContent = builtins.stringLength content;
         in
         lenContent >= lenSuffix && builtins.substring (lenContent - lenSuffix) lenContent content == suffix;
+    hasPrefix = prefix: content:
+        let
+            lenPrefix = builtins.stringLength prefix;
+            lenContent = builtins.stringLength content;
+        in
+        lenContent >= lenPrefix && builtins.substring 0 lenPrefix content == prefix;
 
     loadFile = path: file: args:
         let
@@ -23,7 +29,7 @@ let
             children = builtins.readDir path;
             childrenAsList = attrsToList children;
             fileChildren = builtins.filter
-                (child: child.value == "regular" && (hasSuffix ".nix" child.name))
+                (child: child.value == "regular" && (hasSuffix ".nix" child.name) && (! hasPrefix "_" child.name))
                 childrenAsList;
             directoryChildren = builtins.filter
                 (child: child.value == "directory")
@@ -42,7 +48,7 @@ let
             children = builtins.readDir path;
             childrenAsList = attrsToList children;
             filteredChildren = builtins.filter
-                (child: (child.value == "regular" && (hasSuffix ".nix" child.name)) || (child.value == "directory"))
+                (child: (child.value == "regular" && (hasSuffix ".nix" child.name) && (! hasPrefix "_" child.name)) || (child.value == "directory"))
                 childrenAsList;
         in
         (map
