@@ -24,9 +24,10 @@ bind ctrl-space accept-autosuggestion
 
 alias clear "clear -x"
 alias sail "sh $([ -f sail ] && echo sail || echo vendor/bin/sail)"
-alias git-nuke "git reset --hard HEAD && git clean -fd"
-alias git-auto-commit "git add -A && git commit -m"
 alias git-log-pretty "git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
+
+abbr --add gn "git reset --hard HEAD && git clean -fd"
+abbr --add gac "git add -A && git commit -m"
 
 if test "$TERM" = dumb
     exit 0
