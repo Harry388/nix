@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+if [ -z "$TMUX" ]; then
+    echo "This script must be run in a tmux session"
+    exit 1
+fi
+
+if ! command -v fish &> /dev/null; then
+    echo "This script requires fish"
+    exit 1
+fi
+
+TMP_OUTPUT=$(mktemp)
+export TMP_OUTPUT
+
+if ! tmux has -t ".2" &> /dev/null; then
+    tmux split-window -hd -e TMP_OUTPUT="$TMP_OUTPUT"
+fi
+
+initial_buffer=$(cat <<'FISH'
+echo "Hello World!" \
+> "$TMP_OUTPUT"
+
+tmux send-keys -t ".2" "cat $TMP_OUTPUT" c-M
+FISH
+)
+export initial_buffer
+
+fish -C 'echo "$initial_buffer" | nvim -c "setfiletype fish" -c "silent w !fish" -'
+
+rm -f "$TMP_OUTPUT"
