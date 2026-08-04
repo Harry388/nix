@@ -69,19 +69,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="org.gnome.*"
-    background-effect {
-        blur true
-    }
-    popups {
-        geometry-corner-radius 15
-        background-effect {
-            blur true
-        }
-    }
-}
-
-window-rule {
     match app-id="org.gnome.Calculator"
     open-floating true
     default-window-height { proportion 0.5; }
