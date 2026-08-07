@@ -26,6 +26,7 @@ margin_ends = 250
 padding = 10
 scale = 0.95
 widget_spacing = 10
+thickness = 32
 
 [[control_center.shortcuts]]
 type = "wifi"
