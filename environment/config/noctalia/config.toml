@@ -4,10 +4,22 @@ enabled = true
 tint_intensity = 0.4
 
 [bar.default]
-background_opacity = 1
+background_opacity = 0.6
 start = [ "control-center", "workspaces", "taskbar", "media" ]
 center = [ "clock" ]
-end = [ "tray", "sysmon", "notifications", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
+end = [
+    "tray",
+    "notifications",
+    "sysmon",
+    "ram",
+    "cpu",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "session"
+]
 font_family = "JetBrainsMono NF"
 font_weight = 600
 margin_ends = 250
@@ -44,6 +56,12 @@ font_family = "Noto Sans"
 password_style = "random"
 
 [shell.panel]
+borders = false
+control_center_placement = "floating"
+session_placement = "floating"
+transparency_mode = "glass"
+wallpaper_placement = "floating"
+open_near_click_wallpaper = true
 open_near_click_control_center = true
 open_near_click_session = true
 
@@ -82,6 +100,7 @@ show_active_indicator = false
 drawer = true
 drawer_item_size = 18.0
 scale = 1.1500000000000001
+detached_panel = true
 
 [widget.workspaces]
 active_pill_size = 2.0
@@ -89,3 +108,9 @@ font_family = "JetBrainsMono NF"
 font_weight = 800
 pill_scale = 0.90000000000000002
 show_labels = false
+
+[widget.cpu]
+stat = "cpu_temp"
+
+[widget.ram]
+stat = "ram_pct"
