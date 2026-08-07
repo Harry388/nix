@@ -1,5 +1,9 @@
 [config]
 
+[config.wallpaper]
+set = true
+command = "noctalia msg wallpaper-set {{ image }}"
+
 [templates.ghostty]
 input_path = "~/.config/matugen/templates/ghostty/matugen"
 output_path = "~/.config/ghostty/matugen"
@@ -8,7 +12,7 @@ post_hook = "systemctl reload --user app-com.mitchellh.ghostty.service"
 [templates.noctalia]
 input_path = "~/.config/matugen/templates/noctalia/noctalia.json"
 output_path = "~/.config/noctalia/palettes/matugen.json"
-post_hook = "noctalia msg color-scheme-set custom matugen && noctalia msg theme-mode-set {{mode}} && noctalia msg wallpaper-set {{image}}"
+post_hook = "noctalia msg color-scheme-set custom matugen && noctalia msg theme-mode-set {{ mode }}"
 
 [templates.gtk_0]
 input_path = "~/.config/matugen/templates/gtk/gtk3.css"
