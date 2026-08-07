@@ -2,7 +2,7 @@
 
 mode="dark"
 
-while getopts ":w:m:" opt; do
+while getopts ":w:m:c:" opt; do
     case "$opt" in
         w)
             wallpaper="$OPTARG"
@@ -13,6 +13,9 @@ while getopts ":w:m:" opt; do
                 echo "Invalid mode: $mode"
                 exit 1
             fi
+            ;;
+        c)
+            colour="$OPTARG"
             ;;
         *)
             echo "Usage: $0 [-w <wallpaper>] [-m <mode>]"
@@ -34,9 +37,17 @@ if [ -z "$wallpaper" ]; then
         MY_WALLPAPERS="$MY_ENV/wallpaper"
     fi
 
-    wallpaper="$MY_WALLPAPERS/$(<"$XDG_CONFIG_HOME/wallpaper/config")"
+    wallpaper="$MY_WALLPAPERS/$(<"$XDG_CONFIG_HOME/theme/wallpaper")"
 fi
 
-if [ -f "$wallpaper" ] && command -v matugen &> /dev/null; then
-    matugen image "$wallpaper" -t "scheme-tonal-spot" -m "$mode" --source-color-index 0
+if [ -z "$colour" ]; then
+    colour=$(<"$XDG_CONFIG_HOME/theme/colour")
+fi
+
+if command -v matugen &> /dev/null; then
+    if [ -n "$colour" ]; then
+        matugen color hex "$colour" -m "$mode"
+    elif [ -f "$wallpaper" ]; then
+        matugen image "$wallpaper" -t "scheme-tonal-spot" -m "$mode" --source-color-index 0
+    fi
 fi

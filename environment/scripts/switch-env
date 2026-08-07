@@ -95,7 +95,9 @@ cp "$MY_CONFIG/zshrc" "$HOME/.zshrc"
 cp "$MY_CONFIG/bashrc" "$HOME/.bashrc"
 
 apply-overlay "$MY_HOSTS/$HOST"
-apply-overlay "$MY_OVERLAYS/$OVERLAY"
+if [ -n "$OVERLAY" ]; then
+    apply-overlay "$MY_OVERLAYS/$OVERLAY"
+fi
 
 if [ -n "$noctalia_running" ]; then
     kill -CONT "$noctalia_running"
