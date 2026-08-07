@@ -26,6 +26,7 @@ in
         ascii
         wget
         gcc
+        matugen
     ] ++ [
         session
     ] ++ (with unstable-pkgs; [
