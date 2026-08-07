@@ -1,0 +1,91 @@
+[backdrop]
+blur_intensity = 0.3
+enabled = true
+tint_intensity = 0.4
+
+[bar.default]
+background_opacity = 1
+start = [ "control-center", "workspaces", "taskbar", "media" ]
+center = [ "clock" ]
+end = [ "tray", "sysmon", "notifications", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
+font_family = "JetBrainsMono NF"
+font_weight = 600
+margin_ends = 250
+padding = 10
+scale = 0.95
+widget_spacing = 10
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "dark_mode"
+
+[[control_center.shortcuts]]
+type = "wallpaper"
+
+[plugins]
+auto_update = false
+
+[shell]
+clipboard_enabled = false
+clipboard_keep_from_closed_apps = false
+corner_radius_scale = 1.5
+font_family = "Noto Sans"
+password_style = "random"
+
+[shell.panel]
+open_near_click_control_center = true
+open_near_click_session = true
+
+[shell.screenshot]
+confirm_region = true
+save_to_file = false
+
+[theme]
+custom_palette = "matugen"
+mode = "dark"
+source = "custom"
+
+[theme.templates]
+enable_builtin_templates = false
+enable_community_templates = false
+
+[wallpaper]
+directory = "~/env/wallpaper"
+
+[widget.battery]
+display_mode = "graphic"
+
+[widget.control-center]
+glyph = "snowflake"
+scale = 1.1000000000000001
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.taskbar]
+only_active_workspace = true
+scale = 1.1500000000000001
+show_active_indicator = false
+
+[widget.tray]
+drawer = true
+drawer_item_size = 18.0
+scale = 1.1500000000000001
+
+[widget.workspaces]
+active_pill_size = 2.0
+font_family = "JetBrainsMono NF"
+font_weight = 800
+pill_scale = 0.90000000000000002
+show_labels = false

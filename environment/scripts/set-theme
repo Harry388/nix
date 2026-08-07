@@ -37,17 +37,6 @@ if [ -z "$wallpaper" ]; then
     wallpaper="$MY_WALLPAPERS/$(<"$XDG_CONFIG_HOME/wallpaper/config")"
 fi
 
-noctalia_running=$(command -v noctalia-shell &> /dev/null && noctalia-shell list | grep "Process ID" | awk '/Process ID: [0-9]+/ {print $3}')
-ghostty_running=$(pgrep ghostty)
-
-if [ -f "$wallpaper" ]; then
-    if [ -n "$noctalia_running" ]; then
-        noctalia-shell ipc call wallpaper set "$wallpaper" all
-    fi
-    if command -v matugen &> /dev/null; then
-        matugen image "$wallpaper" -t "scheme-tonal-spot" -m "$mode" --source-color-index 0
-    fi
-    if [ -n "$ghostty_running" ]; then
-        systemctl reload --user app-com.mitchellh.ghostty.service
-    fi
+if [ -f "$wallpaper" ] && command -v matugen &> /dev/null; then
+    matugen image "$wallpaper" -t "scheme-tonal-spot" -m "$mode" --source-color-index 0
 fi
