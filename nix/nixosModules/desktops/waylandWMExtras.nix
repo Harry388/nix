@@ -17,7 +17,6 @@ inputs: { pkgs, ... }:
         wayvnc
         wl-clipboard
         networkmanagerapplet
-        matugen
         vicinae
         waypipe
         weylus

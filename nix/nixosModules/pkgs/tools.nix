@@ -45,6 +45,7 @@ in
         socat
         ascii
         compose2nix
+        matugen
     ] ++ [
         session
     ] ++ (with unstable-pkgs; [
