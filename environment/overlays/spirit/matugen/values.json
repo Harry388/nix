@@ -7,6 +7,14 @@
             "dark": {
                 "color": "#141b1e"
             }
+        },
+        "surface_container": {
+            "default": {
+                "color": "#1e2124"
+            },
+            "dark": {
+                "color": "#1e2124"
+            }
         }
     }
 }
