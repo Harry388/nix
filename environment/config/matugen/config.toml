@@ -1,4 +1,5 @@
 [config]
+import_json_files = [ "./values.json" ]
 
 [config.wallpaper]
 set = true
