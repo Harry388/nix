@@ -5,14 +5,19 @@ tint_intensity = 0.4
 
 [bar.default]
 #background_opacity = 0.6
-start = [ "control-center", "workspaces", "taskbar", "media" ]
-center = [ "clock" ]
+start = [
+    "control-center",
+    "workspaces",
+    "taskbar",
+    "media"
+]
+center = [
+    "clock"
+]
 end = [
     "tray",
     "notifications",
-    "sysmon",
-    "ram",
-    "cpu",
+    "group:sysmon",
     "network",
     "bluetooth",
     "volume",
@@ -28,6 +33,13 @@ scale = 0.95
 widget_spacing = 10
 thickness = 32
 contact_shadow = false
+
+[[bar.default.capsule_group]]
+id = "sysmon"
+members = [ "sysmon", "ram", "cpu" ]
+widget_spacing = 6
+padding = 1
+opacity = 0
 
 [[control_center.shortcuts]]
 type = "wifi"
@@ -101,8 +113,8 @@ show_active_indicator = false
 [widget.tray]
 drawer = true
 drawer_item_size = 18.0
-scale = 1.1500000000000001
-detached_panel = true
+scale = 1
+detached_panel = false
 
 [widget.workspaces]
 active_pill_size = 2.0
@@ -111,8 +123,13 @@ font_weight = 800
 pill_scale = 0.90000000000000002
 show_labels = false
 
+[widget.sysmon]
+show_value = false
+
 [widget.cpu]
 stat = "cpu_temp"
+show_value = false
 
 [widget.ram]
 stat = "ram_pct"
+show_value = false
