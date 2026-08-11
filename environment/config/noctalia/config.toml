@@ -95,6 +95,9 @@ enable_community_templates = false
 [wallpaper]
 directory = "~/env/wallpaper"
 
+[widget.clock]
+format = "%H:%M %e %B"
+
 [widget.battery]
 display_mode = "graphic"
 
