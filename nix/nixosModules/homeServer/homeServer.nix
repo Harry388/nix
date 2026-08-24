@@ -53,7 +53,6 @@ in
 
         systemd.services.restic-backup = {
             description = "System Backup Service";
-            wantedBy = [ "multi-user.target" ];
 
             serviceConfig = {
                 Type = "oneshot";
@@ -62,14 +61,24 @@ in
                 EnvironmentFile = cfg.resticEnvironmentFile;
                 ExecStart = map
                     (service: "${pkgs.restic}/bin/restic backup ${cfg.services.${service}.serviceLocation} --tag ${service}")
-                    services;
+                    (builtins.filter (service: cfg.services.${service}.backup && cfg.services.${service}.enable) services);
 
                 AmbientCapabilities = [ "CAP_DAC_READ_SEARCH" ];
                 CapabilityBoundingSet = [ "CAP_DAC_READ_SEARCH" ];
 
                 PrivateTmp = true;
                 ProtectSystem = "strict";
-                ProtectHome = "tmpfs";
+                ProtectHome = "read-only";
+            };
+        };
+
+        systemd.timers.restic-backup = {
+            description = "System Backup Timer";
+            wantedBy = [ "timers.target" ];
+
+            timerConfig = {
+                OnCalendar = "*-*-* 04:00:00";
+                Unit = "restic-backup.service";
             };
         };
 

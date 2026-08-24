@@ -18,6 +18,11 @@ in
             default = "${config.env.homeServer.servicesLocation}/syncthing";
         };
 
+        backup = lib.mkOption {
+            type = lib.types.bool;
+            default = config.env.homeServer.backup;
+        };
+
     };
 
     config = lib.mkIf cfg.enable {
