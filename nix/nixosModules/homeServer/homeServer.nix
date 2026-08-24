@@ -26,7 +26,23 @@ in
 
         backup = lib.mkOption {
             type = lib.types.bool;
-            default = true;
+            default = false;
+        };
+
+    };
+
+    config = lib.mkIf cfg.backup {
+
+        environment.systemPackages = with pkgs; [
+            restic
+        ];
+
+        users.groups.restic = {};
+
+        users.users.restic = {
+            isSystemUser = true;
+            group = "restic";
+            description = "Restic backup runner";
         };
 
     };

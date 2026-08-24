@@ -21,8 +21,6 @@
         services = {
             syncthing.enable = true;
         };
-
-        backup = false;
     };
 
     boot.loader = {

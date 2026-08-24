@@ -47,6 +47,8 @@
             navidrome.enable = true;
             radicale.enable = true;
         };
+
+        backup = true;
     };
 
     # This value determines the NixOS release from which the default
