@@ -3,6 +3,7 @@ inputs: { config, lib, pkgs, ... }:
 let
     cfg = config.env.homeServer;
     home = config.users.users.${cfg.user}.home;
+    services = [ "immich" "navidrome" "radicale" "syncthing" ];
 in
 {
 
@@ -29,6 +30,11 @@ in
             default = false;
         };
 
+        resticEnvironmentFile = lib.mkOption {
+            type = lib.types.str;
+            default = "etc/restic/env";
+        };
+
     };
 
     config = lib.mkIf cfg.backup {
@@ -43,6 +49,28 @@ in
             isSystemUser = true;
             group = "restic";
             description = "Restic backup runner";
+        };
+
+        systemd.services.restic-backup = {
+            description = "System Backup Service";
+            wantedBy = [ "multi-user.target" ];
+
+            serviceConfig = {
+                Type = "oneshot";
+                User = "restic";
+                Group = "restic";
+                EnvironmentFile = cfg.resticEnvironmentFile;
+                ExecStart = map
+                    (service: "${pkgs.restic}/bin/restic backup ${cfg.services.${service}.serviceLocation} --tag ${service}")
+                    services;
+
+                AmbientCapabilities = [ "CAP_DAC_READ_SEARCH" ];
+                CapabilityBoundingSet = [ "CAP_DAC_READ_SEARCH" ];
+
+                PrivateTmp = true;
+                ProtectSystem = "strict";
+                ProtectHome = "tmpfs";
+            };
         };
 
     };
