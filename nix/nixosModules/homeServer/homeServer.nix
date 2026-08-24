@@ -1,4 +1,4 @@
-inputs: { config, lib, ... }:
+inputs: { config, lib, pkgs, ... }:
 
 let
     cfg = config.env.homeServer;
