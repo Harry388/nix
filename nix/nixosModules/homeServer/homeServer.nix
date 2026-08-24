@@ -32,7 +32,7 @@ in
 
         resticEnvironmentFile = lib.mkOption {
             type = lib.types.str;
-            default = "etc/restic/env";
+            default = "/etc/restic/env";
         };
 
     };
