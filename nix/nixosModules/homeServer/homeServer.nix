@@ -81,14 +81,14 @@ in
                 ExecStart = builtins.filter
                     (command: command != "")
                     [
-                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl stop podman-compose-immich-root" else "")
-                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl stop podman-compose-navidrome-root" else "")
-                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl stop podman-compose-radicale-root" else "")
+                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl stop podman-compose-immich-root.target" else "")
+                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl stop podman-compose-navidrome-root.target" else "")
+                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl stop podman-compose-radicale-root.target" else "")
                         (if shouldBackupService "syncthing" then "${pkgs.systemd}/bin/systemctl stop syncthing" else "")
                         "${pkgs.systemd}/bin/systemctl start restic-backup --wait"
-                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl start podman-compose-immich-root" else "")
-                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl start podman-compose-navidrome-root" else "")
-                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl start podman-compose-radicale-root" else "")
+                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl start podman-compose-immich-root.target" else "")
+                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl start podman-compose-navidrome-root.target" else "")
+                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl start podman-compose-radicale-root.target" else "")
                         (if shouldBackupService "syncthing" then "${pkgs.systemd}/bin/systemctl start syncthing" else "")
                     ];
 
