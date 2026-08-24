@@ -4,6 +4,7 @@ let
     cfg = config.env.homeServer;
     home = config.users.users.${cfg.user}.home;
     services = [ "immich" "navidrome" "radicale" "syncthing" ];
+    shouldBackupService = service: cfg.services.${service}.backup && cfg.services.${service}.enable;
 in
 {
 
@@ -52,7 +53,7 @@ in
         };
 
         systemd.services.restic-backup = {
-            description = "System Backup Service";
+            description = "Restic Backup Service";
 
             serviceConfig = {
                 Type = "oneshot";
@@ -61,7 +62,7 @@ in
                 EnvironmentFile = cfg.resticEnvironmentFile;
                 ExecStart = map
                     (service: "${pkgs.restic}/bin/restic backup ${cfg.services.${service}.serviceLocation} --tag ${service}")
-                    (builtins.filter (service: cfg.services.${service}.backup && cfg.services.${service}.enable) services);
+                    (builtins.filter shouldBackupService services);
 
                 AmbientCapabilities = [ "CAP_DAC_READ_SEARCH" ];
                 CapabilityBoundingSet = [ "CAP_DAC_READ_SEARCH" ];
@@ -72,13 +73,38 @@ in
             };
         };
 
-        systemd.timers.restic-backup = {
+        systemd.services.restic-backup-wrapper = {
+            description = "Restic Backup Wrapper Service";
+
+            serviceConfig = {
+                Type = "oneshot";
+                ExecStart = builtins.filter
+                    (command: command != "")
+                    [
+                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl stop podman-compose-immich-root" else "")
+                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl stop podman-compose-navidrome-root" else "")
+                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl stop podman-compose-radicale-root" else "")
+                        (if shouldBackupService "syncthing" then "${pkgs.systemd}/bin/systemctl stop syncthing" else "")
+                        "${pkgs.systemd}/bin/systemctl start restic-backup --wait"
+                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl start podman-compose-immich-root" else "")
+                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl start podman-compose-navidrome-root" else "")
+                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl start podman-compose-radicale-root" else "")
+                        (if shouldBackupService "syncthing" then "${pkgs.systemd}/bin/systemctl start syncthing" else "")
+                    ];
+
+                PrivateTmp = true;
+                ProtectSystem = "strict";
+                ProtectHome = "tmpfs";
+            };
+        };
+
+        systemd.timers.homeserver-backup = {
             description = "System Backup Timer";
             wantedBy = [ "timers.target" ];
 
             timerConfig = {
                 OnCalendar = "*-*-* 04:00:00";
-                Unit = "restic-backup.service";
+                Unit = "restic-backup-wrapper.service";
             };
         };
 
