@@ -98,8 +98,8 @@ in
             };
         };
 
-        systemd.timers.homeserver-backup = {
-            description = "System Backup Timer";
+        systemd.timers.restic-backup = {
+            description = "Restic Backup Timer";
             wantedBy = [ "timers.target" ];
 
             timerConfig = {
