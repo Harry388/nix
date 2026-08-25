@@ -3,17 +3,13 @@ inputs: { config, lib, pkgs, ... }:
 let
     cfg = config.env.homeServer;
     home = config.users.users.${cfg.user}.home;
-    services = [ "immich" "navidrome" "radicale" "syncthing" ];
+    services = builtins.attrNames (builtins.readDir ./services);
     shouldBackupService = service: cfg.services.${service}.backup && cfg.services.${service}.enable;
+    servicesWithBackupEnabled = builtins.filter shouldBackupService services;
 in
 {
 
-    imports = [
-        (import ./services/immich/_immich.nix inputs)
-        (import ./services/navidrome/_navidrome.nix inputs)
-        (import ./services/radicale/_radicale.nix inputs)
-        (import ./services/syncthing/_syncthing.nix inputs)
-    ];
+    imports = map (service: import ./services/${service}/_${service}.nix inputs) services;
 
     options.env.homeServer = {
 
@@ -60,9 +56,10 @@ in
                 User = "restic";
                 Group = "restic";
                 EnvironmentFile = cfg.resticEnvironmentFile;
-                ExecStart = map
-                    (service: "${pkgs.restic}/bin/restic backup ${cfg.services.${service}.serviceLocation} --tag ${service}")
-                    (builtins.filter shouldBackupService services);
+                ExecStart =
+                    map
+                        (service: "${pkgs.restic}/bin/restic backup ${cfg.services.${service}.serviceLocation} --tag ${service}")
+                        servicesWithBackupEnabled;
 
                 AmbientCapabilities = [ "CAP_DAC_READ_SEARCH" ];
                 CapabilityBoundingSet = [ "CAP_DAC_READ_SEARCH" ];
@@ -78,19 +75,15 @@ in
 
             serviceConfig = {
                 Type = "oneshot";
-                ExecStart = builtins.filter
-                    (command: command != "")
-                    [
-                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl stop podman-compose-immich-root.target" else "")
-                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl stop podman-compose-navidrome-root.target" else "")
-                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl stop podman-compose-radicale-root.target" else "")
-                        (if shouldBackupService "syncthing" then "${pkgs.systemd}/bin/systemctl stop syncthing" else "")
-                        "${pkgs.systemd}/bin/systemctl start restic-backup --wait"
-                        (if shouldBackupService "immich" then "${pkgs.systemd}/bin/systemctl start podman-compose-immich-root.target" else "")
-                        (if shouldBackupService "navidrome" then "${pkgs.systemd}/bin/systemctl start podman-compose-navidrome-root.target" else "")
-                        (if shouldBackupService "radicale" then "${pkgs.systemd}/bin/systemctl start podman-compose-radicale-root.target" else "")
-                        (if shouldBackupService "syncthing" then "${pkgs.systemd}/bin/systemctl start syncthing" else "")
-                    ];
+
+                ExecStart =
+                    (map
+                        (service: "${pkgs.systemd}/bin/systemctl stop ${service}-root.target")
+                        servicesWithBackupEnabled)
+                    ++ [ "${pkgs.systemd}/bin/systemctl start restic-backup --wait" ]
+                    ++ (map
+                        (service: "${pkgs.systemd}/bin/systemctl start ${service}-root.target")
+                        servicesWithBackupEnabled);
 
                 PrivateTmp = true;
                 ProtectSystem = "strict";

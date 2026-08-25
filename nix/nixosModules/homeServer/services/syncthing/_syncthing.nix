@@ -70,6 +70,18 @@ in
             configDir = "${syncthingUserHome}/.local/state/syncthing";
         };
 
+        systemd.services."syncthing" = {
+            partOf = lib.mkForce [ "syncthing-root.target" ];
+            wantedBy = lib.mkForce [ "syncthing-root.target" ];
+        };
+
+        systemd.targets."syncthing-root" = {
+            unitConfig = {
+                Description = "Root target";
+            };
+            wantedBy = [ "multi-user.target" ];
+        };
+
     };
 
 }
