@@ -28,6 +28,7 @@ alias git-log-pretty "git log --graph --abbrev-commit --decorate --format=format
 
 abbr --add gn "git reset --hard HEAD && git clean -fd"
 abbr --add gac "git add -A && git commit -m"
+abbr --add ga "git add -A && git commit --amend"
 
 if test "$TERM" = dumb
     exit 0
