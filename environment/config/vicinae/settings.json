@@ -13,7 +13,7 @@
    "pop_to_root_on_close": true,
    "font": {
       "normal": {
-         "family": "JetBrainsMono NF"
+         "family": "JetBrainsMonoNL Nerd Font"
       }
    },
    "theme": {
@@ -32,6 +32,16 @@
          "enabled": true,
          "rounding": 10,
          "border_width": 3
+      }
+   },
+   "providers": {
+      "files": {
+         "enabled": false,
+         "preferences": {
+            "autoIndexing": false,
+            "excludedIndexingPaths": [],
+            "indexingPaths": []
+         }
       }
    }
 }
