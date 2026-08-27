@@ -60,7 +60,7 @@ type = "dark_mode"
 type = "wallpaper"
 
 [plugins]
-auto_update = false
+auto_update = "none"
 
 [shell]
 clipboard_enabled = false
