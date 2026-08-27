@@ -3,7 +3,7 @@ import_json_files = [ "./values.json" ]
 
 [config.wallpaper]
 set = true
-command = "pgrep noctalia && noctalia msg wallpaper-set {{ image }}"
+command = "pgrep noctalia && noctalia msg wallpaper-set {{ image }} 2> /dev/null"
 
 [templates.ghostty]
 input_path = "~/.config/matugen/templates/ghostty/matugen"
@@ -13,7 +13,7 @@ post_hook = "pgrep ghostty && systemctl reload --user app-com.mitchellh.ghostty.
 [templates.noctalia]
 input_path = "~/.config/matugen/templates/noctalia/noctalia.json"
 output_path = "~/.config/noctalia/palettes/matugen.json"
-post_hook = "pgrep noctalia && noctalia msg color-scheme-set custom matugen && noctalia msg theme-mode-set {{ mode }}"
+post_hook = "pgrep noctalia && noctalia msg color-scheme-set custom matugen 2> /dev/null && noctalia msg theme-mode-set {{ mode }} 2> /dev/null"
 
 [templates.gtk_0]
 input_path = "~/.config/matugen/templates/gtk/gtk3.css"
