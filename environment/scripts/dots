@@ -1,0 +1,174 @@
+#!/usr/bin/env bash
+
+MY_ENV=${MY_ENV:-"$HOME/env"}
+XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
+MY_CONFIG=${MY_CONFIG:-"$MY_ENV/environment/config"}
+SCRIPTS_HOME=${SCRIPTS_HOME:-"$HOME/.local/scripts"}
+MY_SCRIPTS=${MY_SCRIPTS:-"$MY_ENV/environment/scripts"}
+MY_HOSTS=${MY_HOSTS:-"$MY_ENV/environment/hosts"}
+HOST=${HOST:-$(hostname)}
+MY_OVERLAYS=${MY_OVERLAYS:-"$MY_ENV/environment/overlays"}
+MY_WALLPAPERS=${MY_WALLPAPERS:-"$MY_ENV/wallpaper"}
+
+if [ -z "$OVERLAY" ]; then
+    if [ -f "$MY_OVERLAYS/$HOST" ]; then
+        OVERLAY=$(<"$MY_OVERLAYS/$HOST")
+    else
+        OVERLAY=$(<"$MY_OVERLAYS/current")
+    fi
+fi
+
+move () {
+    dir="$1"
+    to="$2"
+    rm -rf "$to"
+    cp -R "$dir" "$to"
+}
+
+apply-overlay () {
+    selection="$1"
+    if [ ! -d "$selection" ]; then
+        return 0
+    fi
+    find "$selection" -type f | while read -r file; do
+        after=${file#"$selection/"}
+        base=$(basename "$file")
+        if [[ $base == "extension."* ]]; then
+            newfile="$XDG_CONFIG_HOME/${after%"$base"}${base#"extension."}"
+            cat "$file" >> "$newfile"
+        else
+            newfile="$XDG_CONFIG_HOME/$after"
+            cp "$file" "$newfile"
+        fi
+    done
+}
+
+switch () {
+    vicinae_running=$(pgrep vicinae)
+    noctalia_running=$(pgrep noctalia)
+
+    if [ -n "$vicinae_running" ]; then
+        pkill vicinae
+    fi
+
+    if [ -n "$noctalia_running" ]; then
+        kill -STOP "$noctalia_running"
+    fi
+
+    move "$MY_SCRIPTS" "$SCRIPTS_HOME"
+    chmod -R +x "$SCRIPTS_HOME"
+
+    find "$MY_CONFIG" -maxdepth 1 -mindepth 1 -type d | while read -r config; do
+        base=$(basename "$config")
+        move "$config" "$XDG_CONFIG_HOME/$base"
+    done
+
+    if [ -f "$XDG_CONFIG_HOME/session/default-session" ]; then
+        chmod +x "$XDG_CONFIG_HOME/session/default-session"
+    fi
+    if [ -d "$XDG_CONFIG_HOME/session/scripts" ]; then
+        chmod -R +x "$XDG_CONFIG_HOME/session/scripts"
+    fi
+
+    cp "$MY_CONFIG/zshrc" "$HOME/.zshrc"
+    cp "$MY_CONFIG/bashrc" "$HOME/.bashrc"
+
+    apply-overlay "$MY_HOSTS/$HOST"
+    if [ -n "$OVERLAY" ]; then
+        apply-overlay "$MY_OVERLAYS/$OVERLAY"
+    fi
+
+    if [ -n "$noctalia_running" ]; then
+        kill -CONT "$noctalia_running"
+    fi
+
+    if [ -n "$vicinae_running" ]; then
+        vicinae server &> /dev/null &
+    fi
+
+    set-theme
+}
+
+backcopy () {
+    overlay=""
+    config=""
+
+    for arg in "$@"; do
+        if [[ "$arg" == "--overlay" ]]; then
+            overlay=1
+        else
+            config="$arg"
+        fi
+    done
+
+    if [ -n "$overlay" ]; then
+        to="$MY_OVERLAYS/$OVERLAY/$config"
+    else
+        to="$MY_CONFIG/$config"
+    fi
+
+    from="$XDG_CONFIG_HOME/$config"
+    move "$from" "$to"
+}
+
+set-theme () {
+    mode="dark"
+
+    while getopts ":w:m:c:" opt; do
+        case "$opt" in
+            w)
+                wallpaper="$OPTARG"
+                ;;
+            m)
+                mode="$OPTARG"
+                if [ "$mode" != "dark" ] && [ "$mode" != "light" ]; then
+                    echo "Invalid mode: $mode"
+                    exit 1
+                fi
+                ;;
+            c)
+                colour="$OPTARG"
+                ;;
+            *)
+                echo "Usage: $0 set-theme [-w <wallpaper>] [-m <mode>]"
+                exit 1
+                ;;
+        esac
+    done
+
+    if [ -z "$wallpaper" ]; then
+        wallpaper="$MY_WALLPAPERS/$(<"$XDG_CONFIG_HOME/theme/wallpaper")"
+    fi
+
+    if [ -z "$colour" ]; then
+        colour=$(<"$XDG_CONFIG_HOME/theme/colour")
+    fi
+
+    if command -v matugen &> /dev/null; then
+        if [ -n "$colour" ]; then
+            matugen color hex "$colour" -m "$mode"
+        elif [ -f "$wallpaper" ]; then
+            matugen image "$wallpaper" -t "scheme-tonal-spot" -m "$mode" --source-color-index 0
+        fi
+    fi
+}
+
+command="$1"
+shift
+
+case "$command" in
+    switch)
+        switch "$@"
+        ;;
+    backcopy)
+        backcopy "$@"
+        ;;
+    set-theme)
+        set-theme "$@"
+        ;;
+    *)
+        echo "Unknown command: $command"
+        exit 1
+        ;;
+esac
+

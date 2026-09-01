@@ -121,7 +121,7 @@ binds {
     Mod+C hotkey-overlay-title="Calculator" { spawn-sh "gnome-calculator"; }
 
     // Tools
-    Mod+S hotkey-overlay-title="Switch Env" { spawn "switch-env"; }
+    Mod+S hotkey-overlay-title="Switch Dots" { spawn-sh "dots switch"; }
     Mod+P hotkey-overlay-title="Screenshot (Noctalia)" { spawn-sh "noctalia msg screenshot-region"; }
     Mod+Shift+P hotkey-overlay-title="Colour Picker (Hyprpicker)" { spawn-sh "hyprpicker -a"; }
     Mod+Ctrl+P hotkey-overlay-title="Fullscreen Screenshot (Noctalia)" { spawn-sh "noctalia msg screenshot-fullscreen pick"; }

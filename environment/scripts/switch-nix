@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z "$MY_ENV" ]; then
-    MY_ENV="$HOME/env"
-fi
+MY_ENV=${MY_ENV:-"$HOME/env"}
 
 current_generation=$(readlink /nix/var/nix/profiles/system | cut -d - -f2)
 
@@ -22,4 +20,6 @@ else
 fi
 popd > /dev/null || exit 1
 
-switch-env
+if command -v dots &> /dev/null; then
+    dots switch
+fi

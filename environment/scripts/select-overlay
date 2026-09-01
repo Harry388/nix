@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-if [ -z "$MY_ENV" ]; then
-    MY_ENV="$HOME/env"
-fi
-
-if [ -z "$MY_OVERLAYS" ]; then
-    MY_OVERLAYS="$MY_ENV/environment/overlays"
-fi
+MY_ENV=${MY_ENV:-"$HOME/env"}
+MY_OVERLAYS=${MY_OVERLAYS:-"$MY_ENV/environment/overlays"}
 
 overlay_names="$(find "$MY_OVERLAYS" -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | sort)"
 
@@ -17,4 +12,4 @@ if [ -z "$overlay" ]; then
     exit 1
 fi
 
-OVERLAY="$overlay" switch-env
+OVERLAY="$overlay" dots switch

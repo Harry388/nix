@@ -13,7 +13,7 @@
         self.nixosModules.gvfs
         self.nixosModules.keyring
         self.nixosModules.tailscale
-        self.nixosModules.switchEnv
+        self.nixosModules.dots
         self.nixosModules.openssh
         self.nixosModules.sshAgent
         self.nixosModules.docker

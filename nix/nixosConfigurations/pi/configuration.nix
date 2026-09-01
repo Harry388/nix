@@ -15,7 +15,7 @@
         self.nixosModules.base
         self.nixosModules.tailscale
         self.nixosModules.openssh
-        self.nixosModules.switchEnv
+        self.nixosModules.dots
 
         self.nixosModules.minimalTools
 
